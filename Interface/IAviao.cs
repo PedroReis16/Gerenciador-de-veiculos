@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Interface
 {
-    internal interface IAviao
+    public interface IAviao
     {
+        void Pousar();
+        void Arremetar();
+        void Decolar();
     }
 }

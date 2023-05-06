@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    internal class Moto
+    public class Moto
     {
     }
 }

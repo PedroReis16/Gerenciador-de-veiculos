@@ -74,12 +74,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Interface\IAviao.cs" />
     <Compile Include="Interface\IVeiculos.cs" />
     <Compile Include="Interface\IVeiculosTerrestres.cs" />
     <Compile Include="Objects\Aviao.cs" />
     <Compile Include="Objects\AviaoGuerra.cs" />
     <Compile Include="Objects\Caminhao.cs" />
     <Compile Include="Objects\Carro.cs" />
+    <Compile Include="Objects\Marca.cs" />
     <Compile Include="Objects\Modelo.cs" />
     <Compile Include="Objects\Moto.cs" />
     <Compile Include="Objects\Navio.cs" />

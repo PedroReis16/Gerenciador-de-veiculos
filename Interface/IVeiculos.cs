@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Interface
 {
-    internal interface IVeiculos
+    public interface IVeiculos
     {
         string Id { get; set; }
         double Peso { get; set; }
