@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class Marca
+    public class Pedagio
     {
-        public int Id { get; set; }
-        public string Descricao { get; set; }
     }
 }

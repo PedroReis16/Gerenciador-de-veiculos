@@ -87,6 +87,7 @@
     <Compile Include="Objects\Navio.cs" />
     <Compile Include="Objects\NavioGuerra.cs" />
     <Compile Include="Objects\Onibus.cs" />
+    <Compile Include="Objects\Pedagio.cs" />
     <Compile Include="Objects\Trem.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

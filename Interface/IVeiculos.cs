@@ -13,7 +13,7 @@ namespace Gerenciador_de_veículos.Interface
         double Peso { get; set; }
         int Velocidade { get; set; }
         int CapacidadePagageitos { get; set; }
-        Modelo Modelo;
+        Modelo Modelo { get; set; }
         void Acelera();
         void Desacelera();
     }
