@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="Gerenciador_de_veículos.Views.VehiclesOptions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gerenciador_de_veículos.Views"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="600" 
+             Width="800"
+             >
+    <Grid Background="#001b8f">
+        <!--Vehicles optins-->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 32">
+            
+            <StackPanel Orientation="Horizontal" Margin="0 4" >
+                <Border Name="btnCarBorder"  CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnCar" Click="BtnCar_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Car"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Carro" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border Name="btnBikeBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button  Name="btnBike" Click="BtnBike_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Motorbike"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Moto" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border Name="btnBusBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnBus" Click="BtnBus_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Bus"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Ônibus" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </StackPanel>
+
+            <StackPanel  Orientation="Horizontal" Margin="0 4" >
+                <Border Name="btnTruckBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnTruck" Click="BtnTruck_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Truck"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Caminhão" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border Name="btnPlaneBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnPlane" Click="BtnPlane_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Airplane"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Avião" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border Name="btnCargoPlaneBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnCargoPlane" Click="btnCargoPlane_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Airplane"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="32 0 0 0"
+                                        />
+                            <Label Content="Avião de carga" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 4" >
+                <Border Name="btnTrainBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnTrain"  Click="BtnTrain_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Train"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Trem" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border Name="btnShipBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnShip" Click="BtnShip_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Ferry"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="4 0 0 4"
+                                        />
+                            <Label Content="Navio" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border Name="btnWarShipBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnWarShip" Click="BtnWarShip_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Ferry"
+                                        Width="110"
+                                        Height="110"
+                                        Margin="16 0 0 8"
+                                        />
+                            <Label Content="Navio de guerra" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="18" Margin="0 0 0 4"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

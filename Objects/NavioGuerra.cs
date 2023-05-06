@@ -10,20 +10,20 @@ namespace Gerenciador_de_veículos.Objects
 {
     public class NavioGuerra : IVeiculos
     {
-        public string Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double Peso { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Velocidade { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int CapacidadePagageitos { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Modelo Modelo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Id { get; set; }
+        public double Peso { get; set; }
+        public int Velocidade { get; set; }
+        public int CapacidadePagageitos { get; set; }
+        public Modelo Modelo { get; set; }
 
         public void Acelera()
         {
-            throw new NotImplementedException();
+
         }
 
         public void Desacelera()
         {
-            throw new NotImplementedException();
+
         }
     }
 }

@@ -4,9 +4,92 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gerenciador_de_veículos"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Gerenciador de veículos"
+        Height="680" 
+        Width="1024"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize"
+        >
+    <Border CornerRadius="5" Background="#001b8f">
+        <Grid Margin="3" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <Button Name="BtnBack" Click="BtnBack_Click" Width="40" Height="40" HorizontalAlignment="Left" Padding="0" Margin="16 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Visibility="Collapsed">
+                <materialDesign:PackIcon
+                    Kind="ArrowLeft"
+                    Width="32"
+                    Height="32"
+                    Foreground="White"
+                    />
+            </Button>
+            <Button Name="btnNotification" MouseEnter="BtnNotification_MouseEnter" MouseLeave="BtnNotification_MouseLeave" Grid.Row="0" HorizontalAlignment="Right" Margin="0 0 16 0" Height="40" Width="40" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Padding="0">
+                <materialDesign:PackIcon
+                    Kind="Notifications"
+                    Width="24"
+                    Height="24"
+                    Foreground="White"
+                    />
+            </Button>
+            
+            <!--Main grid-->
+            <Grid Name="MainGrid" Grid.Row="1"  Margin="0 0 0 0">
+                <Grid  Name="InitialGrid"  Width="850" Height="450" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 128 0 0">
+                    <StackPanel Name="InitialButtons" Orientation="Horizontal" Visibility="Visible" Margin="0 0 0 128" >
+                        <Border Name="btnVeichlesBorder" CornerRadius="15" Width="280" Height="250" Margin="4 0">
+                            <Button Name="btnVehicles" Click="BtnVehicles_Click" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                                <StackPanel Orientation="Vertical">
+                                    <materialDesign:PackIcon
+                                        Kind="Engine"
+                                        Width="120"
+                                        Height="120"
+                                        Margin="4 0 0 0"
+                                        />
+                                    <Label Content="Veículos" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="32"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+
+                        <Border Name="btnTollBorder" CornerRadius="15" Width="280" Height="250" Margin="4 0">
+                            <Button Name="btnToll" Click="btnToll_Click" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                                <StackPanel Orientation="Vertical">
+                                    <materialDesign:PackIcon
+                                        Kind="Money"
+                                        Width="120"
+                                        Height="120"
+                                        Margin="4 0 0 0"
+                                        />
+                                    <Label Content="Pedágio" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="32"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                        <Border Name="btnActionsBorder" CornerRadius="15" Width="280" Height="250" Margin="4 0 ">
+                            <Button Name="btnActions" Click="btnActions_Click" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                                <StackPanel Orientation="Vertical">
+                                    <materialDesign:PackIcon
+                                        Kind="Play"
+                                        Width="120"
+                                        Height="120"
+                                        Margin="0 0 0 0"
+                                        />
+                                    <Label Content="Ações" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="32"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+                
+                <!--Vehicles Options Grid-->
+                <Grid Name="VehiclesOptions" Width="800" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+            </Grid>
+            
+            <!--Notification grid-->
+            <Grid Name="NotificationsGrid" Grid.RowSpan="2" Background="Black" Opacity="0.5" Width="270" Height="250" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 48 32 0" Visibility="Collapsed"/>
+
+        </Grid>
+    </Border>
 </Window>

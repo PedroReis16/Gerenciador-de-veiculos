@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\App.xaml
-1-587587561
+3-454016560
 
-21738871105
+231471098956
 16-264543273
-Views\MainWindow.xaml;
+Views\MainWindow.xaml;Views\NotificationView.xaml;Views\VehiclesOptions.xaml;
 
-False
+True
 

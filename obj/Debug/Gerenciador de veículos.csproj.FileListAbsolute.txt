@@ -24,3 +24,7 @@ C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\App.baml
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CopyComplete
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.baml
