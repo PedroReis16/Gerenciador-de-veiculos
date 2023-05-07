@@ -28,3 +28,13 @@ C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\Notifica
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.baml
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.g.cs
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.baml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.AssemblyReference.cache
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.SuggestedBindingRedirects.cache
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.g.cs
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.g.cs
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.g.cs
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\App.g.cs
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.cache
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.lref
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.exe
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.pdb

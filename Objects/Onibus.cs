@@ -35,14 +35,9 @@ namespace Gerenciador_de_veículos.Objects
 
         }
 
-        public void GerarPlaca()
-        {
-            throw new NotImplementedException();
-        }
-
         public void PagarPedagio()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

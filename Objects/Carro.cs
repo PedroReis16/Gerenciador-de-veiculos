@@ -34,12 +34,6 @@ namespace Gerenciador_de_veículos.Objects
         {
 
         }
-
-        public void GerarPlaca()
-        {
-
-        }
-
         public void PagarPedagio()
         {
 
