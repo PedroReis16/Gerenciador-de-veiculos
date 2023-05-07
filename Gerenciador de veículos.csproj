@@ -71,7 +71,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAO\AvioesDAO.cs" />
+    <Compile Include="DAO\CaminhoesDAO.cs" />
+    <Compile Include="DAO\CarrosDAO.cs" />
+    <Compile Include="DAO\MotosDAO.cs" />
     <Compile Include="DAO\NaviosDAO.cs" />
+    <Compile Include="DAO\OnibusDAO.cs" />
+    <Compile Include="DAO\PedagioDAO.cs" />
     <Compile Include="DAO\VeiculosTerrestresDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
     <Compile Include="Objects\Pagamento.cs" />
@@ -136,6 +141,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DataFiles\DataPedagio.JSON" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
