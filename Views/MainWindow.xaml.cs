@@ -87,5 +87,20 @@ namespace Gerenciador_de_veículos
         {
             //Timer que irá gerar uma ação aleatória nos veículos
         }
+
+        #region Buttons Background Events
+        private void MainWindow_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Button button = sender as Button;
+            button.Background = new SolidColorBrush(Color.FromRgb(00, 177, 255));
+
+        }
+
+        private void MainWindow_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Button button = sender as Button;
+            button.Background = new SolidColorBrush(Color.FromRgb(00, 146, 255));
+        }
+        #endregion
     }
 }

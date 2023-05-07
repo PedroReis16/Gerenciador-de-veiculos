@@ -41,13 +41,14 @@
                 <Grid  Name="InitialGrid"  Width="850" Height="450" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 128 0 0">
                     <StackPanel Name="InitialButtons" Orientation="Horizontal" Visibility="Visible" Margin="0 0 0 128" >
                         <Border Name="btnVeichlesBorder" CornerRadius="15" Width="280" Height="250" Margin="4 0">
-                            <Button Name="btnVehicles" Click="BtnVehicles_Click" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                            <Button Name="btnVehicles" Click="BtnVehicles_Click" MouseEnter="MainWindow_MouseEnter" MouseLeave="MainWindow_MouseLeave" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                                 <StackPanel Orientation="Vertical">
                                     <materialDesign:PackIcon
                                         Kind="Engine"
                                         Width="120"
                                         Height="120"
                                         Margin="4 0 0 0"
+                                        Foreground="White"
                                         />
                                     <Label Content="Veículos" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="32"/>
                                 </StackPanel>
@@ -55,26 +56,28 @@
                         </Border>
 
                         <Border Name="btnTollBorder" CornerRadius="15" Width="280" Height="250" Margin="4 0">
-                            <Button Name="btnToll" Click="btnToll_Click" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                            <Button Name="btnToll" Click="btnToll_Click" MouseEnter="MainWindow_MouseEnter" MouseLeave="MainWindow_MouseLeave" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                                 <StackPanel Orientation="Vertical">
                                     <materialDesign:PackIcon
                                         Kind="Money"
                                         Width="120"
                                         Height="120"
                                         Margin="4 0 0 0"
+                                        Foreground="White"
                                         />
                                     <Label Content="Pedágio" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="32"/>
                                 </StackPanel>
                             </Button>
                         </Border>
                         <Border Name="btnActionsBorder" CornerRadius="15" Width="280" Height="250" Margin="4 0 ">
-                            <Button Name="btnActions" Click="btnActions_Click" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                            <Button Name="btnActions" Click="btnActions_Click" MouseEnter="MainWindow_MouseEnter" MouseLeave="MainWindow_MouseLeave" Width="275" Height="245" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                                 <StackPanel Orientation="Vertical">
                                     <materialDesign:PackIcon
                                         Kind="Play"
                                         Width="120"
                                         Height="120"
                                         Margin="0 0 0 0"
+                                        Foreground="White"
                                         />
                                     <Label Content="Ações" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="32"/>
                                 </StackPanel>
