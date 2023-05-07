@@ -12,7 +12,7 @@ namespace Gerenciador_de_veículos.Interface
         string Id { get; set; }
         double Peso { get; set; }
         int Velocidade { get; set; }
-        int CapacidadePagageitos { get; set; }
+        int CapacidadePassageiros { get; set; }
         Modelo Modelo { get; set; }
         void Acelera();
         void Desacelera();

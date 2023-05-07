@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class Onibus : IVeiculos
+    public class Onibus : IVeiculos, IVeiculosTerrestres
     {
         public string Id { get; set; }
         public double Peso { get; set; }
         public int Velocidade { get; set; }
-        public int CapacidadePagageitos { get; set; }
         public Modelo Modelo { get; set; }
+        public int CapacidadePassageiros { get; set; }
 
         public void Acelera()
         {
@@ -24,6 +24,16 @@ namespace Gerenciador_de_veículos.Objects
         public void Desacelera()
         {
 
+        }
+
+        public void GerarPlaca()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PagarPedagio()
+        {
+            throw new NotImplementedException();
         }
     }
 }

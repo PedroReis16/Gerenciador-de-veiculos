@@ -52,7 +52,7 @@ namespace Gerenciador_de_veículos.Views
 
         }
 
-        private void btnCargoPlane_Click(object sender, RoutedEventArgs e)
+        private void btnWarPlane_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -71,5 +71,25 @@ namespace Gerenciador_de_veículos.Views
         {
 
         }
+
+        private void VehicleOption_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Button button = sender as Button;
+            button.Background = new SolidColorBrush(Color.FromRgb(00, 146, 255));
+        }
+
+        private void VehicleOptions_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Button button = sender as Button;
+            button.Background = new SolidColorBrush(Color.FromRgb(00, 177, 255));
+        }
+
+        //Mouse Enter
+        //Button button = sender as Button;
+        //button.Background = new SolidColorBrush(Color.FromRgb(00, 146, 255));
+
+        //Mouse Leave
+        //Button button = sender as Button;
+        //button.Background = new SolidColorBrush(Color.FromRgb(00, 177, 255));
     }
 }

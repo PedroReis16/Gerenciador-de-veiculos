@@ -13,8 +13,8 @@ namespace Gerenciador_de_veículos.Objects
         public string Id { get; set; }
         public double Peso { get; set; }
         public int Velocidade { get; set; }
-        public int CapacidadePagageitos { get; set; }
         public Modelo Modelo { get; set; }
+        public int CapacidadePassageiros { get; set; }
 
         public void Acelera()
         {

@@ -15,7 +15,7 @@
             
             <StackPanel Orientation="Horizontal" Margin="0 4" >
                 <Border Name="btnCarBorder"  CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnCar" Click="BtnCar_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button Name="btnCar" Click="BtnCar_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Car"
@@ -28,7 +28,7 @@
                     </Button>
                 </Border>
                 <Border Name="btnBikeBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button  Name="btnBike" Click="BtnBike_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button  Name="btnBike" Click="BtnBike_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Motorbike"
@@ -41,7 +41,7 @@
                     </Button>
                 </Border>
                 <Border Name="btnBusBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnBus" Click="BtnBus_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button Name="btnBus" Click="BtnBus_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Bus"
@@ -57,7 +57,7 @@
 
             <StackPanel  Orientation="Horizontal" Margin="0 4" >
                 <Border Name="btnTruckBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnTruck" Click="BtnTruck_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button Name="btnTruck" Click="BtnTruck_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Truck"
@@ -70,7 +70,7 @@
                     </Button>
                 </Border>
                 <Border Name="btnPlaneBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnPlane" Click="BtnPlane_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button Name="btnPlane" Click="BtnPlane_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Airplane"
@@ -82,8 +82,8 @@
                         </StackPanel>
                     </Button>
                 </Border>
-                <Border Name="btnCargoPlaneBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnCargoPlane" Click="btnCargoPlane_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                <Border Name="btnWarPlaneBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
+                    <Button Name="btnWarPlane" Click="btnWarPlane_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Airplane"
@@ -100,7 +100,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0 4" >
                 <Border Name="btnTrainBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnTrain"  Click="BtnTrain_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button Name="btnTrain"  Click="BtnTrain_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Train"
@@ -113,7 +113,7 @@
                     </Button>
                 </Border>
                 <Border Name="btnShipBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnShip" Click="BtnShip_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button Name="btnShip" Click="BtnShip_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Ferry"
@@ -126,7 +126,7 @@
                     </Button>
                 </Border>
                 <Border Name="btnWarShipBorder" CornerRadius="15" Width="190" Height="170" Margin="4 0">
-                    <Button Name="btnWarShip" Click="BtnWarShip_Click" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
+                    <Button Name="btnWarShip" Click="BtnWarShip_Click" MouseEnter="VehicleOption_MouseEnter" MouseLeave="VehicleOptions_MouseLeave" Width="190" Height="170" Padding="0" Margin="0" Background="#0086FF" BorderBrush="#0086FF">
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
                                         Kind="Ferry"

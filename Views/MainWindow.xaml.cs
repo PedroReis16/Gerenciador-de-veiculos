@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Gerenciador_de_veículos
 {
@@ -21,9 +23,14 @@ namespace Gerenciador_de_veículos
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DispatcherTimer actionTimer;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            InitializeTimer();
+            actionTimer.Start();
         }
 
         #region Notification Button Events
@@ -55,7 +62,6 @@ namespace Gerenciador_de_veículos
 
         }
 
-
         private void btnActions_Click(object sender, RoutedEventArgs e)
         {
 
@@ -67,8 +73,19 @@ namespace Gerenciador_de_veículos
                 VehiclesOptions.Children.Clear();
                 VehiclesOptions.Visibility = Visibility.Collapsed;
                 InitialButtons.Visibility = Visibility.Visible;
+                BtnBack.Visibility = Visibility.Collapsed;
             }
         }
         #endregion
+        private void InitializeTimer()
+        {
+            actionTimer = new DispatcherTimer();
+            actionTimer.Tick += new EventHandler(ActionTimer);
+            actionTimer.Interval = TimeSpan.FromSeconds(1);
+        }
+        private void ActionTimer(object sender, EventArgs e)
+        {
+            //Timer que irá gerar uma ação aleatória nos veículos
+        }
     }
 }

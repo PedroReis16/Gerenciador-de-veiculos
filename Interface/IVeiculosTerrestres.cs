@@ -8,7 +8,7 @@ namespace Gerenciador_de_veículos.Interface
 {
     public interface IVeiculosTerrestres : IVeiculos
     {
-        int Passageiros { get; set; }
         void PagarPedagio();
+        void GerarPlaca();
     }
 }
