@@ -1,5 +1,6 @@
 ﻿using Gerenciador_de_veículos.Interface;
 using Gerenciador_de_veículos.Service;
+using Gerenciador_de_veículos.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,12 @@ namespace Gerenciador_de_veículos.Objects
         public bool Limpador { get; set; }
         public int Eixos { get; set; }
         public bool Leito { get; set; }
+
+        public Onibus()
+        {
+            Id = GeradorPlacas.GerarPlaca(); 
+        }
+
         public void Acelera()
         {
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gerenciador_de_veículos.DAO;
+using Gerenciador_de_veículos.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +19,10 @@ namespace Gerenciador_de_veículos.Services
             {
                 string placa = GerarCombinação();
 
-
+                if(VeiculosTerrestresDAO.GetAllVehicles().FindAll(i=>i.Id.Equals(placa)).Count() == 0)
+                {
+                    return placa;
+                }
             }
         }
 

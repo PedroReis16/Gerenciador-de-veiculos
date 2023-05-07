@@ -10,7 +10,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class VeiculosTerrestresDAO
     {
-        public List<IVeiculos> GetAllVehicles()
+        public static List<IVeiculos> GetAllVehicles()
         {
             List<IVeiculos> list = new List<IVeiculos>();
 
