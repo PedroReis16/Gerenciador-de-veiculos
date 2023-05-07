@@ -9,69 +9,69 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.DAO
 {
-    public class AvioesDAO
+    public class NavioGuerra
     {
-        string DataAviao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataAvioes.JSON";
+        string DataNavio = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataNaviosGuerra.JSON";
 
-        public void Save(Aviao veiculo)
+        public void Save(NavioGuerra veiculo)
         {
             try
             {
-                string json = File.ReadAllText(DataAviao);
-                var JObject = JsonConvert.DeserializeObject<List<Aviao>>(json).ToList();
+                string json = File.ReadAllText(DataNavio);
+                var JObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
 
                 JObject.Add(veiculo);
 
                 string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
-                File.WriteAllText(DataAviao, novoJsonResult);
+                File.WriteAllText(DataNavio, novoJsonResult);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erro ao adicionar avião");
             }
         }
-        public void Delete(Aviao veiculo)
+        public void Delete(NavioGuerra veiculo)
         {
             try
             {
-                var json = File.ReadAllText(DataAviao);
-                List<Aviao> jObject = JsonConvert.DeserializeObject<List<Aviao>>(json).ToList();
+                var json = File.ReadAllText(DataNavio);
+                List<NavioGuerra> jObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
 
                 jObject.Remove(veiculo);
 
                 var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataAviao, saida);
+                File.WriteAllText(DataNavio, saida);
             }
             catch
             {
                 Console.WriteLine("Erro ao excluir avião");
             }
         }
-        public void Edit(Aviao veiculo)
+        public void Edit(NavioGuerra veiculo)
         {
             try
             {
-                string json = File.ReadAllText(DataAviao);
-                List<Aviao> jObject = JsonConvert.DeserializeObject<List<Aviao>>(json).ToList();
+                string json = File.ReadAllText(DataNavio);
+                List<NavioGuerra> jObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
 
-                Aviao antigo = jObject.Where(id => id.Id == veiculo.Id).FirstOrDefault();
+                NavioGuerra antigo = jObject.Where(id => id.Id == veiculo.Id).FirstOrDefault();
 
                 antigo = veiculo;
 
                 string novoJsonResult = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataAviao, novoJsonResult);
+                File.WriteAllText(DataNavio, novoJsonResult);
             }
             catch
             {
                 Console.WriteLine("Erro ao editar avião");
             }
         }
-        public List<Aviao> GetAll()
+        public List<NavioGuerra> GetAll()
         {
             try
             {
-                string json = File.ReadAllText(DataAviao);
-                List<Aviao> jObject = JsonConvert.DeserializeObject<List<Aviao>>(json).ToList();
+                string json = File.ReadAllText(DataNavio);
+                List<NavioGuerra> jObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
                 return jObject;
             }
             catch
