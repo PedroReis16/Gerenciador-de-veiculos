@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\App.xaml
-3-454016560
+4-81402339
 
-41-1724779143
+42-180000336
 17-1161355731
-Views\MainWindow.xaml;Views\NotificationView.xaml;Views\VehiclesOptions.xaml;
+Views\ActionsOptions.xaml;Views\MainWindow.xaml;Views\NotificationView.xaml;Views\VehiclesOptions.xaml;
 
-True
+False
 

@@ -92,12 +92,19 @@
     <Compile Include="Services\IdentificadorNavio.cs" />
     <Compile Include="Services\IdentificadorTrem.cs" />
     <Compile Include="Services\IdentificadorCarro.cs" />
+    <Compile Include="Views\ActionsOptions.xaml.cs">
+      <DependentUpon>ActionsOptions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NotificationView.xaml.cs">
       <DependentUpon>NotificationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VehiclesOptions.xaml.cs">
       <DependentUpon>VehiclesOptions.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\ActionsOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

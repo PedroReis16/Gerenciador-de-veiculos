@@ -51,11 +51,11 @@ namespace Gerenciador_de_veículos
             BtnBack.Visibility = Visibility.Visible;
             VehiclesOptions vehiclesOptions = new VehiclesOptions(this);
 
-            VehiclesOptions.Children.Clear();
-            VehiclesOptions.Children.Add(vehiclesOptions);
-            VehiclesOptions.Visibility = Visibility.Visible;
+            VehiclesGrid.Children.Clear();
+            VehiclesGrid.Children.Add(vehiclesOptions);
+            VehiclesGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
-            
+
         }
         private void btnToll_Click(object sender, RoutedEventArgs e)
         {//Evento do botão pedágio
@@ -64,14 +64,27 @@ namespace Gerenciador_de_veículos
 
         private void btnActions_Click(object sender, RoutedEventArgs e)
         {
+            BtnBack.Visibility = Visibility.Visible;
+            ActionsOptions actionsOptions = new ActionsOptions(this);
 
+            ActionGrid.Children.Clear();
+            ActionGrid.Children.Add(actionsOptions);
+            ActionGrid.Visibility = Visibility.Visible;
+            InitialButtons.Visibility = Visibility.Collapsed;
         }
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            if(VehiclesOptions.Visibility == Visibility.Visible)
+            if (VehiclesGrid.Visibility == Visibility.Visible)
             {
-                VehiclesOptions.Children.Clear();
-                VehiclesOptions.Visibility = Visibility.Collapsed;
+                VehiclesGrid.Children.Clear();
+                VehiclesGrid.Visibility = Visibility.Collapsed;
+                InitialButtons.Visibility = Visibility.Visible;
+                BtnBack.Visibility = Visibility.Collapsed;
+            }
+            if(ActionGrid.Visibility == Visibility.Visible)
+            {
+                ActionGrid.Children.Clear();
+                ActionGrid.Visibility = Visibility.Collapsed;
                 InitialButtons.Visibility = Visibility.Visible;
                 BtnBack.Visibility = Visibility.Collapsed;
             }

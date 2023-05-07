@@ -38,3 +38,27 @@ D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.lref
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.exe
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.pdb
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe.config
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.pdb
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.dll
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Newtonsoft.Json.dll
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.pdb
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\bin\Debug\Newtonsoft.Json.xml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\App.baml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.baml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.baml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.baml
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.g.resources
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador_de_veículos.Properties.Resources.resources
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.GenerateResource.cache
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CoreCompileInputs.cache
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CopyComplete
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.g.cs
+D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.baml
