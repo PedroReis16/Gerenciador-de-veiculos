@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("carro.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("datafiles/datanavios.txt")]
 
 

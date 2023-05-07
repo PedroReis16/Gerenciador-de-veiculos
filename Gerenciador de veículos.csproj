@@ -70,8 +70,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAO\AvioesDAO.cs" />
+    <Compile Include="DAO\NaviosDAO.cs" />
+    <Compile Include="DAO\VeiculosTerrestresDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
     <Compile Include="Objects\Pagamento.cs" />
+    <Compile Include="Services\GeradorPlacas.cs" />
     <Compile Include="Views\NotificationView.xaml.cs">
       <DependentUpon>NotificationView.xaml</DependentUpon>
     </Compile>
@@ -142,8 +146,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
-    <Folder Include="Services\" />
+    <None Include="DataFiles\DataCarros.JSON" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataFiles\DataMotos.JSON" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataFiles\DataCaminhoes.JSON" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataFiles\DataOnibus.JSON" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataFiles\DataAvioes.JSON" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataFiles\DataNavios.JSON" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" />
