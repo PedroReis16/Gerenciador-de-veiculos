@@ -11,14 +11,15 @@ namespace Gerenciador_de_veículos.Objects
     public class Caminhao : IVeiculos, IVeiculosTerrestres
     {
         public string Id { get; set; }
-        public double Peso { get; set; }
+        public double Peso { get; set; } //veiculo descarregado
+        public int Eixos { get; set; }
         public int Velocidade { get; set; }
         public int Passageiros { get; set; }
-        public double Carga { get; set; }
-        public double Capacidade { get; set; }
+        public double Carga { get; set; } //quantidade de carga atual
+        public double Capacidade { get; set; } //quantidade máxima de carga
         public Modelo Modelo { get; set; }
         public int CapacidadePassageiros { get; set; }
-
+        public bool Limpador { get; set; }
         public void Acelera()
         {
 

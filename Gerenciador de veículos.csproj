@@ -50,6 +50,9 @@
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -73,6 +76,8 @@
     <Compile Include="DAO\AvioesDAO.cs" />
     <Compile Include="DAO\CaminhoesDAO.cs" />
     <Compile Include="DAO\CarrosDAO.cs" />
+    <Compile Include="DAO\MarcasDAO.cs" />
+    <Compile Include="DAO\ModelosDAO.cs" />
     <Compile Include="DAO\MotosDAO.cs" />
     <Compile Include="DAO\NaviosDAO.cs" />
     <Compile Include="DAO\OnibusDAO.cs" />
@@ -141,6 +146,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DataFiles\DataModelos.JSON" />
+    <None Include="DataFiles\DataMarcas.JSON" />
     <None Include="DataFiles\DataPedagio.JSON" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
