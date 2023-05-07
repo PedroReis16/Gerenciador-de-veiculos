@@ -24,7 +24,7 @@ namespace Gerenciador_de_veículos.Objects
 
         public Caminhao()
         {
-            Id = GeradorPlacas.GerarPlaca();
+            Id = IdentificadorCarro.GerarPlaca();
         }
 
         public void Acelera()
@@ -49,9 +49,5 @@ namespace Gerenciador_de_veículos.Objects
 
         }
 
-        public void GerarPlaca()
-        {
-
-        }
     }
 }

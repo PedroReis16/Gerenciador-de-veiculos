@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Objects
 
         public Moto()
         {
-            Id = GeradorPlacas.GerarPlaca();
+            Id = IdentificadorCarro.GerarPlaca();
         }
 
         public void Acelera()

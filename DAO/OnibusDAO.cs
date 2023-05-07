@@ -11,7 +11,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class OnibusDAO
     {
-        string DataOnibus = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataOnibus.JSON";
+        static string DataOnibus = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataOnibus.JSON";
 
         public void Save(Onibus veiculo)
         {
@@ -66,7 +66,7 @@ namespace Gerenciador_de_veículos.DAO
 
             }
         }
-        public List<Onibus> GetAll()
+        public static List<Onibus> GetAll()
         {
             try
             {

@@ -1,5 +1,6 @@
 ﻿using Gerenciador_de_veículos.Interface;
 using Gerenciador_de_veículos.Service;
+using Gerenciador_de_veículos.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,16 +17,21 @@ namespace Gerenciador_de_veículos.Objects
         public int CapacidadePassageiros { get; set; }
         public Modelo Modelo { get; set; }
         public bool Limpador { get; set; }
-        public int QtdVagoes { get; set; } 
+        public int QtdVagoes { get; set; }
 
+        public Trem()
+        {
+            Id = IdentificadorTrem.GerarMatricula();
+        }
         public void Acelera()
         {
-            
+
         }
 
         public void Desacelera()
         {
-            
+
         }
+
     }
 }

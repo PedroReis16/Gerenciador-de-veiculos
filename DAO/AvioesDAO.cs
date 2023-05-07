@@ -11,7 +11,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class AvioesDAO
     {
-        string DataAviao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataAvioes.JSON";
+        static string DataAviao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataAvioes.JSON";
 
         public void Save(Aviao veiculo)
         {
@@ -66,7 +66,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao editar avião");
             }
         }
-        public List<Aviao> GetAll()
+        public static List<Aviao> GetAll()
         {
             try
             {

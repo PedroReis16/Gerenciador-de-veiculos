@@ -11,7 +11,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class NaviosDAO
     {
-        string DataNavio = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataNavios.JSON";
+        static string DataNavio = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataNavios.JSON";
 
         public void Save(Navio veiculo)
         {
@@ -66,7 +66,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao editar avião");
             }
         }
-        public List<Navio> GetAll()
+        public static List<Navio> GetAll()
         {
             try
             {
