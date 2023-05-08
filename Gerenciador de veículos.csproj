@@ -80,20 +80,31 @@
     <Compile Include="DAO\MarcasDAO.cs" />
     <Compile Include="DAO\ModelosDAO.cs" />
     <Compile Include="DAO\MotosDAO.cs" />
-    <Compile Include="DAO\NavioGuerra.cs" />
+    <Compile Include="DAO\NavioGuerraDAO.cs" />
     <Compile Include="DAO\NaviosDAO.cs" />
     <Compile Include="DAO\OnibusDAO.cs" />
     <Compile Include="DAO\PedagioDAO.cs" />
-    <Compile Include="DAO\VeiculosTerrestresDAO.cs" />
+    <Compile Include="DAO\TrensDAO.cs" />
+    <Compile Include="DAO\VeiculosDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
     <Compile Include="Objects\Pagamento.cs" />
-    <Compile Include="Services\GeradorPlacas.cs" />
+    <Compile Include="Services\IdentificadorAviao.cs" />
+    <Compile Include="Services\IdentificadorNavio.cs" />
+    <Compile Include="Services\IdentificadorTrem.cs" />
+    <Compile Include="Services\IdentificadorCarro.cs" />
+    <Compile Include="Views\ActionsOptions.xaml.cs">
+      <DependentUpon>ActionsOptions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NotificationView.xaml.cs">
       <DependentUpon>NotificationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VehiclesOptions.xaml.cs">
       <DependentUpon>VehiclesOptions.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\ActionsOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -153,6 +164,7 @@
     <None Include="DataFiles\DataMarcas.JSON" />
     <None Include="DataFiles\DataNaviosGuerra.JSON" />
     <None Include="DataFiles\DataPedagio.JSON" />
+    <None Include="DataFiles\DataTrens.JSON" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

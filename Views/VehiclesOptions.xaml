@@ -89,9 +89,9 @@
                                         Kind="Airplane"
                                         Width="110"
                                         Height="110"
-                                        Margin="32 0 0 0"
+                                        Margin="20 0 0 0"
                                         />
-                            <Label Content="Avião de carga" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                            <Label Content="Avião de guerra" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="20"/>
                         </StackPanel>
                     </Button>
                 </Border>

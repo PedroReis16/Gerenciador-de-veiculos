@@ -1,5 +1,6 @@
 ﻿using Gerenciador_de_veículos.Interface;
 using Gerenciador_de_veículos.Service;
+using Gerenciador_de_veículos.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ namespace Gerenciador_de_veículos.Objects
         public int CapacidadePassageiros { get ; set ; }
         public bool Limpador { get; set; }
 
+        public Aviao()
+        {
+            Id = IdentificadorAviao.GerarMatricula();
+        }
         public void Acelera()
         {
             Velocidade++;

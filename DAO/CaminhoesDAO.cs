@@ -11,7 +11,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class CaminhoesDAO
     {
-        string DataCaminhao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataCaminhoes.JSON";
+        static string DataCaminhao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataCaminhoes.JSON";
 
         public void Save(Caminhao veiculo)
         {
@@ -66,7 +66,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao editar caminhão");
             }
         }
-        public List<Caminhao> GetAll()
+        public static List<Caminhao> GetAll()
         {
             try
             {

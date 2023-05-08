@@ -1,0 +1,280 @@
+﻿<UserControl x:Class="Gerenciador_de_veículos.Views.ActionsOptions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Gerenciador_de_veículos.Views"
+      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Height="600" 
+      Width="800"
+      >
+    <Grid Background="#001b8f">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+            <StackPanel Orientation="Horizontal" Margin="0 4">
+
+                <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
+                    <Button  
+                        ToolTip="Acelera um veículo aleatório"
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150" 
+                        Padding="0" Margin="0"
+                        Background="#0086FF"
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Speedometer"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Acelerar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
+                    <Button  
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave"
+                        Width="170" Height="150" 
+                        Padding="0" 
+                        Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="SpeedometerSlow"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Reduzir" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
+                    <Button 
+                        ToolTip="Liga ou desliga o limpador de algum dos veículos"
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150" 
+                        Padding="0" 
+                        Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="WiperWash"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="8 0 0 0"
+                                        />
+                            <Label Content="Limpador" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border CornerRadius="15" Width="170" Height="150"  Margin="4 0">
+                    <Button 
+                        ToolTip="Faça algum veículo pagar o pedágio"
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150"  Padding="0" 
+                        Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Money"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Pedágio" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0 4">
+
+                <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
+                    <Button 
+                        ToolTip="Carregar caminhão"
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150" 
+                        Padding="0" 
+                        Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="DumpTruck"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Carregar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
+                    <Button  
+                        ToolTip="Descarregar caminhão"
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150" 
+                        Padding="0" Margin="0"
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="TruckFlatbed"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="16 0 0 0"
+                                        />
+                            <Label Content="Descarregar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
+                    <Button  
+                        ToolTip="Empinar moto"
+                        MouseEnter="ActionOptions_MouseEnter" 
+                        MouseLeave="ActionOptions_MouseLeave"
+                        Width="170" Height="150" 
+                        Padding="0" Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Motorbike"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Empinar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
+                    <Button  
+                        ToolTip="Pousar Avião"
+                        MouseEnter="ActionOptions_MouseEnter" 
+                        MouseLeave="ActionOptions_MouseLeave"
+                        Width="170" Height="150"  
+                        Padding="0" Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="AirplaneLanding"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Pousar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0 4">
+                <Border CornerRadius="15" Width="170" Height="150" Margin="4 0">
+                    <Button 
+                        ToolTip="Decolar"
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150"  
+                        Padding="0" Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="AirplaneTakeoff"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Decolar" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
+                    <Button 
+                        ToolTip="Faça o piloto de uma avião abandonar o veículo"
+                        MouseEnter="ActionOptions_MouseEnter" 
+                        MouseLeave="ActionOptions_MouseLeave"
+                        Width="170" Height="150" 
+                        Padding="0" Margin="0"
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="Eject"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Ejetar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
+                    <Button 
+                        ToolTip="Ataque um barco ou navio"
+                        MouseEnter="ActionOptions_MouseEnter" 
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150" 
+                        Padding="0" Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="SwordCross"
+                                        Width="90"
+                                        Height="90"
+                                        Margin="4 4 0 0"
+                                        />
+                            <Label Content="Ataque" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+                <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
+                    <Button  
+                        ToolTip="Faça um barco parar no porto"
+                        MouseEnter="ActionOptions_MouseEnter" 
+                        MouseLeave="ActionOptions_MouseLeave"
+                        Width="170" Height="150" 
+                        Padding="0" Margin="0"
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="ShipWheel"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="4 0 0 0"
+                                        />
+                            <Label Content="Atracar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

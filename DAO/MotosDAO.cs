@@ -11,7 +11,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class MotosDAO
     {
-        string DataMoto = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataMotos.JSON";
+        static string DataMoto = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataMotos.JSON";
 
         public void Save(Moto veiculo)
         {
@@ -66,7 +66,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Error ao editar moto");
             }
         }
-        public List<Moto> GetAll()
+        public static List<Moto> GetAll()
         {
             try
             {

@@ -1,23 +1,27 @@
-﻿using System;
+﻿using Gerenciador_de_veículos.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Services
-{//Classe responsável por gerar placas aleatórias para os veículos terrestres, que servirão também com identificadores únicos
-    public class GeradorPlacas
+{
+    public class IdentificadorTrem
     {
         private static Random random = new Random();
         private static string[] letras = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 
-        public static string GerarPlaca()
+        public static string GerarMatricula()
         {
             while (true)
             {
-                string placa = GerarCombinação();
+                string matricula = GerarCombinação();
 
-
+                if (VeiculosDAO.GetAllTrains().FindAll(i => i.Id.Equals(matricula)).Count() == 0)
+                {
+                    return matricula;
+                }
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿using Gerenciador_de_veículos.Interface;
 using Gerenciador_de_veículos.Service;
+using Gerenciador_de_veículos.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,11 @@ namespace Gerenciador_de_veículos.Objects
         public bool Oficial { get; set; }
         public bool Limpador { get; set; }
 
+        public Carro()
+        {
+            Id = IdentificadorCarro.GerarPlaca();
+        }
+
         public void Acelera()
         {
 
@@ -26,17 +32,11 @@ namespace Gerenciador_de_veículos.Objects
 
         public void Desacelera()
         {
-            
-        }
 
-        public void GerarPlaca()
-        {
-            
         }
-
         public void PagarPedagio()
         {
-            
+
         }
     }
 }

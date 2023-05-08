@@ -4,21 +4,19 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.DAO
 {
-    public class NavioGuerra
+    public class TrensDAO
     {
-        string DataNavio = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataNaviosGuerra.JSON";
+        static string DataNavio = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataTrens.JSON";
 
-        public void Save(NavioGuerra veiculo)
+        public void Save(Trem veiculo)
         {
             try
             {
                 string json = File.ReadAllText(DataNavio);
-                var JObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
+                var JObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
 
                 JObject.Add(veiculo);
 
@@ -30,12 +28,12 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao adicionar avião");
             }
         }
-        public void Delete(NavioGuerra veiculo)
+        public void Delete(Trem veiculo)
         {
             try
             {
                 var json = File.ReadAllText(DataNavio);
-                List<NavioGuerra> jObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
+                List<Trem> jObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
 
                 jObject.Remove(veiculo);
 
@@ -47,14 +45,14 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao excluir avião");
             }
         }
-        public void Edit(NavioGuerra veiculo)
+        public void Edit(Trem veiculo)
         {
             try
             {
                 string json = File.ReadAllText(DataNavio);
-                List<NavioGuerra> jObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
+                List<Trem> jObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
 
-                NavioGuerra antigo = jObject.Where(id => id.Id == veiculo.Id).FirstOrDefault();
+                Trem antigo = jObject.Where(id => id.Id == veiculo.Id).FirstOrDefault();
 
                 antigo = veiculo;
 
@@ -66,12 +64,12 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao editar avião");
             }
         }
-        public List<NavioGuerra> GetAll()
+        public static List<Trem> GetAll()
         {
             try
             {
                 string json = File.ReadAllText(DataNavio);
-                List<NavioGuerra> jObject = JsonConvert.DeserializeObject<List<NavioGuerra>>(json).ToList();
+                List<Trem> jObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
                 return jObject;
             }
             catch
