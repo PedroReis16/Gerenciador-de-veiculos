@@ -17,6 +17,7 @@ namespace Gerenciador_de_veículos.Objects
         public int CapacidadePassageiros { get; set; }
         public Modelo Modelo { get; set; }
         public bool Empinar { get;set; }
+        public int VelMax { get; set; }
 
         public Moto()
         {

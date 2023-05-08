@@ -20,6 +20,7 @@ namespace Gerenciador_de_veículos.Objects
         public Modelo Modelo { get; set; }
         public int CapacidadePassageiros { get; set; }
         public bool Limpador { get; set; }
+        public int VelMax { get; set; }
 
         public Caminhao()
         {

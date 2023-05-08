@@ -13,6 +13,7 @@ namespace Gerenciador_de_veículos.Interface
         double Peso { get; set; }
         int Velocidade { get; set; }
         int CapacidadePassageiros { get; set; }
+        int VelMax { get; set; }
         Modelo Modelo { get; set; }
     }
 }

@@ -76,10 +76,11 @@ namespace Gerenciador_de_veículos.Services
 
                     Carro carro = new Carro();
                     carro.Peso = random.Next(900, 2001);
-                    carro.Velocidade = random.Next(0, 161);
+                    carro.VelMax = random.Next(150, 300);
+                    carro.Velocidade = random.Next(10, 161);
                     carro.CapacidadePassageiros = lugares[random.Next(0, 4)];
                     carro.Modelo = modelo[random.Next(0, modelo.Count)];
-                    if(random.Next(0,1) == 0)
+                    if (random.Next(0, 1) == 0)
                     {
                         carro.Portas = 4;
                     }
@@ -104,7 +105,8 @@ namespace Gerenciador_de_veículos.Services
                     Moto moto = new Moto();
 
                     moto.Peso = random.Next(90, 161);
-                    moto.Velocidade = random.Next(0, 300);
+                    moto.VelMax = random.Next(150, 300);
+                    moto.Velocidade = random.Next(10, 300);
                     moto.CapacidadePassageiros = 2;
                     moto.Modelo = modelo[random.Next(0, modelo.Count)];
                     moto.Empinar = false;
@@ -116,13 +118,14 @@ namespace Gerenciador_de_veículos.Services
                     Onibus onibus = new Onibus();
 
                     onibus.Peso = random.Next(5000, 14500);
+                    onibus.VelMax = random.Next(70, 120);
                     onibus.Velocidade = random.Next(0, 91);
                     onibus.Modelo = modelo[random.Next(0, modelo.Count)];
                     onibus.CapacidadePassageiros = random.Next(20, 61);
                     onibus.Limpador = false;
                     onibus.Eixos = random.Next(2, 5);
 
-                    if(random.Next(0,1) == 0)
+                    if (random.Next(0, 1) == 0)
                     {
                         onibus.Leito = true;
                     }
@@ -135,20 +138,21 @@ namespace Gerenciador_de_veículos.Services
                     break;
                 case 4:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Caminhao).ToList();
-                     Caminhao caminhao = new Caminhao();
+                    Caminhao caminhao = new Caminhao();
 
-                    caminhao.Peso = random.Next(3500,8000);
+                    caminhao.Peso = random.Next(3500, 8000);
                     caminhao.Eixos = random.Next(2, 10);
+                    caminhao.VelMax = random.Next(70, 120);
                     caminhao.Velocidade = random.Next(0, 91);
-                    if(caminhao.Eixos == 2)
+                    if (caminhao.Eixos == 2)
                     {
                         caminhao.Capacidade = 4000;
                     }
-                    else if(caminhao.Eixos == 3)
+                    else if (caminhao.Eixos == 3)
                     {
                         caminhao.Capacidade = 6000;
                     }
-                    else if(caminhao.Eixos == 4)
+                    else if (caminhao.Eixos == 4)
                     {
                         caminhao.Capacidade = 11000;
                     }
@@ -177,6 +181,7 @@ namespace Gerenciador_de_veículos.Services
                     Aviao aviao = new Aviao();
 
                     aviao.Peso = 280000;
+                    aviao.VelMax = random.Next(650, 850);
                     aviao.Velocidade = random.Next(250, 850);
                     aviao.Modelo = modelo[random.Next(0, modelo.Count)];
                     aviao.CapacidadePassageiros = random.Next(0, 850);
@@ -189,6 +194,7 @@ namespace Gerenciador_de_veículos.Services
                     AviaoGuerra aviaoGuerra = new AviaoGuerra();
 
                     aviaoGuerra.Peso = 14000;
+                    aviaoGuerra.VelMax = random.Next(950,1700);
                     aviaoGuerra.Velocidade = random.Next(450, 1700);
                     aviaoGuerra.Modelo = modelo[random.Next(0, modelo.Count)];
                     aviaoGuerra.CapacidadePassageiros = 1;
@@ -200,6 +206,7 @@ namespace Gerenciador_de_veículos.Services
                     Navio navio = new Navio();
 
                     navio.Peso = 230000000;
+                    navio.VelMax = random.Next(45, 60);
                     navio.Velocidade = random.Next(0, 60);
                     navio.CapacidadePassageiros = 5000;
                     navio.Modelo = modelo[random.Next(0, modelo.Count)];
@@ -211,6 +218,7 @@ namespace Gerenciador_de_veículos.Services
                     NavioGuerra navioGuerra = new NavioGuerra();
 
                     navioGuerra.Peso = 14000000;
+                    navioGuerra.VelMax = random.Next(45, 60);
                     navioGuerra.Velocidade = random.Next(0, 60);
                     navioGuerra.CapacidadePassageiros = 200;
                     navioGuerra.Modelo = modelo[random.Next(0, modelo.Count)];
@@ -222,6 +230,7 @@ namespace Gerenciador_de_veículos.Services
                     Trem trem = new Trem();
 
                     trem.Peso = 100000000;
+                    trem.VelMax = random.Next(45, 80);
                     trem.Velocidade = random.Next(0, 60);
                     trem.CapacidadePassageiros = 1200;
                     trem.Modelo = modelo[random.Next(0, modelo.Count)];
@@ -278,7 +287,15 @@ namespace Gerenciador_de_veículos.Services
         } //Métodos responsável pela remoção de veículos
         public void Acelerar()
         {
+            int i = 0;
+            int index = random.Next(0, veiculos.Count);
+            int velocidade = random.Next(0, 100);
+            var veiculo = veiculos[index];
 
+            while (i<velocidade || i<veiculo.VelMax)
+            {
+
+            }
         }
         public void Reduzir()
         {

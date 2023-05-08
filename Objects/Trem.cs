@@ -18,6 +18,7 @@ namespace Gerenciador_de_veículos.Objects
         public Modelo Modelo { get; set; }
         public bool Limpador { get; set; }
         public int QtdVagoes { get; set; }
+        public int VelMax { get; set; }
 
         public Trem()
         {

@@ -19,10 +19,11 @@ namespace Gerenciador_de_veículos.Objects
         public bool Limpador { get; set; }
         public int Eixos { get; set; }
         public bool Leito { get; set; }
+        public int VelMax { get; set; }
 
         public Onibus()
         {
-            Id = IdentificadorCarro.GerarPlaca(); 
+            Id = IdentificadorCarro.GerarPlaca();
         }
     }
 }
