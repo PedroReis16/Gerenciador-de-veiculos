@@ -15,7 +15,7 @@ namespace Gerenciador_de_veículos.DAO
     {
         static string DataCarro = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataCarros.JSON";
 
-        public void Save(Carro carro)
+        public static void Save(Carro carro)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao adicionar carro");
             }
         }
-        public void Delete(Carro carro)
+        public static void Delete(Carro carro)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao excluir carro");
             }
         }
-        public void Edit(Carro carro)
+        public static void Edit(Carro carro)
         {
             try
             {

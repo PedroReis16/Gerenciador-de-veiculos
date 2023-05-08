@@ -13,7 +13,7 @@ namespace Gerenciador_de_veículos.DAO
     {
         static string DataCaminhao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataCaminhoes.JSON";
 
-        public void Save(Caminhao veiculo)
+        public static void Save(Caminhao veiculo)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao adicionar carro");
             }
         }
-        public void Delete(Caminhao veiculo)
+        public static void Delete(Caminhao veiculo)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao excluir carro");
             }
         }
-        public void Edit(Caminhao veiculo)
+        public static void Edit(Caminhao veiculo)
         {
             try
             {

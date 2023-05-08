@@ -1,5 +1,6 @@
 ﻿using Gerenciador_de_veículos.Interface;
 using System.Collections.Generic;
+using System.Security.Policy;
 
 namespace Gerenciador_de_veículos.DAO
 {
@@ -58,6 +59,17 @@ namespace Gerenciador_de_veículos.DAO
             list.AddRange(NaviosDAO.GetAll());
             list.AddRange(NavioGuerraDAO.GetAll());
             list.AddRange(TrensDAO.GetAll());
+
+            return list;
+        }
+        public static List<IVeiculos> GetAllRoadVehicles()
+        {
+            List<IVeiculos> list = new List<IVeiculos>();
+
+            list.AddRange(CarrosDAO.GetAll());
+            list.AddRange(MotosDAO.GetAll());
+            list.AddRange(OnibusDAO.GetAll());
+            list.AddRange(CaminhoesDAO.GetAll());
 
             return list;
         }

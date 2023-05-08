@@ -1,6 +1,8 @@
 ﻿using Gerenciador_de_veículos.DAO;
 using Gerenciador_de_veículos.Interface;
+using Gerenciador_de_veículos.Objects;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.RightsManagement;
@@ -19,7 +21,7 @@ namespace Gerenciador_de_veículos.Services
         }
 
         public void Random(int acao)
-        { 
+        {
             switch (acao)
             {
                 case 1:
@@ -69,7 +71,45 @@ namespace Gerenciador_de_veículos.Services
         } //Método responsável pela criação de novos veículos
         public void Remover()
         {
+            int index = random.Next(0, veiculos.Count);
+            var veiculo = veiculos[index];
 
+            if (veiculo.GetType() == typeof(Carro))
+            {
+                CarrosDAO.Delete((Carro)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Moto))
+            {
+                MotosDAO.Delete((Moto)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Onibus))
+            {
+                OnibusDAO.Delete((Onibus)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Caminhao))
+            {
+                CaminhoesDAO.Delete((Caminhao)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Aviao))
+            {
+                AvioesDAO.Delete((Aviao)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(AviaoGuerra))
+            {
+                AviaoGuerraDAO.Delete((AviaoGuerra)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Navio))
+            {
+                NaviosDAO.Delete((Navio)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(NavioGuerra))
+            {
+                NavioGuerraDAO.Delete((NavioGuerra)veiculo);
+            }
+            else
+            {
+                TrensDAO.Delete((Trem)veiculo);
+            }
         } //Métodos responsável pela remoção de veículos
         public void Acelerar()
         {

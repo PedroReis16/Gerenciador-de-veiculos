@@ -13,7 +13,7 @@ namespace Gerenciador_de_veículos.DAO
     {
         static string DataMoto = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataMotos.JSON";
 
-        public void Save(Moto veiculo)
+        public static void Save(Moto veiculo)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao adicionar carro");
             }
         }
-        public void Delete(Moto veiculo)
+        public static void Delete(Moto veiculo)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao excluir carro");
             }
         }
-        public void Edit(Moto veiculo)
+        public static void Edit(Moto veiculo)
         {
             try
             {

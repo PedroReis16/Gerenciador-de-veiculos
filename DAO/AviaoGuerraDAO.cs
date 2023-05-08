@@ -13,7 +13,7 @@ namespace Gerenciador_de_veículos.DAO
     {
         static string DataAviao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataAvioesGuerra.JSON";
 
-        public void Save(AviaoGuerra veiculo)
+        public static void Save(AviaoGuerra veiculo)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao adicionar avião");
             }
         }
-        public void Delete(AviaoGuerra veiculo)
+        public static void Delete(AviaoGuerra veiculo)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao excluir avião");
             }
         }
-        public void Edit(AviaoGuerra veiculo)
+        public static void Edit(AviaoGuerra veiculo)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao editar avião");
             }
         }
-        public static List<AviaoGuerra> GetAll()
+        public  static List<AviaoGuerra> GetAll()
         {
             try
             {

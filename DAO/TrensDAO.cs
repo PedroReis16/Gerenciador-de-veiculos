@@ -11,7 +11,7 @@ namespace Gerenciador_de_veículos.DAO
     {
         static string DataNavio = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataTrens.JSON";
 
-        public void Save(Trem veiculo)
+        public static void Save(Trem veiculo)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao adicionar avião");
             }
         }
-        public void Delete(Trem veiculo)
+        public static void Delete(Trem veiculo)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao excluir avião");
             }
         }
-        public void Edit(Trem veiculo)
+        public static void Edit(Trem veiculo)
         {
             try
             {

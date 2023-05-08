@@ -13,7 +13,7 @@ namespace Gerenciador_de_veículos.DAO
     {
         static string DataOnibus = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataOnibus.JSON";
 
-        public void Save(Onibus veiculo)
+        public static void Save(Onibus veiculo)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao adicionar ônibus");
             }
         }
-        public void Delete(Onibus veiculo)
+        public static void Delete(Onibus veiculo)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao excluir ônibus");
             }
         }
-        public void Edit(Onibus veiculo)
+        public static void Edit(Onibus veiculo)
         {
             try
             {
