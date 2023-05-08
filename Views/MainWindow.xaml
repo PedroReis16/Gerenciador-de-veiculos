@@ -11,7 +11,7 @@
         Width="1024"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         >
     <Border CornerRadius="5" Background="#001b8f">
         <Grid Margin="3" Background="Transparent">
@@ -91,7 +91,13 @@
                 
                 <!--Actions Options Grid-->
                 <Grid Name="ActionGrid" Width="800" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+                
+                <!--Toll Options Grid-->
+                <Grid Name="ToolGrid" Width="800" Height="600" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed"/>
+                
             </Grid>
+            <!--Label actions-->
+            <Label Name="lblActions" Width="1000" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0 48 0 0" FontFamily="NotoSans" FontWeight="Medium" FontSize="32" Foreground="White" Grid.Row="0" Grid.RowSpan="2" Visibility="Collapsed" />
             
             <!--Notification grid-->
             <Grid Name="NotificationsGrid" Grid.RowSpan="2" Background="Black" Opacity="0.5" Width="270" Height="250" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 48 32 0" Visibility="Collapsed"/>

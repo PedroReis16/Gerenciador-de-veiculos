@@ -64,6 +64,7 @@ namespace Gerenciador_de_veículos
 
         private void btnActions_Click(object sender, RoutedEventArgs e)
         {
+            btnNotification.Visibility = Visibility.Collapsed;
             BtnBack.Visibility = Visibility.Visible;
             ActionsOptions actionsOptions = new ActionsOptions(this);
 
@@ -87,6 +88,7 @@ namespace Gerenciador_de_veículos
                 ActionGrid.Visibility = Visibility.Collapsed;
                 InitialButtons.Visibility = Visibility.Visible;
                 BtnBack.Visibility = Visibility.Collapsed;
+                btnNotification.Visibility = Visibility.Visible;
             }
         }
         #endregion

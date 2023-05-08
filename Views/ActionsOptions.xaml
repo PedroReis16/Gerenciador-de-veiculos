@@ -16,6 +16,8 @@
 
                 <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
                     <Button  
+                        Name="btnAcelerate"
+                        Click="btnAcelerate_Click"
                         ToolTip="Acelera um veículo aleatório"
                         MouseEnter="ActionOptions_MouseEnter"
                         MouseLeave="ActionOptions_MouseLeave" 
@@ -37,6 +39,9 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
                     <Button  
+                        Name="btnBreak"
+                        Click="BtnBreak_Click"
+                        ToolTip="Freia um veículo aleatório"
                         MouseEnter="ActionOptions_MouseEnter"
                         MouseLeave="ActionOptions_MouseLeave"
                         Width="170" Height="150" 
@@ -58,6 +63,8 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
                     <Button 
+                        Name="btnWindShield"
+                        Click="BtnWindShield_Click"
                         ToolTip="Liga ou desliga o limpador de algum dos veículos"
                         MouseEnter="ActionOptions_MouseEnter"
                         MouseLeave="ActionOptions_MouseLeave" 
@@ -80,6 +87,8 @@
                 </Border>
                 <Border CornerRadius="15" Width="170" Height="150"  Margin="4 0">
                     <Button 
+                        Name="btnTool"
+                        Click="BtnTool_Click"
                         ToolTip="Faça algum veículo pagar o pedágio"
                         MouseEnter="ActionOptions_MouseEnter"
                         MouseLeave="ActionOptions_MouseLeave" 
@@ -104,7 +113,9 @@
 
                 <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
                     <Button 
-                        ToolTip="Carregar caminhão"
+                        Name="btnTruckLoad"
+                        Click="BtnTruckLoad_Click"
+                        ToolTip="Coloque carga em um caminhão aleatório"
                         MouseEnter="ActionOptions_MouseEnter"
                         MouseLeave="ActionOptions_MouseLeave" 
                         Width="170" Height="150" 
@@ -126,7 +137,9 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
                     <Button  
-                        ToolTip="Descarregar caminhão"
+                        Name="btnTruckUnload"
+                        Click="BtnTruckUnload_Click"
+                        ToolTip="Tire a carga de um dos caminhões"
                         MouseEnter="ActionOptions_MouseEnter"
                         MouseLeave="ActionOptions_MouseLeave" 
                         Width="170" Height="150" 
@@ -147,7 +160,9 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
                     <Button  
-                        ToolTip="Empinar moto"
+                        Name="btnCram"
+                        Click="BtnCram_Click"
+                        ToolTip="Faça uma moto sair empinando por aí"
                         MouseEnter="ActionOptions_MouseEnter" 
                         MouseLeave="ActionOptions_MouseLeave"
                         Width="170" Height="150" 
@@ -168,7 +183,9 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
                     <Button  
-                        ToolTip="Pousar Avião"
+                        Name="btnLanding"
+                        Click="BtnLanding_Click"
+                        ToolTip="Obrigue um dos aviões descansar um pouco"
                         MouseEnter="ActionOptions_MouseEnter" 
                         MouseLeave="ActionOptions_MouseLeave"
                         Width="170" Height="150"  
@@ -192,7 +209,9 @@
             <StackPanel Orientation="Horizontal" Margin="0 4">
                 <Border CornerRadius="15" Width="170" Height="150" Margin="4 0">
                     <Button 
-                        ToolTip="Decolar"
+                        Name="btnTakeOff"
+                        Click="BtnTakeOff_Click"
+                        ToolTip="Ao infinito e além!"
                         MouseEnter="ActionOptions_MouseEnter"
                         MouseLeave="ActionOptions_MouseLeave" 
                         Width="170" Height="150"  
@@ -213,7 +232,9 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
                     <Button 
-                        ToolTip="Faça o piloto de uma avião abandonar o veículo"
+                        Name="btnEject"
+                        Click="BtnEject_Click"
+                        ToolTip="MAYDAY,MAYDAY!"
                         MouseEnter="ActionOptions_MouseEnter" 
                         MouseLeave="ActionOptions_MouseLeave"
                         Width="170" Height="150" 
@@ -234,7 +255,9 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
                     <Button 
-                        ToolTip="Ataque um barco ou navio"
+                        Name="btnAttack"
+                        Click="BtnAttack_Click"
+                        ToolTip="Já pensou em iniciar um guerra hoje?"
                         MouseEnter="ActionOptions_MouseEnter" 
                         MouseLeave="ActionOptions_MouseLeave" 
                         Width="170" Height="150" 
@@ -255,6 +278,8 @@
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
                     <Button  
+                        Name="btnDock"
+                        Click="BtnDock_Click"
                         ToolTip="Faça um barco parar no porto"
                         MouseEnter="ActionOptions_MouseEnter" 
                         MouseLeave="ActionOptions_MouseLeave"

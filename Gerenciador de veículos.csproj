@@ -92,6 +92,7 @@
     <Compile Include="Services\IdentificadorNavio.cs" />
     <Compile Include="Services\IdentificadorTrem.cs" />
     <Compile Include="Services\IdentificadorCarro.cs" />
+    <Compile Include="Services\VeiculosAcoes.cs" />
     <Compile Include="Views\ActionsOptions.xaml.cs">
       <DependentUpon>ActionsOptions.xaml</DependentUpon>
     </Compile>
