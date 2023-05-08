@@ -194,7 +194,7 @@ namespace Gerenciador_de_veículos.Services
                     AviaoGuerra aviaoGuerra = new AviaoGuerra();
 
                     aviaoGuerra.Peso = 14000;
-                    aviaoGuerra.VelMax = random.Next(950,1700);
+                    aviaoGuerra.VelMax = random.Next(950, 1700);
                     aviaoGuerra.Velocidade = random.Next(450, 1700);
                     aviaoGuerra.Modelo = modelo[random.Next(0, modelo.Count)];
                     aviaoGuerra.CapacidadePassageiros = 1;
@@ -287,14 +287,52 @@ namespace Gerenciador_de_veículos.Services
         } //Métodos responsável pela remoção de veículos
         public void Acelerar()
         {
-            int i = 0;
             int index = random.Next(0, veiculos.Count);
-            int velocidade = random.Next(0, 100);
             var veiculo = veiculos[index];
+            int velocidade = random.Next(0, 100); //Velocidade que deseja aumentar
 
-            while (i<velocidade || i<veiculo.VelMax)
+            while (velocidade > 0 || veiculo.Velocidade < veiculo.VelMax)
             {
+                veiculo.Velocidade++;
 
+                velocidade--;
+            }
+
+            if (veiculo.GetType() == typeof(Carro))
+            {
+                CarrosDAO.Edit((Carro)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Moto))
+            {
+                MotosDAO.Edit((Moto)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Onibus))
+            {
+                OnibusDAO.Edit((Onibus)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Caminhao))
+            {
+                CaminhoesDAO.Edit((Caminhao)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Aviao))
+            {
+                AvioesDAO.Edit((Aviao)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(AviaoGuerra))
+            {
+                AviaoGuerraDAO.Edit((AviaoGuerra)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Navio))
+            {
+                NaviosDAO.Edit((Navio)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(NavioGuerra))
+            {
+                NavioGuerraDAO.Edit((NavioGuerra)veiculo);
+            }
+            else
+            {
+                TrensDAO.Edit((Trem)veiculo);
             }
         }
         public void Reduzir()
