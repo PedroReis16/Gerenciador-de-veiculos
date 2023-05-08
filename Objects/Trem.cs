@@ -23,15 +23,5 @@ namespace Gerenciador_de_veículos.Objects
         {
             Id = IdentificadorTrem.GerarMatricula();
         }
-        public void Acelera()
-        {
-
-        }
-
-        public void Desacelera()
-        {
-
-        }
-
     }
 }

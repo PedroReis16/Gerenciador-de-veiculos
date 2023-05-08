@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class AviaoGuerra : IVeiculos, IAviao
+    public class AviaoGuerra : IVeiculos
     {
         public string Id { get; set; }
         public double Peso { get; set; }
@@ -20,36 +20,6 @@ namespace Gerenciador_de_veículos.Objects
         public AviaoGuerra()
         {
             Id = IdentificadorAviao.GerarMatricula();
-        }
-        public void Acelera()
-        {
-
-        }
-        public void Desacelera()
-        {
-
-        }
-
-        public void Arremetar()
-        {
-
-        }
-
-        public void Decolar()
-        {
-
-        }
-        public void Pousar()
-        {
-
-        }
-        public void Ejetar()
-        {
-
-        }
-        public void Atacar()
-        {
-
         }
     }
 }

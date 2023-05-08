@@ -101,6 +101,9 @@ namespace Gerenciador_de_veículos
         private void ActionTimer(object sender, EventArgs e)
         {
             //Timer que irá gerar uma ação aleatória nos veículos
+
+            int acao = new Random().Next(1, 15);
+
         }
 
         #region Buttons Background Events

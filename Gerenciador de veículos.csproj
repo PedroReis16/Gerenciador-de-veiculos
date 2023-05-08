@@ -87,6 +87,7 @@
     <Compile Include="DAO\TrensDAO.cs" />
     <Compile Include="DAO\VeiculosDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
+    <Compile Include="Interface\IVeiculosAcoes.cs" />
     <Compile Include="Objects\Pagamento.cs" />
     <Compile Include="Services\IdentificadorAviao.cs" />
     <Compile Include="Services\IdentificadorNavio.cs" />

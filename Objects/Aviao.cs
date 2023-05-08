@@ -22,15 +22,6 @@ namespace Gerenciador_de_veículos.Objects
         {
             Id = IdentificadorAviao.GerarMatricula();
         }
-        public void Acelera()
-        {
-            Velocidade++;
-        }
-        public void Desacelera()
-        {
-            Velocidade--;
-        }
-
         public void Arremetar()
         {
 

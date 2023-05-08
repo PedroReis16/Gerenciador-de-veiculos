@@ -21,14 +21,5 @@ namespace Gerenciador_de_veículos.Objects
         {
             Id = IdentificadorNavio.GerarMatricula();
         }
-        public void Acelera()
-        {
-            
-        }
-
-        public void Desacelera()
-        {
-           
-        }
     }
 }

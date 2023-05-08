@@ -62,26 +62,25 @@
                     </Button>
                 </Border>
                 <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
-                    <Button 
-                        Name="btnWindShield"
-                        Click="BtnWindShield_Click"
-                        ToolTip="Liga ou desliga o limpador de algum dos veículos"
-                        MouseEnter="ActionOptions_MouseEnter"
-                        MouseLeave="ActionOptions_MouseLeave" 
+                    <Button  
+                        Name="btnCram"
+                        Click="BtnCram_Click"
+                        ToolTip="Faça uma moto sair empinando por aí"
+                        MouseEnter="ActionOptions_MouseEnter" 
+                        MouseLeave="ActionOptions_MouseLeave"
                         Width="170" Height="150" 
-                        Padding="0" 
-                        Margin="0" 
+                        Padding="0" Margin="0" 
                         Background="#0086FF" 
                         BorderBrush="#0086FF"
                         >
                         <StackPanel Orientation="Vertical">
                             <materialDesign:PackIcon
-                                        Kind="WiperWash"
+                                        Kind="Motorbike"
                                         Width="100"
                                         Height="100"
-                                        Margin="8 0 0 0"
+                                        Margin="4 0 0 0"
                                         />
-                            <Label Content="Limpador" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                            <Label Content="Empinar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
                         </StackPanel>
                     </Button>
                 </Border>
@@ -158,29 +157,7 @@
                         </StackPanel>
                     </Button>
                 </Border>
-                <Border  CornerRadius="15" Width="170" Height="150"  Margin="4 0">
-                    <Button  
-                        Name="btnCram"
-                        Click="BtnCram_Click"
-                        ToolTip="Faça uma moto sair empinando por aí"
-                        MouseEnter="ActionOptions_MouseEnter" 
-                        MouseLeave="ActionOptions_MouseLeave"
-                        Width="170" Height="150" 
-                        Padding="0" Margin="0" 
-                        Background="#0086FF" 
-                        BorderBrush="#0086FF"
-                        >
-                        <StackPanel Orientation="Vertical">
-                            <materialDesign:PackIcon
-                                        Kind="Motorbike"
-                                        Width="100"
-                                        Height="100"
-                                        Margin="4 0 0 0"
-                                        />
-                            <Label Content="Empinar" HorizontalAlignment="Center" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
-                        </StackPanel>
-                    </Button>
-                </Border>
+                
                 <Border  CornerRadius="15" Width="170" Height="150" Margin="4 0">
                     <Button  
                         Name="btnLanding"
@@ -204,9 +181,6 @@
                         </StackPanel>
                     </Button>
                 </Border>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal" Margin="0 4">
                 <Border CornerRadius="15" Width="170" Height="150" Margin="4 0">
                     <Button 
                         Name="btnTakeOff"
@@ -227,6 +201,32 @@
                                         Margin="4 0 0 0"
                                         />
                             <Label Content="Decolar" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0 4">
+                <Border CornerRadius="15" Width="170" Height="150" Margin="4 0">
+                    <Button 
+                        Name="btnAirplaneAlert"
+                        Click="BtnAirplaneAlert_Click"
+                        ToolTip="Achou que ia pousar, né?"
+                        MouseEnter="ActionOptions_MouseEnter"
+                        MouseLeave="ActionOptions_MouseLeave" 
+                        Width="170" Height="150"  
+                        Padding="0" Margin="0" 
+                        Background="#0086FF" 
+                        BorderBrush="#0086FF"
+                        >
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon
+                                        Kind="AirplaneAlert"
+                                        Width="100"
+                                        Height="100"
+                                        Margin="12 0 0 0"
+                                        />
+                            <Label Content="Arremeter" Foreground="White" FontFamily="NotoSans" FontSize="24"/>
                         </StackPanel>
                     </Button>
                 </Border>

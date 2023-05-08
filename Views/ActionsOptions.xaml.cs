@@ -51,12 +51,6 @@ namespace Gerenciador_de_veículos.Views
         {
 
         }
-
-        private void BtnWindShield_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnTool_Click(object sender, RoutedEventArgs e)
         {
 
@@ -86,7 +80,10 @@ namespace Gerenciador_de_veículos.Views
         {
 
         }
+        private void BtnAirplaneAlert_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
         private void BtnAttack_Click(object sender, RoutedEventArgs e)
         {
 
@@ -101,5 +98,7 @@ namespace Gerenciador_de_veículos.Views
         {
 
         }
+
+
     }
 }

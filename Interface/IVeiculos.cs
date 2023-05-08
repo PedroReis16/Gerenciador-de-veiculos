@@ -14,7 +14,5 @@ namespace Gerenciador_de_veículos.Interface
         int Velocidade { get; set; }
         int CapacidadePassageiros { get; set; }
         Modelo Modelo { get; set; }
-        void Acelera();
-        void Desacelera();
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class Onibus : IVeiculos, IVeiculosTerrestres
+    public class Onibus : IVeiculos
     {
         public string Id { get; set; }
         public double Peso { get; set; }
@@ -23,21 +23,6 @@ namespace Gerenciador_de_veículos.Objects
         public Onibus()
         {
             Id = IdentificadorCarro.GerarPlaca(); 
-        }
-
-        public void Acelera()
-        {
-
-        }
-
-        public void Desacelera()
-        {
-
-        }
-
-        public void PagarPedagio()
-        {
-            
         }
     }
 }
