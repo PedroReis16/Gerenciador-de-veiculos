@@ -15,9 +15,8 @@ namespace Gerenciador_de_veículos.Objects
         public double Peso { get; set; } //veiculo descarregado
         public int Eixos { get; set; }
         public int Velocidade { get; set; }
-        public int Passageiros { get; set; }
-        public double Carga { get; set; } //quantidade de carga atual
         public double Capacidade { get; set; } //quantidade máxima de carga
+        public double Carga { get; set; } //quantidade de carga atual
         public Modelo Modelo { get; set; }
         public int CapacidadePassageiros { get; set; }
         public bool Limpador { get; set; }
