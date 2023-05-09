@@ -8,7 +8,6 @@ namespace Gerenciador_de_veículos.Interface
 {
     public interface IVeiculosAcoes
     {
-        void Random(int acao);
         void Adicionar();
         void Remover();
         void Acelerar();

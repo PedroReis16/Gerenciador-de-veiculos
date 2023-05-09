@@ -36,14 +36,6 @@ namespace Gerenciador_de_veículos.DAO
 
             return list;
         }
-        public static List<IVeiculos> GetAllTrains()
-        {
-            List<IVeiculos> list = new List<IVeiculos>();
-
-            list.AddRange(TrensDAO.GetAll());
-
-            return list;
-        }
         public static List<IVeiculos> GetAll()
         {
             List<IVeiculos> list = new List<IVeiculos>();

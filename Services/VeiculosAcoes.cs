@@ -6,6 +6,7 @@ using Gerenciador_de_veículos.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Gerenciador_de_veículos.Services
 {
@@ -13,9 +14,16 @@ namespace Gerenciador_de_veículos.Services
     {
         Random random = new Random();
         List<IVeiculos> veiculos;
+        MainWindow main;
+
         public VeiculosAcoes()
         {
             veiculos = VeiculosDAO.GetAll();
+        }
+        public VeiculosAcoes(MainWindow main)
+        {
+            veiculos = VeiculosDAO.GetAll();
+            this.main = main;
         }
 
         public void Random(int acao)
@@ -337,10 +345,66 @@ namespace Gerenciador_de_veículos.Services
         }
         public void Reduzir()
         {
+            int index = random.Next(0, veiculos.Count);
+            var veiculo = veiculos[index];
+            int velocidade = random.Next(0, 100); //Velocidade que deseja diminuir
+            while (velocidade > 0 || veiculo.Velocidade > 0)
+            {
+                veiculo.Velocidade--;
+                velocidade--;
+            }
+            if (veiculo.GetType() == typeof(Carro))
+            {
+                CarrosDAO.Edit((Carro)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Moto))
+            {
+                MotosDAO.Edit((Moto)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Onibus))
+            {
+                OnibusDAO.Edit((Onibus)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Caminhao))
+            {
+                CaminhoesDAO.Edit((Caminhao)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Aviao))
+            {
+                AvioesDAO.Edit((Aviao)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(AviaoGuerra))
+            {
+                AviaoGuerraDAO.Edit((AviaoGuerra)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(Navio))
+            {
+                NaviosDAO.Edit((Navio)veiculo);
+            }
+            else if (veiculo.GetType() == typeof(NavioGuerra))
+            {
+                NavioGuerraDAO.Edit((NavioGuerra)veiculo);
+            }
+            else
+            {
+                TrensDAO.Edit((Trem)veiculo);
+            }
         }
         public void Limpador()
         {
+            List<IVeiculos> veiculos = this.veiculos.Where(x => x.GetType() != typeof(Moto)).ToList();
+            int index = random.Next(0, veiculos.Count);
 
+            var veiculo = veiculos[index];
+
+            if (veiculo != null)
+            {
+                main.TimerControl();
+                //Manda a mensagem que o limpador deste carro esta ligado
+                Thread.Sleep(3000);
+                //Manda mensagem que o limpador foi desligado
+                main.TimerControl();
+            }
         }
         public void Pedagio()
         {

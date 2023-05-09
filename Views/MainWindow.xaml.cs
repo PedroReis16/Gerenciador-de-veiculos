@@ -1,4 +1,5 @@
-﻿using Gerenciador_de_veículos.Views;
+﻿using Gerenciador_de_veículos.Services;
+using Gerenciador_de_veículos.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +25,18 @@ namespace Gerenciador_de_veículos
     public partial class MainWindow : Window
     {
         private DispatcherTimer actionTimer;
+        VeiculosAcoes acoes;
+        bool timer;
 
         public MainWindow()
         {
             InitializeComponent();
 
+            acoes = new VeiculosAcoes(this);
+
             InitializeTimer();
             actionTimer.Start();
+            timer = true;
         }
 
         #region Notification Button Events
@@ -82,7 +88,7 @@ namespace Gerenciador_de_veículos
                 InitialButtons.Visibility = Visibility.Visible;
                 BtnBack.Visibility = Visibility.Collapsed;
             }
-            if(ActionGrid.Visibility == Visibility.Visible)
+            if (ActionGrid.Visibility == Visibility.Visible)
             {
                 ActionGrid.Children.Clear();
                 ActionGrid.Visibility = Visibility.Collapsed;
@@ -103,7 +109,20 @@ namespace Gerenciador_de_veículos
             //Timer que irá gerar uma ação aleatória nos veículos
 
             int acao = new Random().Next(1, 15);
-
+            acoes.Random(acao);
+        }
+        public void TimerControl()
+        {
+            if (timer == true)
+            {
+                actionTimer.Stop();
+                timer = false;
+            }
+            else
+            {
+                actionTimer.Start();
+                timer = true;
+            }
         }
 
         #region Buttons Background Events
