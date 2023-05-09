@@ -3,6 +3,7 @@ using Gerenciador_de_veículos.Enums;
 using Gerenciador_de_veículos.Interface;
 using Gerenciador_de_veículos.Objects;
 using Gerenciador_de_veículos.Service;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace Gerenciador_de_veículos.Services
         Random random = new Random();
         List<IVeiculos> veiculos;
         MainWindow main;
+        double valor;
+        string placa;
 
         public VeiculosAcoes()
         {
@@ -408,7 +411,51 @@ namespace Gerenciador_de_veículos.Services
         }
         public void Pedagio()
         {
+            Pagamento pag = new Pagamento();
+            List<IVeiculos> veiculos = VeiculosDAO.GetAllRoadVehicles();
+            List<Pedagio> pedagios = PedagioDAO.GetAll();
+            int index = random.Next(0, veiculos.Count);
+            var veiculo = veiculos[index];
+            Pedagio pedagio = pedagios[random.Next(0, pedagios.Count)];
 
+
+            if (veiculo.GetType() != typeof(Carro))
+            {
+                Carro carro = (Carro)veiculo;
+                if (carro.Oficial)
+                {
+                    valor = 0;
+                }
+                else
+                {
+                    valor = 7.00;
+                }
+                placa = carro.Id;
+            }
+            else if (veiculo.GetType() != typeof(Moto))
+            {
+                Moto moto = (Moto)veiculo;
+                valor = 3.00;
+                placa = moto.Id;
+            }
+            else if (veiculo.GetType() != typeof(Onibus))
+            {
+                Onibus onibus = (Onibus)veiculo;
+                valor = onibus.Eixos * 8.50;
+                placa = onibus.Id;
+            }
+            else if (veiculo.GetType() != typeof(Caminhao))
+            {
+                Caminhao caminhao = (Caminhao)veiculo;
+                valor = caminhao.Eixos * 8.50;
+                placa = caminhao.Id;
+            }
+
+            pag.Id = PagamentoDAO.GetAll().LastOrDefault().Id + 1;
+            pag.IdPedagio = pedagio.Id;
+            pag.Placa = placa;
+            pag.Valor = valor;
+            pag.Data = DateTime.Now;
         }
         public void Carregar()
         {

@@ -12,19 +12,19 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class ModelosDAO
     {
-        static string DataAviao = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataModelos.JSON";
+        static string DataModelo = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataModelos.JSON";
 
         public static void Save(Modelo modelo)
         {
             try
             {
-                string json = File.ReadAllText(DataAviao);
+                string json = File.ReadAllText(DataModelo);
                 var JObject = JsonConvert.DeserializeObject<List<Modelo>>(json).ToList();
 
                 JObject.Add(modelo);
 
                 string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
-                File.WriteAllText(DataAviao, novoJsonResult);
+                File.WriteAllText(DataModelo, novoJsonResult);
             }
             catch (Exception ex)
             {
@@ -35,13 +35,13 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                var json = File.ReadAllText(DataAviao);
+                var json = File.ReadAllText(DataModelo);
                 List<Modelo> jObject = JsonConvert.DeserializeObject<List<Modelo>>(json).ToList();
 
                 jObject.Remove(modelo);
 
                 var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataAviao, saida);
+                File.WriteAllText(DataModelo, saida);
             }
             catch
             {
@@ -52,7 +52,7 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                string json = File.ReadAllText(DataAviao);
+                string json = File.ReadAllText(DataModelo);
                 List<Modelo> jObject = JsonConvert.DeserializeObject<List<Modelo>>(json).ToList();
 
                 Modelo antigo = jObject.Where(id => id.Codigo == modelo.Codigo).FirstOrDefault();
@@ -60,7 +60,7 @@ namespace Gerenciador_de_veículos.DAO
                 antigo = modelo;
 
                 string novoJsonResult = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataAviao, novoJsonResult);
+                File.WriteAllText(DataModelo, novoJsonResult);
             }
             catch
             {
@@ -71,7 +71,7 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                string json = File.ReadAllText(DataAviao);
+                string json = File.ReadAllText(DataModelo);
                 List<Modelo> jObject = JsonConvert.DeserializeObject<List<Modelo>>(json).ToList();
                 return jObject;
             }

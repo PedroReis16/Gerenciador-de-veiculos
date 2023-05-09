@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gerenciador_de_veículos.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,16 @@ namespace Gerenciador_de_veículos.Objects
 {
     public class Pedagio
     {
-        string Id { get; set; }
-        string Localização { get; set; }
-        static double ganhos { get; set; }
+        public string Id { get; set; }
+        public string Localização { get; set; }
+        public double Ganhos { get; set; }
 
-        public void Receber()
+        public void Receber(double valor)
         {
+            Pedagio pedagio = PedagioDAO.GetAll().Where(x=> x.Id == Id).FirstOrDefault();
+            pedagio.Ganhos += valor;
 
+            PedagioDAO.Edit(pedagio);
         }
     }
 }

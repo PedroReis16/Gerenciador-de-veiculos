@@ -83,6 +83,7 @@
     <Compile Include="DAO\NavioGuerraDAO.cs" />
     <Compile Include="DAO\NaviosDAO.cs" />
     <Compile Include="DAO\OnibusDAO.cs" />
+    <Compile Include="DAO\PagamentoDAO.cs" />
     <Compile Include="DAO\PedagioDAO.cs" />
     <Compile Include="DAO\TrensDAO.cs" />
     <Compile Include="DAO\VeiculosDAO.cs" />
@@ -165,6 +166,7 @@
     <None Include="DataFiles\DataModelos.JSON" />
     <None Include="DataFiles\DataMarcas.JSON" />
     <None Include="DataFiles\DataNaviosGuerra.JSON" />
+    <None Include="DataFiles\DataPagamento.JSON" />
     <None Include="DataFiles\DataPedagio.JSON" />
     <None Include="DataFiles\DataTrens.JSON" />
     <None Include="packages.config" />
