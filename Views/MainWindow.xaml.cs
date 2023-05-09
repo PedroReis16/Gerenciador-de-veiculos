@@ -24,7 +24,6 @@ namespace Gerenciador_de_veículos
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<string> Notificacoes { get; set; }
         private DispatcherTimer actionTimer;
         VeiculosAcoes acoes;
         bool timer;
@@ -33,12 +32,11 @@ namespace Gerenciador_de_veículos
         {
             InitializeComponent();
 
-            acoes = new VeiculosAcoes(this);
+            //acoes = new VeiculosAcoes(this);
 
             InitializeTimer();
             actionTimer.Start();
             timer = true;
-            notificacoes = new List<string>();
         }
 
         #region Notification Button Events
@@ -111,9 +109,7 @@ namespace Gerenciador_de_veículos
             //Timer que irá gerar uma ação aleatória nos veículos
 
             int acao = new Random().Next(1, 15);
-            acoes.Random(acao);
-
-            Console.WriteLine(notificacoes[notificacoes.Count - 1]);
+            //acoes.Random(acao);
         }
         public void TimerControl()
         {

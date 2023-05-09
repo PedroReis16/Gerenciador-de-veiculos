@@ -18,7 +18,7 @@ namespace Gerenciador_de_veículos.Services
             {
                 string matricula = GerarCombinação();
 
-                if (VeiculosDAO.GetAllTrains().FindAll(i => i.Id.Equals(matricula)).Count() == 0)
+                if (TrensDAO.GetAll().FindAll(i => i.Id.Equals(matricula)).Count() == 0)
                 {
                     return matricula;
                 }

@@ -114,8 +114,6 @@ namespace Gerenciador_de_veículos.Services
                     carro.Limpador = false;
 
                     CarrosDAO.Save(carro);
-
-                    main.Notificacoes.Add($"O carro {carro.Id} começou a viajar!");
                     break;
                 case 2:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Moto).ToList();
@@ -129,7 +127,6 @@ namespace Gerenciador_de_veículos.Services
                     moto.Empinar = false;
 
                     MotosDAO.Save(moto);
-                    main.Notificacoes.Add($"A moto {moto.Id} começou a viajar!");
                     break;
                 case 3:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Ônibus).ToList();
@@ -153,7 +150,6 @@ namespace Gerenciador_de_veículos.Services
                     }
 
                     OnibusDAO.Save(onibus);
-                    main.Notificacoes.Add($"O ônibus {onibus.Id} começou a viajar! Ele esta com {onibus.CapacidadePassageiros} passageiros!");
                     break;
                 case 4:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Caminhao).ToList();
@@ -193,7 +189,7 @@ namespace Gerenciador_de_veículos.Services
                     caminhao.Limpador = false;
 
                     CaminhoesDAO.Save(caminhao);
-                    main.Notificacoes.Add($"O caminhão {caminhao.Id} começou a viajar! Ele possui {caminhao.Eixos} eixos e {caminhao.Carga} Kg de carga");
+
                     break;
                 case 5:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Aviao).ToList();
@@ -207,7 +203,6 @@ namespace Gerenciador_de_veículos.Services
                     aviao.Limpador = false;
 
                     AvioesDAO.Save(aviao);
-                    main.Notificacoes.Add($"O avião {aviao.Id} esta em nosso espaço aéreo! Atualmente, ele esta com {aviao.CapacidadePassageiros} passageiros e uma velocidade de {aviao.Velocidade} Km/h!");
                     break;
                 case 6:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.AviaoGuerra).ToList();
@@ -220,7 +215,6 @@ namespace Gerenciador_de_veículos.Services
                     aviaoGuerra.CapacidadePassageiros = 1;
 
                     AviaoGuerraDAO.Save(aviaoGuerra);
-                    main.Notificacoes.Add($"O avião {aviaoGuerra.Id} está patrulhando os ares!");
                     break;
                 case 7:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Navio).ToList();
@@ -233,7 +227,6 @@ namespace Gerenciador_de_veículos.Services
                     navio.Modelo = modelo[random.Next(0, modelo.Count)];
 
                     NaviosDAO.Save(navio);
-                    main.Notificacoes.Add($"O navio {navio.Id} esta zarpando!");
                     break;
                 case 8:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.NavioGuerra).ToList();
@@ -246,7 +239,6 @@ namespace Gerenciador_de_veículos.Services
                     navioGuerra.Modelo = modelo[random.Next(0, modelo.Count)];
 
                     NavioGuerraDAO.Save(navioGuerra);
-                    main.Notificacoes.Add($"O navio {navioGuerra.Id} esta patrulhando os mares!");
                     break;
                 case 9:
                     modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Trem).ToList();
@@ -261,8 +253,6 @@ namespace Gerenciador_de_veículos.Services
                     trem.QtdVagoes = random.Next(1, 21);
 
                     TrensDAO.Save(trem);
-
-                    main.Notificacoes.Add($"O trem {trem.Id} esta partinfo! Com {trem.QtdVagoes} vagões");
                     break;
             }
 
@@ -309,8 +299,6 @@ namespace Gerenciador_de_veículos.Services
             {
                 TrensDAO.Delete((Trem)veiculo);
             }
-
-            main.Notificacoes.Add($"O veículo {veiculo.Id} esta saindo das nossa jurisdições!");
         } //Métodos responsável pela remoção de veículos
         public void Acelerar()
         {
