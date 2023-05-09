@@ -18,6 +18,7 @@ namespace Gerenciador_de_veículos.Interface
         void Descarregar();
         void Empinar();
         void Pousar();
+        void Decolar();
         void Arremeter();
         void Atacar();
         void Atracar();

@@ -65,5 +65,12 @@ namespace Gerenciador_de_veículos.DAO
 
             return list;
         }
+        public static List<IVeiculos> GetWarVehicles()
+        {
+            List<IVeiculos> list = new List<IVeiculos>();
+            list.AddRange(AviaoGuerraDAO.GetAll());
+            list.AddRange(NavioGuerraDAO.GetAll());
+            return list;
+        }
     }
 }

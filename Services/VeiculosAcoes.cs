@@ -7,6 +7,7 @@ using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace Gerenciador_de_veículos.Services
@@ -58,18 +59,21 @@ namespace Gerenciador_de_veículos.Services
                     Pousar();
                     break;
                 case 9:
-                    Arremeter();
+                    Decolar();
                     break;
                 case 10:
-                    Atacar();
+                    Arremeter();
                     break;
                 case 11:
-                    Atracar();
+                    Atacar();
                     break;
                 case 12:
-                    Adicionar();
+                    Atracar();
                     break;
                 case 13:
+                    Adicionar();
+                    break;
+                case 14:
                     Remover();
                     break;
             }
@@ -450,38 +454,245 @@ namespace Gerenciador_de_veículos.Services
                 valor = caminhao.Eixos * 8.50;
                 placa = caminhao.Id;
             }
+            pedagio.Receber(valor);
 
             pag.Id = PagamentoDAO.GetAll().LastOrDefault().Id + 1;
             pag.IdPedagio = pedagio.Id;
             pag.Placa = placa;
             pag.Valor = valor;
             pag.Data = DateTime.Now;
+
+            PagamentoDAO.Save(pag);
         }
         public void Carregar()
         {
+            List<Caminhao> caminhoes = CaminhoesDAO.GetAll();
+
+            if (caminhoes.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                Caminhao caminhao = caminhoes[random.Next(0, caminhoes.Count)];
+                int carga = random.Next(10, Convert.ToInt32(caminhao.Capacidade));
+
+                caminhao.Carga = caminhao.Carga + carga;
+                //Mostrar que a quantidade de carga que foi colocada no caminhão
+
+                if (caminhao.Carga > caminhao.Capacidade)
+                {
+                    caminhao.Velocidade = 0;
+                    //Mostrar que o caminhão não irá acelerar com esse peso
+                }
+                CaminhoesDAO.Edit(caminhao);
+            }
         }
         public void Descarregar()
         {
+            List<Caminhao> caminhoes = CaminhoesDAO.GetAll();
+            if (caminhoes.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                Caminhao caminhao = caminhoes[random.Next(0, caminhoes.Count)];
+                caminhao.Carga = 0;
+                //Mostrar que o caminhão foi descarregado
+
+                CaminhoesDAO.Edit(caminhao);
+            }
         }
         public void Empinar()
         {
+            List<Moto> motos = MotosDAO.GetAll();
 
+            if (motos.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                Moto moto = motos[random.Next(0, motos.Count)];
+
+                //Mostrar que a moto começou a empinar
+                main.TimerControl();
+                int acao = random.Next(0, 3);
+                Thread.Sleep(3000);
+                switch (acao)
+                {
+                    case 0:
+                        //Mostrar que o motoqueiro caiu
+                        break;
+                    case 1:
+                        //Mostrar que o motoqueiro parou de empinar
+                        break;
+                    case 2:
+                        //Mostrar que o motoqueiro começou a ser perseguido pela policia por empinar
+                        break;
+                }
+                main.TimerControl();
+            }
         }
         public void Pousar()
         {
+            List<IVeiculos> avioes = VeiculosDAO.GetAllPlanes();
 
+            if (avioes.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                var veiculo = avioes[random.Next(0, avioes.Count)];
+
+                if (veiculo.GetType() == typeof(Aviao))
+                {
+                    Aviao aviao = (Aviao)veiculo;
+                    //Mostrar que o avião pousou
+
+                    AvioesDAO.Delete(aviao);
+                }
+                else
+                {
+                    AviaoGuerra aviao = (AviaoGuerra)veiculo;
+                    //Mostrar que o avião pousou
+
+                    AviaoGuerraDAO.Delete(aviao);
+                }
+            }
+        }
+        public void Decolar()
+        {
+            List<IVeiculos> avioes = VeiculosDAO.GetAllPlanes();
+            List<Modelo> modelo;
+
+            if (avioes.Count == 0)
+            {
+                switch (random.Next(1, 3))
+                {
+                    case 1:
+                        modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.Aviao).ToList();
+                        Aviao aviao = new Aviao();
+
+                        aviao.Peso = 280000;
+                        aviao.VelMax = random.Next(650, 850);
+                        aviao.Velocidade = random.Next(250, 850);
+                        aviao.Modelo = modelo[random.Next(0, modelo.Count)];
+                        aviao.CapacidadePassageiros = random.Next(0, 850);
+                        aviao.Limpador = false;
+
+                        AvioesDAO.Save(aviao);
+
+                        //Mostrar que esse avião decolou
+                        break;
+                    case 2:
+                        modelo = ModelosDAO.GetAll().Where(i => i.Tipo == TipoVeiculo.AviaoGuerra).ToList();
+                        AviaoGuerra aviaoGuerra = new AviaoGuerra();
+
+                        aviaoGuerra.Peso = 14000;
+                        aviaoGuerra.VelMax = random.Next(950, 1700);
+                        aviaoGuerra.Velocidade = random.Next(450, 1700);
+                        aviaoGuerra.Modelo = modelo[random.Next(0, modelo.Count)];
+                        aviaoGuerra.CapacidadePassageiros = 1;
+
+                        AviaoGuerraDAO.Save(aviaoGuerra);
+
+                        //Mostrar que esse avião decolou
+                        break;
+                }
+            }
+            else
+            {
+                var aviao = avioes[random.Next(0, avioes.Count)];
+
+                //Mostrar que o avião decolou
+            }
         }
         public void Arremeter()
         {
+            List<IVeiculos> avioes = VeiculosDAO.GetAllPlanes();
 
+            if (avioes.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                var aviao = avioes[random.Next(0, avioes.Count)];
+
+                //Mensagem que mostra que o avião tentou pousar e não conseguiu;
+            }
         }
         public void Atacar()
         {
+            List<IVeiculos> veiculos = VeiculosDAO.GetWarVehicles();
 
+            if (veiculos.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                var veiculo = veiculos[random.Next(0, veiculos.Count)];
+
+                //Mostrar que o veiculo esta prestes a atacar
+                main.TimerControl();
+                int acao = random.Next(0, 4);
+                Thread.Sleep(acao);
+                switch (acao)
+                {
+                    case 0:
+                        //Mostrar que o veiculo errou o ataque
+                        break;
+                    case 1:
+                        //Mostrar que o veiculo desistiu do ataque
+                        break;
+                    case 2:
+                        //Mostrar que o veiculo venceu o ataque
+                        break;
+                    case 3:
+                        //Mostrar que o veiculo perdeu o ataque
+                        if (veiculo.GetType() == typeof(AviaoGuerra))
+                        {
+                            AviaoGuerra aviao = (AviaoGuerra)veiculo;
+                            AviaoGuerraDAO.Delete(aviao);
+                        }
+                        else
+                        {
+                            NavioGuerra navio = (NavioGuerra)veiculo;
+                            NavioGuerraDAO.Delete(navio);
+                        }
+                        break;
+                }
+                main.TimerControl();
+            }
         }
         public void Atracar()
         {
+            List<IVeiculos> navios = VeiculosDAO.GetAllShips();
 
+            if (navios.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                var veiculo = navios[random.Next(0, navios.Count)];
+                if (veiculo.GetType() == typeof(Navio))
+                {
+                    Navio navio = (Navio)veiculo;
+                    //Mostrar que o navio atracou
+                    NaviosDAO.Delete(navio);
+                }
+                else
+                {
+                    NavioGuerra navio = (NavioGuerra)veiculo;
+                    //Mostrar que o navio atracou
+                    NavioGuerraDAO.Delete(navio);
+                }
+            }
         }
     }
 }
