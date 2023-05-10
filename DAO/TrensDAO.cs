@@ -4,12 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace Gerenciador_de_veículos.DAO
 {
     public class TrensDAO
     {
-        static string DataNavio = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataTrens.JSON";
+        public static string DataNavio = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\DataFiles\DataTrens.JSON";
 
         public static void Save(Trem veiculo)
         {

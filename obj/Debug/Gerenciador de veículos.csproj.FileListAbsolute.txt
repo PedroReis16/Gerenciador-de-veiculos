@@ -1,33 +1,3 @@
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe.config
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.pdb
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.AssemblyReference.cache
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.SuggestedBindingRedirects.cache
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.g.cs
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\App.g.cs
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.cache
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.lref
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.baml
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.g.resources
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador_de_veículos.Properties.Resources.resources
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.GenerateResource.cache
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CoreCompileInputs.cache
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.exe
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.pdb
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.dll
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.dll
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.pdb
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.xml
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\App.baml
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CopyComplete
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.g.cs
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.baml
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.g.cs
-C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.baml
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.AssemblyReference.cache
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.SuggestedBindingRedirects.cache
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.g.cs
@@ -62,7 +32,37 @@ D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CopyComplete
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.g.cs
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.baml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe.config
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.dll
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.AssemblyReference.cache
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.SuggestedBindingRedirects.cache
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\App.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.cache
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.lref
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\App.baml
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.baml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.baml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.baml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.g.resources
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador_de_veículos.Properties.Resources.resources
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.GenerateResource.cache
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CoreCompileInputs.cache
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CopyComplete
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.exe
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.pdb

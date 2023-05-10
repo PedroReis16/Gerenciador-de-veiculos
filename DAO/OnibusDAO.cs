@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class OnibusDAO
     {
-        static string DataOnibus = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataOnibus.JSON";
+        static string DataOnibus = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"DataFiles\DataOnibus.JSON";
 
         public static void Save(Onibus veiculo)
         {

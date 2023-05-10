@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Windows;
+using System.Reflection;
 
 namespace Gerenciador_de_veículos.DAO
 {
     public class CarrosDAO
     {
-        static string DataCarro = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataCarros.JSON";
+        static string DataCarro = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"DataFiles\DataCarros.JSON";
 
         public static void Save(Carro carro)
         {
