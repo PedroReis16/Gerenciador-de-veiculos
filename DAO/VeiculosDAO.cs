@@ -1,4 +1,4 @@
-﻿using Gerenciador_de_veículos.Interface;
+﻿using Gerenciador_de_veículos.Fonts;
 using System.Collections.Generic;
 using System.Security.Policy;
 
@@ -10,10 +10,10 @@ namespace Gerenciador_de_veículos.DAO
         {
             List<IVeiculos> list = new List<IVeiculos>();
 
-            list.AddRange(CarrosDAO.GetAll());
-            list.AddRange(MotosDAO.GetAll());
-            list.AddRange(OnibusDAO.GetAll());
-            list.AddRange(CaminhoesDAO.GetAll());
+            //list.AddRange(CarrosDAO.GetAll());
+            //list.AddRange(MotosDAO.GetAll());
+            //list.AddRange(OnibusDAO.GetAll());
+            //list.AddRange(CaminhoesDAO.GetAll());
 
             return list;
         }
@@ -21,8 +21,8 @@ namespace Gerenciador_de_veículos.DAO
         {
             List<IVeiculos> list = new List<IVeiculos>();
 
-            list.AddRange(AvioesDAO.GetAll());
-            list.AddRange(AviaoGuerraDAO.GetAll());
+            //list.AddRange(AvioesDAO.GetAll());
+            //list.AddRange(AviaoGuerraDAO.GetAll());
 
             return list;
         }
@@ -31,8 +31,8 @@ namespace Gerenciador_de_veículos.DAO
         {
             List<IVeiculos> list = new List<IVeiculos>();
 
-            list.AddRange(NaviosDAO.GetAll());
-            list.AddRange(NavioGuerraDAO.GetAll());
+            //list.AddRange(NaviosDAO.GetAll());
+            //list.AddRange(NavioGuerraDAO.GetAll());
 
             return list;
         }
@@ -40,17 +40,17 @@ namespace Gerenciador_de_veículos.DAO
         {
             List<IVeiculos> list = new List<IVeiculos>();
 
-            list.AddRange(CarrosDAO.GetAll());
-            list.AddRange(MotosDAO.GetAll());
-            list.AddRange(OnibusDAO.GetAll());
-            list.AddRange(CaminhoesDAO.GetAll());
-            list.AddRange(AvioesDAO.GetAll());
-            list.AddRange(AviaoGuerraDAO.GetAll());
-            list.AddRange(AvioesDAO.GetAll());
-            list.AddRange(AviaoGuerraDAO.GetAll());
-            list.AddRange(NaviosDAO.GetAll());
-            list.AddRange(NavioGuerraDAO.GetAll());
-            list.AddRange(TrensDAO.GetAll());
+            //list.AddRange(CarrosDAO.GetAll());
+            //list.AddRange(MotosDAO.GetAll());
+            //list.AddRange(OnibusDAO.GetAll());
+            //list.AddRange(CaminhoesDAO.GetAll());
+            //list.AddRange(AvioesDAO.GetAll());
+            //list.AddRange(AviaoGuerraDAO.GetAll());
+            //list.AddRange(AvioesDAO.GetAll());
+            //list.AddRange(AviaoGuerraDAO.GetAll());
+            //list.AddRange(NaviosDAO.GetAll());
+            //list.AddRange(NavioGuerraDAO.GetAll());
+            //list.AddRange(TrensDAO.GetAll());
 
             return list;
         }
@@ -58,18 +58,18 @@ namespace Gerenciador_de_veículos.DAO
         {
             List<IVeiculos> list = new List<IVeiculos>();
 
-            list.AddRange(CarrosDAO.GetAll());
-            list.AddRange(MotosDAO.GetAll());
-            list.AddRange(OnibusDAO.GetAll());
-            list.AddRange(CaminhoesDAO.GetAll());
+            //list.AddRange(CarrosDAO.GetAll());
+            //list.AddRange(MotosDAO.GetAll());
+            //list.AddRange(OnibusDAO.GetAll());
+            //list.AddRange(CaminhoesDAO.GetAll());
 
             return list;
         }
         public static List<IVeiculos> GetWarVehicles()
         {
             List<IVeiculos> list = new List<IVeiculos>();
-            list.AddRange(AviaoGuerraDAO.GetAll());
-            list.AddRange(NavioGuerraDAO.GetAll());
+            //list.AddRange(AviaoGuerraDAO.GetAll());
+            //list.AddRange(NavioGuerraDAO.GetAll());
             return list;
         }
     }

@@ -88,16 +88,18 @@
     <Compile Include="DAO\TrensDAO.cs" />
     <Compile Include="DAO\VeiculosDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
-    <Compile Include="Interface\IVeiculosAcoes.cs" />
-    <Compile Include="Interface\IVeiculoTerrestre.cs" />
+    <Compile Include="Fonts\IAviao.cs" />
+    <Compile Include="Fonts\IVeiculos.cs" />
+    <Compile Include="Fonts\IVeiculosAcoes.cs" />
+    <Compile Include="Fonts\IVeiculoTerrestre.cs" />
     <Compile Include="Objects\Pagamento.cs" />
-    <Compile Include="Objects\Veiculo.cs" />
-    <Compile Include="Objects\VeiculoFechado.cs" />
     <Compile Include="Services\IdentificadorAviao.cs" />
     <Compile Include="Services\IdentificadorNavio.cs" />
     <Compile Include="Services\IdentificadorTrem.cs" />
     <Compile Include="Services\IdentificadorCarro.cs" />
     <Compile Include="Services\VeiculosAcoes.cs" />
+    <Compile Include="Fonts\Veiculo.cs" />
+    <Compile Include="Fonts\VeiculoFechado.cs" />
     <Compile Include="Views\ActionsOptions.xaml.cs">
       <DependentUpon>ActionsOptions.xaml</DependentUpon>
     </Compile>
@@ -119,8 +121,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interface\IAviao.cs" />
-    <Compile Include="Interface\IVeiculos.cs" />
     <Compile Include="Objects\Aviao.cs" />
     <Compile Include="Objects\AviaoGuerra.cs" />
     <Compile Include="Objects\Caminhao.cs" />

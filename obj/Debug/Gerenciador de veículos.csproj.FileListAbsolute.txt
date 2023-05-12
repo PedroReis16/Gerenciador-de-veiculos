@@ -66,3 +66,14 @@ C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CopyComplete
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.exe
 C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.AssemblyReference.cache
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\App.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.cache
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos_MarkupCompile.lref
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.exe
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.pdb

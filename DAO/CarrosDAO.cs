@@ -69,7 +69,7 @@ namespace Gerenciador_de_veículos.DAO
                 Console.WriteLine("Erro ao editar avião");
             }
         }
-        public static List<Carro> GetAll()
+        public static IList<Carro> GetAll()
         {
             try
             {
