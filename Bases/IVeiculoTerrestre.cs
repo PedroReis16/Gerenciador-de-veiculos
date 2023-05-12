@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Interface
 {
-    public interface IVeiculosTerrestres : IVeiculos
+    public interface IVeiculoTerrestre
     {
-        void PagarPedagio();
+        void Pedagio();
     }
 }

@@ -9,20 +9,18 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class Moto : IVeiculos
+    public class Moto : Veiculo, IVeiculoTerrestre
     {
-        public string Id { get; set; }
-        public double Peso { get; set; }
-        public int Velocidade { get; set; }
-        public int CapacidadePassageiros { get; set; }
-        public Modelo Modelo { get; set; }
         public bool Empinar { get;set; }
-        public int VelMax { get; set; }
 
         public Moto()
         {
             Id = IdentificadorCarro.GerarPlaca();
         }
 
+        public void Pedagio()
+        {
+
+        }
     }
 }

@@ -9,16 +9,8 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class Trem : IVeiculos
+    public class Trem : VeiculoFechado
     {
-        public string Id { get; set; }
-        public double Peso { get; set; }
-        public int Velocidade { get; set; }
-        public int CapacidadePassageiros { get; set; }
-        public Modelo Modelo { get; set; }
-        public bool Limpador { get; set; }
-        public int QtdVagoes { get; set; }
-        public int VelMax { get; set; }
 
         public Trem()
         {

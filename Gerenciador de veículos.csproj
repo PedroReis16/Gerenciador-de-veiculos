@@ -89,7 +89,10 @@
     <Compile Include="DAO\VeiculosDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
     <Compile Include="Interface\IVeiculosAcoes.cs" />
+    <Compile Include="Interface\IVeiculoTerrestre.cs" />
     <Compile Include="Objects\Pagamento.cs" />
+    <Compile Include="Objects\Veiculo.cs" />
+    <Compile Include="Objects\VeiculoFechado.cs" />
     <Compile Include="Services\IdentificadorAviao.cs" />
     <Compile Include="Services\IdentificadorNavio.cs" />
     <Compile Include="Services\IdentificadorTrem.cs" />
@@ -118,7 +121,6 @@
     </Compile>
     <Compile Include="Interface\IAviao.cs" />
     <Compile Include="Interface\IVeiculos.cs" />
-    <Compile Include="Interface\IVeiculosTerrestres.cs" />
     <Compile Include="Objects\Aviao.cs" />
     <Compile Include="Objects\AviaoGuerra.cs" />
     <Compile Include="Objects\Caminhao.cs" />

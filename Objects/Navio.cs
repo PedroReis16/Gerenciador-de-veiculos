@@ -9,18 +9,15 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class Navio : IVeiculos
+    public class Navio : VeiculoFechado
     {
-        public string Id { get; set; }
-        public double Peso { get; set; }
-        public int Velocidade { get; set; }
-        public int CapacidadePassageiros { get; set; }
-        public Modelo Modelo { get; set; }
-        public int VelMax { get; set; }
-
         public Navio()
         {
             Id = IdentificadorNavio.GerarMatricula();
+        }
+        public void Atracar()
+        {
+
         }
     }
 }

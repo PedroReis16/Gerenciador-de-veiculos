@@ -9,18 +9,30 @@ using System.Threading.Tasks;
 
 namespace Gerenciador_de_veículos.Objects
 {
-    public class AviaoGuerra : IVeiculos
+    public class AviaoGuerra : VeiculoFechado, IAviao
     {
-        public string Id { get; set; }
-        public double Peso { get; set; }
-        public int Velocidade { get; set; }
-        public Modelo Modelo { get; set; }
-        public int CapacidadePassageiros { get; set; }
-        public int VelMax { get;set; }
-
         public AviaoGuerra()
         {
             Id = IdentificadorAviao.GerarMatricula();
+        }
+
+        public void Arremetar()
+        {
+           
+        }
+
+        public void Decolar()
+        {
+           
+        }
+
+        public void Pousar()
+        {
+            
+        }
+        public void Atacar()
+        {
+
         }
     }
 }
