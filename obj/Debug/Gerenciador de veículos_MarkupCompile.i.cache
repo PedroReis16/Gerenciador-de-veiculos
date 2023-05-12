@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-Z:\Gerenciador-de-veiculos\obj\Debug\
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\obj\Debug\
 Gerenciador_de_veículos
 none
 false
 DEBUG;TRACE
-Z:\Gerenciador-de-veiculos\App.xaml
+C:\Users\Mobilemed\source\repos\Gerenciador-de-veiculos\App.xaml
 4-81402339
 
-48-1742728914
-17-1786515999
+48-455041380
+17842852277
 Views\ActionsOptions.xaml;Views\MainWindow.xaml;Views\NotificationView.xaml;Views\VehiclesOptions.xaml;
 
 False
