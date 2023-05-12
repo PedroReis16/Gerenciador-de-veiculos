@@ -1,4 +1,5 @@
 ﻿using Gerenciador_de_veículos.DAO;
+using Gerenciador_de_veículos.Fonts;
 using Gerenciador_de_veículos.Services;
 using Gerenciador_de_veículos.Views;
 using System;
@@ -32,10 +33,9 @@ namespace Gerenciador_de_veículos
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine(TrensDAO.DataNavio);
 
             //acoes = new VeiculosAcoes(this);
-            
+            Console.WriteLine(VeiculosDAO.DataVeiculo);
             InitializeTimer();
             actionTimer.Start();
             timer = true;
@@ -111,7 +111,7 @@ namespace Gerenciador_de_veículos
             //Timer que irá gerar uma ação aleatória nos veículos
 
             int acao = new Random().Next(1, 15);
-            acoes.Random(acao);
+            //acoes.Random(acao);
         }
         public void TimerControl()
         {

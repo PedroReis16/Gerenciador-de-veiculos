@@ -1,76 +1,211 @@
-﻿using Gerenciador_de_veículos.Fonts;
+﻿using Gerenciador_de_veículos.Objects;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.Security.Policy;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace Gerenciador_de_veículos.DAO
 {
     public class VeiculosDAO
     {
-        public static List<IVeiculos> GetAllVehicles()
-        {
-            List<IVeiculos> list = new List<IVeiculos>();
+        public static string DataVeiculo = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"DataFiles\DataVeiculos.JSON";
+        static string json = File.ReadAllText(DataVeiculo);
 
-            //list.AddRange(CarrosDAO.GetAll());
-            //list.AddRange(MotosDAO.GetAll());
-            //list.AddRange(OnibusDAO.GetAll());
-            //list.AddRange(CaminhoesDAO.GetAll());
+        public static void Save(object veiculo)
+        {
+            try
+            {
+                //string json = File.ReadAllText(DataCarro);
+                List<object> jObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+
+                jObject.Add(veiculo);
+
+                string novoJsonResult = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+                File.WriteAllText(DataVeiculo, novoJsonResult);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao adicionar carro");
+            }
+        }
+        public static void Delete(object veiculo)
+        {
+            try
+            {
+                //var json = File.ReadAllText(DataCarro);
+                List<object> jObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+
+                jObject.Remove(veiculo);
+
+                var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+                File.WriteAllText(DataVeiculo, saida);
+            }
+            catch
+            {
+                Console.WriteLine("Erro ao excluir carro");
+            }
+        }
+        public static void Edit(object veiculo)
+        {
+            try
+            {
+                //string json = File.ReadAllText(DataCarro);
+                List<object> jObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+                int index;
+
+                if (veiculo is Carro carro)
+                {
+                    Carro novo = (Carro)veiculo;
+
+                    carro = jObject.OfType<Carro>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(carro);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is Moto moto)
+                {
+                    Moto novo = (Moto)veiculo;
+
+                    moto = jObject.OfType<Moto>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(moto);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is Caminhao caminhao)
+                {
+                    Caminhao novo = (Caminhao)veiculo;
+
+                    caminhao = jObject.OfType<Caminhao>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(caminhao);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is Onibus onibus)
+                {
+                    Onibus novo = (Onibus)veiculo;
+
+                    onibus = jObject.OfType<Onibus>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(onibus);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is Aviao aviao)
+                {
+                    Aviao novo = (Aviao)veiculo;
+
+                    aviao = jObject.OfType<Aviao>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(aviao);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is AviaoGuerra aviaoG)
+                {
+                    AviaoGuerra novo = (AviaoGuerra)veiculo;
+
+                    aviaoG = jObject.OfType<AviaoGuerra>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(aviaoG);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is Navio navio)
+                {
+                    Navio novo = (Navio)veiculo;
+
+                    navio = jObject.OfType<Navio>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(navio);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is NavioGuerra navioG)
+                {
+                    NavioGuerra novo = (NavioGuerra)veiculo;
+
+                    novo = jObject.OfType<NavioGuerra>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(navioG);
+                    jObject[index] = null;
+                    jObject[index] = novo;
+                }
+                else if (veiculo is Trem trem)
+                {
+                    Trem novo = (Trem)veiculo;
+
+                    trem = jObject.OfType<Trem>().Where(id => id.Id == novo.Id).FirstOrDefault();
+                    index = jObject.IndexOf(trem);
+                    jObject[index] = null;
+                    jObject[index] = trem;
+                }
+
+                string novoJsonResult = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+                File.WriteAllText(DataVeiculo, novoJsonResult);
+            }
+            catch
+            {
+                Console.WriteLine("Erro ao editar veículo");
+            }
+        }
+
+        public static List<object> GetAllVehicles()
+        {
+            List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
 
             return list;
         }
-        public static List<IVeiculos> GetAllPlanes()
+        public static List<object> GetAllRoadVehicles()
         {
-            List<IVeiculos> list = new List<IVeiculos>();
+            List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+            List<object> result = new List<object>();
 
-            //list.AddRange(AvioesDAO.GetAll());
-            //list.AddRange(AviaoGuerraDAO.GetAll());
+            foreach (var i in list)
+            {
+                if (i is Carro || i is Moto || i is Caminhao || i is Onibus)
+                {
+                    result.Add(i);
+                }
+            }
 
-            return list;
+            return result;
         }
-
-        public static List<IVeiculos> GetAllShips()
+        public static List<object> GetAllPlanes()
         {
-            List<IVeiculos> list = new List<IVeiculos>();
-
-            //list.AddRange(NaviosDAO.GetAll());
-            //list.AddRange(NavioGuerraDAO.GetAll());
-
-            return list;
+            List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+            List<object> result = new List<object>();
+            foreach (var i in list)
+            {
+                if (i is Aviao || i is AviaoGuerra)
+                {
+                    result.Add(i);
+                }
+            }
+            return result;
         }
-        public static List<IVeiculos> GetAll()
+        public static List<object> GetAllShips()
         {
-            List<IVeiculos> list = new List<IVeiculos>();
-
-            //list.AddRange(CarrosDAO.GetAll());
-            //list.AddRange(MotosDAO.GetAll());
-            //list.AddRange(OnibusDAO.GetAll());
-            //list.AddRange(CaminhoesDAO.GetAll());
-            //list.AddRange(AvioesDAO.GetAll());
-            //list.AddRange(AviaoGuerraDAO.GetAll());
-            //list.AddRange(AvioesDAO.GetAll());
-            //list.AddRange(AviaoGuerraDAO.GetAll());
-            //list.AddRange(NaviosDAO.GetAll());
-            //list.AddRange(NavioGuerraDAO.GetAll());
-            //list.AddRange(TrensDAO.GetAll());
-
-            return list;
+            List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+            List<object> result = new List<object>();
+            foreach (var i in list)
+            {
+                if (i is Navio || i is NavioGuerra)
+                {
+                    result.Add(i);
+                }
+            }
+            return result;
         }
-        public static List<IVeiculos> GetAllRoadVehicles()
+        public static List<Trem> GetAllTrains()
         {
-            List<IVeiculos> list = new List<IVeiculos>();
-
-            //list.AddRange(CarrosDAO.GetAll());
-            //list.AddRange(MotosDAO.GetAll());
-            //list.AddRange(OnibusDAO.GetAll());
-            //list.AddRange(CaminhoesDAO.GetAll());
-
-            return list;
-        }
-        public static List<IVeiculos> GetWarVehicles()
-        {
-            List<IVeiculos> list = new List<IVeiculos>();
-            //list.AddRange(AviaoGuerraDAO.GetAll());
-            //list.AddRange(NavioGuerraDAO.GetAll());
-            return list;
+            List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+            List<Trem> result = new List<Trem>();
+            foreach (var i in list)
+            {
+                if (i is Trem)
+                {
+                    result.Add((Trem)i);
+                }
+            }
+            return result;
         }
     }
 }

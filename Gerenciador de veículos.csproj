@@ -73,19 +73,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DAO\AviaoGuerraDAO.cs" />
-    <Compile Include="DAO\AvioesDAO.cs" />
-    <Compile Include="DAO\CaminhoesDAO.cs" />
-    <Compile Include="DAO\CarrosDAO.cs" />
     <Compile Include="DAO\MarcasDAO.cs" />
     <Compile Include="DAO\ModelosDAO.cs" />
-    <Compile Include="DAO\MotosDAO.cs" />
-    <Compile Include="DAO\NavioGuerraDAO.cs" />
-    <Compile Include="DAO\NaviosDAO.cs" />
-    <Compile Include="DAO\OnibusDAO.cs" />
     <Compile Include="DAO\PagamentoDAO.cs" />
     <Compile Include="DAO\PedagioDAO.cs" />
-    <Compile Include="DAO\TrensDAO.cs" />
     <Compile Include="DAO\VeiculosDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
     <Compile Include="Fonts\IAviao.cs" />
@@ -164,13 +155,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DataFiles\AvioesGuerra.JSON" />
-    <None Include="DataFiles\DataModelos.JSON" />
     <None Include="DataFiles\DataMarcas.JSON" />
-    <None Include="DataFiles\DataNaviosGuerra.JSON" />
+    <None Include="DataFiles\DataModelos.JSON" />
     <None Include="DataFiles\DataPagamento.JSON" />
     <None Include="DataFiles\DataPedagio.JSON" />
-    <None Include="DataFiles\DataTrens.JSON" />
+    <None Include="DataFiles\DataVeiculos.JSON" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,24 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataFiles\DataCarros.JSON" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataFiles\DataMotos.JSON" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataFiles\DataCaminhoes.JSON" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataFiles\DataOnibus.JSON" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataFiles\DataAvioes.JSON" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataFiles\DataNavios.JSON" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" />
