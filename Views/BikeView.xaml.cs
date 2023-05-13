@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class BikeView : UserControl
     {
-        public BikeView()
+        public BikeView(MainWindow menu)
         {
             InitializeComponent();
         }

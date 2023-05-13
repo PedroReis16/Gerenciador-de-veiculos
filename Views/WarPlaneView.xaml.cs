@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class WarPlaneView : UserControl
     {
-        public WarPlaneView()
+        public WarPlaneView(MainWindow menu)
         {
             InitializeComponent();
         }

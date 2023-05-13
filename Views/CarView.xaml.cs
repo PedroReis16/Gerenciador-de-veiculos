@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class CarView : UserControl
     {
-        public CarView()
+        public CarView(MainWindow menu)
         {
             InitializeComponent();
         }

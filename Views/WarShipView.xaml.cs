@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class WarShipView : UserControl
     {
-        public WarShipView()
+        public WarShipView(MainWindow menu)
         {
             InitializeComponent();
         }

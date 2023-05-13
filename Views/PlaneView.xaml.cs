@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class PlaneView : UserControl
     {
-        public PlaneView()
+        public PlaneView(MainWindow menu)
         {
             InitializeComponent();
         }

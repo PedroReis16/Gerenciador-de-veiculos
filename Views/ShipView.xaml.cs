@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class ShipView : UserControl
     {
-        public ShipView()
+        public ShipView(MainWindow menu)
         {
             InitializeComponent();
         }

@@ -29,47 +29,47 @@ namespace Gerenciador_de_veículos.Views
 
         private void BtnCar_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenCarView();
         }
 
         private void BtnBike_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenBikeView();
         }
 
         private void BtnBus_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenBusView();
         }
 
         private void BtnTruck_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenTruckView();
         }
 
         private void BtnPlane_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenPlaneView();
         }
 
         private void btnWarPlane_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenWarPlaneView();
         }
 
         private void BtnTrain_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenTrainView();
         }
 
         private void BtnShip_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenShipView();
         }
 
         private void BtnWarShip_Click(object sender, RoutedEventArgs e)
         {
-
+            main.OpenWarShipView();
         }
 
         #region Buttons BackGround Events

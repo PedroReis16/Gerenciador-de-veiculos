@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class TruckView : UserControl
     {
-        public TruckView()
+        public TruckView(MainWindow menu)
         {
             InitializeComponent();
         }

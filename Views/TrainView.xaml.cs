@@ -20,7 +20,7 @@ namespace Gerenciador_de_veículos.Views
     /// </summary>
     public partial class TrainView : UserControl
     {
-        public TrainView()
+        public TrainView(MainWindow menu)
         {
             InitializeComponent();
         }
