@@ -1,4 +1,5 @@
 ﻿using Gerenciador_de_veículos.DAO;
+using Gerenciador_de_veículos.Fonts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,13 @@ namespace Gerenciador_de_veículos.Services
     {//Gera o identificar para os navios
         public static string GerarMatricula()
         {
+            List<Veiculo> list = VeiculosDAO.GetAllShips().ConvertAll(x => (Veiculo)x);
+
             while (true)
             {
                 string matricula = GerarCombinacao();
 
-                if (VeiculosDAO.GetAllShips().FindAll(i => i.Id.Equals(matricula)).Count == 0)
+                if (list.FindAll(i => i.Id.Equals(matricula)).Count == 0)
                 {
                     return matricula;
                 }

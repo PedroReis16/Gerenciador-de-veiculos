@@ -1,4 +1,5 @@
-﻿using Gerenciador_de_veículos.Objects;
+﻿using Gerenciador_de_veículos.Fonts;
+using Gerenciador_de_veículos.Objects;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -162,7 +163,7 @@ namespace Gerenciador_de_veículos.DAO
             {
                 if (i is Carro || i is Moto || i is Caminhao || i is Onibus)
                 {
-                    result.Add(i);
+                    result.Add((Veiculo)i);
                 }
             }
 

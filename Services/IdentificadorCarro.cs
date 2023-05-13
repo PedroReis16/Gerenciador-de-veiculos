@@ -15,18 +15,20 @@ namespace Gerenciador_de_veículos.Services
 
         public static string GerarPlaca()
         {
+            List<Veiculo> list = VeiculosDAO.GetAllRoadVehicles().ConvertAll(x => (Veiculo)x);
+
             while (true)
             {
-                string placa = GerarCombinação();
+                string placa = GerarCombinacao();
 
-                if(VeiculosDAO.GetAllVehicles().FindAll(i=>i.Id.Equals(placa)).Count() == 0)
+                if (list.FindAll(x => x.Id == placa).Count == 0)
                 {
                     return placa;
                 }
             }
         }
 
-        private static string GerarCombinação()
+        private static string GerarCombinacao()
         {
             return CombinacaoLetras() + CombinacaoNumeros();
         }
