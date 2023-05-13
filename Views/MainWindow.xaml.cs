@@ -5,6 +5,7 @@ using Gerenciador_de_veículos.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,13 +30,15 @@ namespace Gerenciador_de_veículos
         private DispatcherTimer actionTimer;
         VeiculosAcoes acoes;
         bool timer;
+        string teste = VeiculosDAO.DataVeiculo;
 
         public MainWindow()
         {
             InitializeComponent();
 
             //acoes = new VeiculosAcoes(this);
-            Console.WriteLine(VeiculosDAO.DataVeiculo);
+            Console.WriteLine(teste);
+
             InitializeTimer();
             actionTimer.Start();
             timer = true;
