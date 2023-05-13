@@ -94,13 +94,52 @@
     <Compile Include="Views\ActionsOptions.xaml.cs">
       <DependentUpon>ActionsOptions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BikeView.xaml.cs">
+      <DependentUpon>BikeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BusView.xaml.cs">
+      <DependentUpon>BusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CarView.xaml.cs">
+      <DependentUpon>CarView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NotificationView.xaml.cs">
       <DependentUpon>NotificationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlaneView.xaml.cs">
+      <DependentUpon>PlaneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShipView.xaml.cs">
+      <DependentUpon>ShipView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrainView.xaml.cs">
+      <DependentUpon>TrainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TruckView.xaml.cs">
+      <DependentUpon>TruckView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VehiclesOptions.xaml.cs">
       <DependentUpon>VehiclesOptions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WarPlaneView.xaml.cs">
+      <DependentUpon>WarPlaneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WarShipView.xaml.cs">
+      <DependentUpon>WarShipView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\ActionsOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BikeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,7 +171,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PlaneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShipView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TrainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TruckView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\VehiclesOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WarPlaneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WarShipView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

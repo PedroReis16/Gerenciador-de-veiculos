@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\App.xaml
-4-81402339
+13-945138858
 
-39-287980943
+48138899428
 17-1161355731
-Views\ActionsOptions.xaml;Views\MainWindow.xaml;Views\NotificationView.xaml;Views\VehiclesOptions.xaml;
+Views\ActionsOptions.xaml;Views\BikeView.xaml;Views\BusView.xaml;Views\CarView.xaml;Views\MainWindow.xaml;Views\NotificationView.xaml;Views\PlaneView.xaml;Views\ShipView.xaml;Views\TrainView.xaml;Views\TruckView.xaml;Views\VehiclesOptions.xaml;Views\WarPlaneView.xaml;Views\WarShipView.xaml;
 
 True
 
