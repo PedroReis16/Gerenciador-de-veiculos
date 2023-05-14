@@ -86,7 +86,7 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Valor" Width="150" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                        <GridViewColumn Width="150" HeaderContainerStyle="{StaticResource HeaderStyle}">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button Click="Button_Click" Background="#0086FF" BorderBrush="Transparent" BorderThickness="0" Margin="36 0 0 0">

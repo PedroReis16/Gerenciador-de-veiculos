@@ -95,3 +95,44 @@ D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\TruckView.baml
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\WarPlaneView.baml
 D:\pedro\Documentos\Programação\Projetos-Portifólio\C# - .NET\Gerenciador-de-veiculos\obj\Debug\Views\WarShipView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe.config
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.exe
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Gerenciador de veículos.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.dll
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\BikeView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\BusView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\CarView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\PlaneView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\ShipView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\TrainView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\TruckView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\WarPlaneView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\WarShipView.g.cs
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\App.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\ActionsOptions.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\BikeView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\BusView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\CarView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\MainWindow.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\NotificationView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\PlaneView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\ShipView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\TrainView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\TruckView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\VehiclesOptions.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\WarPlaneView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Views\WarShipView.baml
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.g.resources
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador_de_veículos.Properties.Resources.resources
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.GenerateResource.cache
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CoreCompileInputs.cache
+C:\Users\Mobilemed\source\repos\Gerenciador\Gerenciador-de-veiculos\obj\Debug\Gerenciador de veículos.csproj.CopyComplete

@@ -49,37 +49,37 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Placa" Width="212" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                        <GridViewColumn Header="Placa" Width="170" HeaderContainerStyle="{StaticResource HeaderStyle}">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Label Width="212" Content="{Binding Id}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
+                                    <Label Width="170" Content="{Binding Id}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn  Header="Modelo" Width="212" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                        <GridViewColumn  Header="Modelo" Width="170" HeaderContainerStyle="{StaticResource HeaderStyle}">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Label  Width="212" Content="{Binding Modelo}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 24 0"/>
+                                    <Label  Width="170" Content="{Binding Modelo}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 24 0"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn  Header="Peso" Width="212" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                        <GridViewColumn  Header="Peso" Width="170" HeaderContainerStyle="{StaticResource HeaderStyle}">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Label Width="212" Content="{Binding Peso}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
+                                    <Label Width="170" Content="{Binding Peso}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Passageiros" Width="212" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                        <GridViewColumn Header="Passageiros" Width="170" HeaderContainerStyle="{StaticResource HeaderStyle}">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Label Width="212" Content="{Binding CapacidadePassageiros}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
+                                    <Label Width="170" Content="{Binding CapacidadePassageiros}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn  Width="212" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                        <GridViewColumn  Width="170" HeaderContainerStyle="{StaticResource HeaderStyle}">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button Click="Button_Click" Background="#0086FF" BorderBrush="Transparent" BorderThickness="0" Margin="36 0 0 0">
