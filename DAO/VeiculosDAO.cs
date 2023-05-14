@@ -12,7 +12,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class VeiculosDAO
     {
-        public static string DataVeiculo = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) +@"\DataFiles\DataVeiculos.JSON";
+        static string DataVeiculo = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) +@"\DataFiles\DataVeiculos.JSON";
         static string json = File.ReadAllText(DataVeiculo);
 
         public static void Save(object veiculo)

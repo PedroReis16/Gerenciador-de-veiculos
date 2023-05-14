@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class ModelosDAO
     {
-        static string DataModelo = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"DataFiles\DataModelos.JSON";
+        static string DataModelo = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"DataFiles\DataModelos.JSON";
 
         public static void Save(Modelo modelo)
         {
