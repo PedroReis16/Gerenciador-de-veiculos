@@ -7,29 +7,37 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace Gerenciador_de_veículos.DAO
 {
     public class VeiculosDAO
     {
-        static string DataVeiculo = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) +@"\DataFiles\DataVeiculos.JSON";
+        static string DataVeiculo = Environment.CurrentDirectory +@"\DataFiles\DataVeiculos.json";
         static string json = File.ReadAllText(DataVeiculo);
 
         public static void Save(object veiculo)
         {
             try
             {
-                //string json = File.ReadAllText(DataCarro);
-                List<object> jObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+                List<object> JObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
 
-                jObject.Add(veiculo);
+                JObject.Add(veiculo);
+                
+                string dado = JsonConvert.SerializeObject(JObject, Formatting.Indented);
 
-                string novoJsonResult = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataVeiculo, novoJsonResult);
+                //JsonSerializerSettings cfg = new JsonSerializerSettings();
+                //cfg.TypeNameHandling = TypeNameHandling.All;
+
+                //string dado = JsonConvert.SerializeObject(veiculo, cfg);
+
+                //string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                //string novoJsonResult = JsonConvert.SerializeObject(dado, Formatting.Indented);
+                File.WriteAllText(DataVeiculo, dado);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao adicionar carro");
+                Console.WriteLine("Erro ao adicionar avião");
             }
         }
         public static void Delete(object veiculo)
@@ -195,10 +203,10 @@ namespace Gerenciador_de_veículos.DAO
             }
             return result;
         }
-        public static List<Trem> GetAllTrains()
+        public static List<object> GetAllTrains()
         {
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
-            List<Trem> result = new List<Trem>();
+            List<object> result = new List<object>();
             foreach (var i in list)
             {
                 if (i is Trem)

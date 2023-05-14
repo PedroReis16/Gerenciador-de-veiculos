@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Packaging;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -17,22 +18,20 @@ namespace Gerenciador_de_veículos.DAO
     {
         public static string DataMarcas = /*Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)*/Environment.CurrentDirectory + @"\DataFiles\DataMarcas.json";
 
-        public static void Save(List<Marca> marca)
+        public static void Save(object marca)
         {
             try
             {
-                //string json = File.ReadAllText(DataMarcas);
-                //var JObject = JsonConvert.DeserializeObject<List<Marca>>(json).ToList();
+                string json = File.ReadAllText(DataMarcas);
+                var JObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
 
-                //JObject.Add(marca);
-                JsonSerializerSettings cfg = new JsonSerializerSettings();
-                cfg.TypeNameHandling = TypeNameHandling.All;
+                JObject.Add(marca);
 
-                string dado = JsonConvert.SerializeObject(marca,cfg);
+                string dado = JsonConvert.SerializeObject(JObject);
+                File.WriteAllText(DataMarcas, dado);
 
                 //string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
                 //string novoJsonResult = JsonConvert.SerializeObject(dado, Formatting.Indented);
-                File.WriteAllText(DataMarcas, dado);
             }
             catch (Exception ex)
             {

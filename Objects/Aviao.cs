@@ -1,4 +1,5 @@
-﻿using Gerenciador_de_veículos.Fonts;
+﻿using Gerenciador_de_veículos.DAO;
+using Gerenciador_de_veículos.Fonts;
 using Gerenciador_de_veículos.Service;
 using Gerenciador_de_veículos.Services;
 using System;
@@ -13,9 +14,21 @@ namespace Gerenciador_de_veículos.Objects
     {
         public Aviao()
         {
-            Id = IdentificadorAviao.GerarMatricula();
+            NewAviao();
         }
+        private void NewAviao()
+        {
+            Random random = new Random();
+            List<Modelo> modelo = ModelosDAO.GetAll().Where(x => x.Tipo == Enums.TipoVeiculo.Aviao).ToList();
 
+            Id = IdentificadorAviao.GerarMatricula();
+            Peso = 280000;
+            VelMax = random.Next(650, 850);
+            Velocidade = random.Next(250, 850);
+            Modelo = modelo[random.Next(0, modelo.Count)];
+            CapacidadePassageiros = random.Next(0, 850);
+            Limpador = false;
+        }
         public void Arremetar()
         {
 

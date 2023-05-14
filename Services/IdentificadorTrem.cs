@@ -1,4 +1,5 @@
 ﻿using Gerenciador_de_veículos.DAO;
+using Gerenciador_de_veículos.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,13 @@ namespace Gerenciador_de_veículos.Services
 
         public static string GerarMatricula()
         {
+            List<Trem> list = VeiculosDAO.GetAllTrains().ConvertAll(x => (Trem)x);
+
             while (true)
             {
                 string matricula = GerarCombinação();
 
-                if (VeiculosDAO.GetAllTrains().FindAll(i => i.Id.Equals(matricula)).Count() == 0)
+                if (list.FindAll(i => i.Id.Equals(matricula)).Count() == 0)
                 {
                     return matricula;
                 }

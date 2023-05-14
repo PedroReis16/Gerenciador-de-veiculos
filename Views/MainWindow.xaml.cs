@@ -41,6 +41,7 @@ namespace Gerenciador_de_veículos
             InitializeComponent();
             //acoes = new VeiculosAcoes(this);
 
+
             InitializeTimer();
             actionTimer.Start();
             timer = true;
@@ -268,6 +269,7 @@ namespace Gerenciador_de_veículos
             telas = true;
         }
         #endregion
+
 
     }
 }
