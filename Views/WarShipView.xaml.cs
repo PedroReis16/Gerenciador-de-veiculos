@@ -24,5 +24,10 @@ namespace Gerenciador_de_veículos.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

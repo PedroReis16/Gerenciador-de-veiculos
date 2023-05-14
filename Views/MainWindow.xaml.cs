@@ -1,5 +1,6 @@
 ﻿using Gerenciador_de_veículos.DAO;
 using Gerenciador_de_veículos.Fonts;
+using Gerenciador_de_veículos.Objects;
 using Gerenciador_de_veículos.Services;
 using Gerenciador_de_veículos.Views;
 using System;
@@ -265,5 +266,6 @@ namespace Gerenciador_de_veículos
             telas = true;
         }
         #endregion
+
     }
 }
