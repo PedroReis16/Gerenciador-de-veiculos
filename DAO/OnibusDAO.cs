@@ -11,14 +11,23 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class OnibusDAO
     {
-        static string DataOnibus = Environment.CurrentDirectory + @"DataFiles\DataOnibus.json";
+        static string DataOnibus = Environment.CurrentDirectory + @"\DataFiles\DataOnibus.json";
 
         public static void Save(Onibus veiculo)
         {
             try
             {
                 string json = File.ReadAllText(DataOnibus);
-                var JObject = JsonConvert.DeserializeObject<List<Onibus>>(json).ToList();
+                List<Onibus> JObject;
+
+                if (json == "")
+                {
+                    JObject = new List<Onibus>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<Onibus>>(json).ToList();
+                }
 
                 JObject.Add(veiculo);
 

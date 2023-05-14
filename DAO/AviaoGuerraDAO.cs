@@ -1,5 +1,6 @@
 ﻿using Gerenciador_de_veículos.Objects;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,14 +12,22 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class AviaoGuerraDAO
     {
-        static string DataAviao = Environment.CurrentDirectory + @"DataFiles\DataAvioesGuerra.json";
+        static string DataAviao = Environment.CurrentDirectory + @"\DataFiles\DataAvioesGuerra.json";
 
         public static void Save(AviaoGuerra veiculo)
         {
             try
             {
                 string json = File.ReadAllText(DataAviao);
-                var JObject = JsonConvert.DeserializeObject<List<AviaoGuerra>>(json).ToList();
+                List<AviaoGuerra> JObject;
+                if (json == "")
+                {
+                    JObject = new List<AviaoGuerra>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<AviaoGuerra>>(json).ToList();
+                }
 
                 JObject.Add(veiculo);
 

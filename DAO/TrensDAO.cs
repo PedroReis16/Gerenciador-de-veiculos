@@ -9,14 +9,23 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class TrensDAO
     {
-        static string DataNavio = Environment.CurrentDirectory + @"DataFiles\DataTrens.json";
+        static string DataNavio = Environment.CurrentDirectory + @"\DataFiles\DataTrens.json";
 
         public static void Save(Trem veiculo)
         {
             try
             {
                 string json = File.ReadAllText(DataNavio);
-                var JObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
+                List<Trem> JObject;
+
+                if (json == "")
+                {
+                    JObject = new List<Trem>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
+                }
 
                 JObject.Add(veiculo);
 

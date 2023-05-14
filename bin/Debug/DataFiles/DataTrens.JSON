@@ -1,1 +1,12 @@
-﻿
+[
+  {
+    "QtdVagoes": 17,
+    "Limpador": false,
+    "Id": "GZZ2447",
+    "Peso": 100000000.0,
+    "Velocidade": 17,
+    "CapacidadePassageiros": 1200,
+    "VelMax": 75,
+    "Modelo": null
+  }
+]

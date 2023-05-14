@@ -26,6 +26,8 @@ namespace Gerenciador_de_veículos.Objects
             Velocidade = random.Next(450, 1700);
             Modelo = modelo[random.Next(0, modelo.Count)];
             CapacidadePassageiros = 1;
+
+            AviaoGuerraDAO.Save(this);
         }
 
         public string Arremeter()

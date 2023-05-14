@@ -49,6 +49,8 @@ namespace Gerenciador_de_veículos.Objects
                 Oficial = false;
             }
             Limpador = false;
+
+            CarrosDAO.Save(this);
         }
         public void Pedagio()
         {

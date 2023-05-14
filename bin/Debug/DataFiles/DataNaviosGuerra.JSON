@@ -1,1 +1,19 @@
-﻿
+[
+  {
+    "Limpador": false,
+    "Id": "IMO8288",
+    "Peso": 14000000.0,
+    "Velocidade": 17,
+    "CapacidadePassageiros": 200,
+    "VelMax": 58,
+    "Modelo": {
+      "Codigo": 21,
+      "ModeloNome": "TGV",
+      "Marca": {
+        "MarcaId": 107,
+        "MarcaNome": "Alstom"
+      },
+      "Tipo": 9
+    }
+  }
+]

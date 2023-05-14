@@ -1,1 +1,21 @@
-﻿
+[
+  {
+    "Portas": 4,
+    "Oficial": true,
+    "Limpador": false,
+    "Id": "KWW3179",
+    "Peso": 1599.0,
+    "Velocidade": 116,
+    "CapacidadePassageiros": 4,
+    "VelMax": 264,
+    "Modelo": {
+      "Codigo": 2,
+      "ModeloNome": "Civic",
+      "Marca": {
+        "MarcaId": 5,
+        "MarcaNome": "Honda"
+      },
+      "Tipo": 1
+    }
+  }
+]

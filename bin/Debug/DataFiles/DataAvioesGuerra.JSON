@@ -1,1 +1,19 @@
-﻿
+[
+  {
+    "Limpador": false,
+    "Id": "DEPQKAL",
+    "Peso": 14000.0,
+    "Velocidade": 1193,
+    "CapacidadePassageiros": 1,
+    "VelMax": 1343,
+    "Modelo": {
+      "Codigo": 16,
+      "ModeloNome": "Su-27 Flanker",
+      "Marca": {
+        "MarcaId": 107,
+        "MarcaNome": "Sukhoi"
+      },
+      "Tipo": 6
+    }
+  }
+]

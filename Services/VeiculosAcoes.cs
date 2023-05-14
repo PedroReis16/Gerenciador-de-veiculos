@@ -135,43 +135,34 @@ namespace Gerenciador_de_veículos.Services
             {
                 case 0:
                     novo = new Carro();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 1:
                     novo = new Moto();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 2:
                     novo = new Aviao();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 3:
                     novo = new Navio();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 4:
                     novo = new Caminhao();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 5:
                     novo = new Onibus();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 6:
                     novo = new Trem();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 7:
                     novo = new NavioGuerra();
-                    VeiculosDAO.Save(novo);
                     break;
                 case 8:
                     novo = new AviaoGuerra();
-                    VeiculosDAO.Save(novo);
                     break;
             }
 
-            var veiculo = VeiculosDAO.GetAllVehicles();
+            //var veiculo = VeiculosDAO.GetAllVehicles();
 
             //menu.Text(ultimo.Id, 2);
         }

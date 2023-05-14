@@ -43,7 +43,7 @@ namespace Gerenciador_de_veículos
 
             Mensagem = new List<string>();
             acoes = new VeiculosAcoes(this);
-            //Inicializar();
+            Inicializar();
 
             InitializeTimer();
             actionTimer.Start();
@@ -328,22 +328,18 @@ namespace Gerenciador_de_veículos
 
         private void Inicializar()
         {
-            List<object> items = new List<object>()
-            {
-                new Carro(),
-                new Moto(),
-                new Onibus(),
-                new Caminhao(),
-                new Aviao(),
-                new AviaoGuerra(),
-                new Navio(),
-                   new NavioGuerra(),
-                   new Trem()
-            };
-            foreach(var i in items)
-            {
-                VeiculosDAO.Save(i);
-            }
+
+            Carro car=new Carro();
+            Moto bike=new Moto();
+            Onibus bus=new Onibus();
+            Caminhao caminhao = new Caminhao();
+            Aviao plane = new Aviao();
+            AviaoGuerra Warplane=new AviaoGuerra();
+            Navio ship = new Navio();
+            NavioGuerra Warship =new NavioGuerra();
+            Trem train = new Trem();
+
+
         }
     }
 }

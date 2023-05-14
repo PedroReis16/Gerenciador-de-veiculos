@@ -31,6 +31,8 @@ namespace Gerenciador_de_veículos.Objects
             CapacidadePassageiros = 2;
             Modelo = modelo[random.Next(0, modelo.Count)];
             Empinar = false;
+
+            MotosDAO.Save(this);
         }
 
         public void Pedagio()

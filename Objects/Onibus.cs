@@ -42,6 +42,8 @@ namespace Gerenciador_de_veículos.Objects
             {
                 Leito = false;
             }
+
+            OnibusDAO.Save(this);
         }
 
         public void Pedagio()

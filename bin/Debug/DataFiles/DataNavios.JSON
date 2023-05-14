@@ -1,1 +1,16 @@
-﻿
+[
+  {
+    "Limpador": false,
+    "Id": "IMO8288",
+    "Peso": 230000000.0,
+    "Velocidade": 17,
+    "CapacidadePassageiros": 5000,
+    "VelMax": 58,
+    "Modelo": {
+      "Codigo": 19,
+      "ModeloNome": "MSC Meraviglia",
+      "Marca": null,
+      "Tipo": 8
+    }
+  }
+]

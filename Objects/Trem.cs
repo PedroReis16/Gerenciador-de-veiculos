@@ -31,6 +31,8 @@ namespace Gerenciador_de_veículos.Objects
             Modelo = modelo;
             Limpador = false;
             QtdVagoes = random.Next(1, 21);
+
+            TrensDAO.Save(this);
         }
     }
 }

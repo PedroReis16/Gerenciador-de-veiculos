@@ -27,6 +27,8 @@ namespace Gerenciador_de_veículos.Objects
             Velocidade = random.Next(0, 60);
             CapacidadePassageiros = 5000;
             Modelo = modelo[random.Next(0, modelo.Count)];
+
+            NaviosDAO.Save(this);
         }
         public void Atracar()
         {

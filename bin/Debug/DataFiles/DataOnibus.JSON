@@ -1,1 +1,21 @@
-﻿
+[
+  {
+    "Eixos": 3,
+    "Leito": true,
+    "Limpador": false,
+    "Id": "YHR2302",
+    "Peso": 11539.0,
+    "Velocidade": 12,
+    "CapacidadePassageiros": 29,
+    "VelMax": 79,
+    "Modelo": {
+      "Codigo": 7,
+      "ModeloNome": "Paradiso 1800 DD",
+      "Marca": {
+        "MarcaId": 58,
+        "MarcaNome": "Marcopolo"
+      },
+      "Tipo": 3
+    }
+  }
+]

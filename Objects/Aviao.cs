@@ -28,6 +28,8 @@ namespace Gerenciador_de_veículos.Objects
             Modelo = modelo[random.Next(0, modelo.Count)];
             CapacidadePassageiros = random.Next(0, 850);
             Limpador = false;
+
+            AvioesDAO.Save(this);
         }
         public string Arremeter()
         {

@@ -1,1 +1,22 @@
-﻿
+[
+  {
+    "Eixos": 6,
+    "Capacidade": 25000.0,
+    "Carga": 347.0,
+    "Limpador": false,
+    "Id": "GMH1990",
+    "Peso": 5861.0,
+    "Velocidade": 36,
+    "CapacidadePassageiros": 2,
+    "VelMax": 100,
+    "Modelo": {
+      "Codigo": 11,
+      "ModeloNome": "Actros",
+      "Marca": {
+        "MarcaId": 13,
+        "MarcaNome": "Mercedes-Benz"
+      },
+      "Tipo": 4
+    }
+  }
+]

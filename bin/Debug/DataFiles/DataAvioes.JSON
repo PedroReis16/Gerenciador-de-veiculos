@@ -1,1 +1,19 @@
-﻿
+[
+  {
+    "Limpador": false,
+    "Id": "DEPQKAL",
+    "Peso": 280000.0,
+    "Velocidade": 606,
+    "CapacidadePassageiros": 342,
+    "VelMax": 754,
+    "Modelo": {
+      "Codigo": 14,
+      "ModeloNome": "Airbus A380",
+      "Marca": {
+        "MarcaId": 65,
+        "MarcaNome": "Airbus"
+      },
+      "Tipo": 5
+    }
+  }
+]

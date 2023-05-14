@@ -59,6 +59,8 @@ namespace Gerenciador_de_veículos.Objects
             Modelo = modelo[random.Next(0, modelo.Count)];
             CapacidadePassageiros = 2;
             Limpador = false;
+
+            CaminhoesDAO.Save(this);
         }
 
         public void Pedagio()

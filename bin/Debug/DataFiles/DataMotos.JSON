@@ -1,1 +1,19 @@
-﻿
+[
+  {
+    "Empinar": false,
+    "Id": "LLM4671",
+    "Peso": 113.0,
+    "Velocidade": 285,
+    "CapacidadePassageiros": 2,
+    "VelMax": 224,
+    "Modelo": {
+      "Codigo": 6,
+      "ModeloNome": "Street Triple",
+      "Marca": {
+        "MarcaId": 41,
+        "MarcaNome": "Triumph"
+      },
+      "Tipo": 2
+    }
+  }
+]

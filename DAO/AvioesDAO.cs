@@ -11,14 +11,23 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class AvioesDAO
     {
-        static string DataAviao = Environment.CurrentDirectory+ @"DataFiles\DataAvioes.json";
+        static string DataAviao = Environment.CurrentDirectory+ @"\DataFiles\DataAvioes.json";
 
         public static void Save(Aviao veiculo)
         {
             try
             {
                 string json = File.ReadAllText(DataAviao);
-                var JObject = JsonConvert.DeserializeObject<List<Aviao>>(json).ToList();
+                List<Aviao> JObject;
+
+                if (json == "")
+                {
+                    JObject = new List<Aviao>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<Aviao>>(json).ToList();
+                }
 
                 JObject.Add(veiculo);
 
