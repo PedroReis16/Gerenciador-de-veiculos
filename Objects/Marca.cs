@@ -8,7 +8,7 @@ namespace Gerenciador_de_veículos.Objects
 {
     public class Marca
     {
-        public int Id { get; set; }
-        public string Descricao { get; set; }
+        public int MarcaId { get; set; }
+        public string MarcaNome { get; set; }
     }
 }

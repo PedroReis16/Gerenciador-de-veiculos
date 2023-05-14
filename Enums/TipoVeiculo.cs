@@ -10,7 +10,7 @@ namespace Gerenciador_de_veículos.Enums
     {
         Carro = 1,
         Moto,
-        Ônibus,
+        Onibus,
         Caminhao,
         Aviao,
         AviaoGuerra,

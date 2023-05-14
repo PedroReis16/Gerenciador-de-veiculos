@@ -1,6 +1,7 @@
 ﻿using Gerenciador_de_veículos.Objects;
 using Gerenciador_de_veículos.Service;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,19 +15,24 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class MarcasDAO
     {
-        static string DataMarcas = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\DataFiles\DataMarcas.JSON";
+        public static string DataMarcas = /*Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)*/Environment.CurrentDirectory + @"\DataFiles\DataMarcas.json";
 
-        public static void Save(Marca marca)
+        public static void Save(List<Marca> marca)
         {
             try
             {
-                string json = File.ReadAllText(DataMarcas);
-                var JObject = JsonConvert.DeserializeObject<List<Marca>>(json).ToList();
+                //string json = File.ReadAllText(DataMarcas);
+                //var JObject = JsonConvert.DeserializeObject<List<Marca>>(json).ToList();
 
-                JObject.Add(marca);
+                //JObject.Add(marca);
+                JsonSerializerSettings cfg = new JsonSerializerSettings();
+                cfg.TypeNameHandling = TypeNameHandling.All;
 
-                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
-                File.WriteAllText(DataMarcas, novoJsonResult);
+                string dado = JsonConvert.SerializeObject(marca,cfg);
+
+                //string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                //string novoJsonResult = JsonConvert.SerializeObject(dado, Formatting.Indented);
+                File.WriteAllText(DataMarcas, dado);
             }
             catch (Exception ex)
             {
@@ -57,7 +63,7 @@ namespace Gerenciador_de_veículos.DAO
                 string json = File.ReadAllText(DataMarcas);
                 List<Marca> jObject = JsonConvert.DeserializeObject<List<Marca>>(json).ToList();
 
-                Marca antigo = jObject.Where(id => id.Id == marca.Id).FirstOrDefault();
+                Marca antigo = jObject.Where(id => id.MarcaId == marca.MarcaId).FirstOrDefault();
 
                 antigo = marca;
 

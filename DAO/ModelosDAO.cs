@@ -13,19 +13,24 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class ModelosDAO
     {
-        static string DataModelo = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"DataFiles\DataModelos.JSON";
+        static string DataModelo = Environment.CurrentDirectory+ @"\DataFiles\DataModelos.json";
 
-        public static void Save(Modelo modelo)
+        public static void Save(List<Modelo> modelo)
         {
             try
             {
-                string json = File.ReadAllText(DataModelo);
-                var JObject = JsonConvert.DeserializeObject<List<Modelo>>(json).ToList();
+                //string json = File.ReadAllText(DataMarcas);
+                //var JObject = JsonConvert.DeserializeObject<List<Marca>>(json).ToList();
 
-                JObject.Add(modelo);
+                //JObject.Add(marca);
+                JsonSerializerSettings cfg = new JsonSerializerSettings();
+                cfg.TypeNameHandling = TypeNameHandling.All;
 
-                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
-                File.WriteAllText(DataModelo, novoJsonResult);
+                string dado = JsonConvert.SerializeObject(modelo, cfg);
+
+                //string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                //string novoJsonResult = JsonConvert.SerializeObject(dado, Formatting.Indented);
+                File.WriteAllText(DataModelo, dado);
             }
             catch (Exception ex)
             {
