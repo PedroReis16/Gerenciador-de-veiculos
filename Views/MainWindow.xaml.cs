@@ -53,11 +53,16 @@ namespace Gerenciador_de_veículos
         #region Notification Button Events
         private void BtnNotification_MouseEnter(object sender, MouseEventArgs e)
         {
+            NotificationView notificationView = new NotificationView(Mensagem);
+
+            NotificationsGrid.Children.Clear();
+            NotificationsGrid.Children.Add(notificationView);
             NotificationsGrid.Visibility = Visibility.Visible;
         }
 
         private void BtnNotification_MouseLeave(object sender, MouseEventArgs e)
         {
+            NotificationsGrid.Children.Clear();
             NotificationsGrid.Visibility = Visibility.Collapsed;
         }
         #endregion
