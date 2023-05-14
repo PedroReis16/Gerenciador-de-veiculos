@@ -15,6 +15,10 @@ namespace Gerenciador_de_veículos.Services
 
         public static string GerarMatricula()
         {
+            if (VeiculosDAO.GetAllTrains() == null)
+            {
+                return GerarCombinação();
+            }
             List<Trem> list = VeiculosDAO.GetAllTrains().ConvertAll(x => (Trem)x);
 
             while (true)

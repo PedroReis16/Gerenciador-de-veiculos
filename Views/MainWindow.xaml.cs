@@ -43,6 +43,7 @@ namespace Gerenciador_de_veículos
 
             Mensagem = new List<string>();
             acoes = new VeiculosAcoes(this);
+            //Inicializar();
 
             InitializeTimer();
             actionTimer.Start();
@@ -118,7 +119,7 @@ namespace Gerenciador_de_veículos
             //Timer que irá gerar uma ação aleatória nos veículos
 
             int acao = new Random().Next(1, 15);
-            acoes.Random(acao);
+            //acoes.Random(acao);
         }
         public void TimerControl()
         {
@@ -325,6 +326,24 @@ namespace Gerenciador_de_veículos
         }
         #endregion
 
-
+        private void Inicializar()
+        {
+            List<object> items = new List<object>()
+            {
+                new Carro(),
+                new Moto(),
+                new Onibus(),
+                new Caminhao(),
+                new Aviao(),
+                new AviaoGuerra(),
+                new Navio(),
+                   new NavioGuerra(),
+                   new Trem()
+            };
+            foreach(var i in items)
+            {
+                VeiculosDAO.Save(i);
+            }
+        }
     }
 }

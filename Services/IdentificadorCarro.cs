@@ -15,6 +15,10 @@ namespace Gerenciador_de_veículos.Services
 
         public static string GerarPlaca()
         {
+            if (VeiculosDAO.GetAllRoadVehicles() == null)
+            {
+                return GerarCombinacao();
+            }
             List<Veiculo> list = VeiculosDAO.GetAllRoadVehicles().ConvertAll(x => (Veiculo)x);
 
             while (true)

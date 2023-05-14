@@ -21,7 +21,16 @@ namespace Gerenciador_de_veículos.DAO
             try
             {
                 string json = File.ReadAllText(DataVeiculo);
-                List<object> JObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+                List<object> JObject;
+
+                if (json == "")
+                {
+                    JObject = new List<object>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
+                }
 
                 JObject.Add(veiculo);
 
@@ -160,6 +169,10 @@ namespace Gerenciador_de_veículos.DAO
         public static List<object> GetAllVehicles()
         {
             string json = File.ReadAllText(DataVeiculo);
+            if (json == "")
+            {
+                return null;
+            }
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
 
             return list;
@@ -167,12 +180,16 @@ namespace Gerenciador_de_veículos.DAO
         public static List<object> GetAllRoadVehicles()
         {
             string json = File.ReadAllText(DataVeiculo);
+            if (json == "")
+            {
+                return null;
+            }
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
 
             foreach (var i in list)
             {
-                if (i is Carro || i is Moto || i is Caminhao || i is Onibus)
+                if (i.GetType() == typeof(Carro) || i.GetType() == typeof(Moto) || i.GetType() == typeof(Caminhao) || i.GetType() == typeof(Onibus))
                 {
                     result.Add((Veiculo)i);
                 }
@@ -183,11 +200,15 @@ namespace Gerenciador_de_veículos.DAO
         public static List<object> GetAllPlanes()
         {
             string json = File.ReadAllText(DataVeiculo);
+            if (json == "")
+            {
+                return null;
+            }
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
             foreach (var i in list)
             {
-                if (i is Aviao || i is AviaoGuerra)
+                if (i.GetType() == typeof(Aviao) || i.GetType() == typeof(AviaoGuerra))
                 {
                     result.Add(i);
                 }
@@ -197,11 +218,15 @@ namespace Gerenciador_de_veículos.DAO
         public static List<object> GetAllShips()
         {
             string json = File.ReadAllText(DataVeiculo);
+            if (json == "")
+            {
+                return null;
+            }
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
             foreach (var i in list)
             {
-                if (i is Navio || i is NavioGuerra)
+                if (i.GetType() == typeof(Navio) || i.GetType() == typeof(NavioGuerra))
                 {
                     result.Add(i);
                 }
@@ -211,11 +236,15 @@ namespace Gerenciador_de_veículos.DAO
         public static List<object> GetAllTrains()
         {
             string json = File.ReadAllText(DataVeiculo);
+            if (json == "")
+            {
+                return null;
+            }
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
             foreach (var i in list)
             {
-                if (i is Trem)
+                if (i.GetType() == typeof(Trem))
                 {
                     result.Add((Trem)i);
                 }

@@ -12,6 +12,10 @@ namespace Gerenciador_de_veículos.Services
     {//Gera o identificar para os navios
         public static string GerarMatricula()
         {
+            if (VeiculosDAO.GetAllShips() == null)
+            {
+                return GerarCombinacao();
+            }
             List<Veiculo> list = VeiculosDAO.GetAllShips().ConvertAll(x => (Veiculo)x);
 
             while (true)

@@ -1,15 +1,41 @@
 [
   {
-    "Portas": 4,
-    "Oficial": false,
+    "QtdVagoes": 14,
     "Limpador": false,
-    "Id": "XGU0459",
-    "Peso": 1736.0,
-    "Velocidade": 152,
-    "CapacidadePassageiros": 2,
-    "VelMax": 174,
+    "Id": "QTB2056",
+    "Peso": 100000000.0,
+    "Velocidade": 4,
+    "CapacidadePassageiros": 1200,
+    "VelMax": 56,
+    "Modelo": null
+  },
+  {
+    "Limpador": false,
+    "Id": "GBGHCDG",
+    "Peso": 280000.0,
+    "Velocidade": 766,
+    "CapacidadePassageiros": 12,
+    "VelMax": 662,
     "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
+      "Codigo": 14,
+      "ModeloNome": "Airbus A380",
+      "Marca": {
+        "MarcaId": 65,
+        "MarcaNome": "Airbus"
+      },
+      "Tipo": 5
+    }
+  },
+  {
+    "Portas": 4,
+    "Oficial": true,
+    "Limpador": false,
+    "Id": "KTX5578",
+    "Peso": 1891.0,
+    "Velocidade": 141,
+    "CapacidadePassageiros": 2,
+    "VelMax": 296,
+    "Modelo": {
       "Codigo": 1,
       "ModeloNome": "Golf",
       "Marca": null,
@@ -18,17 +44,15 @@
   },
   {
     "Empinar": false,
-    "Id": "VVW3619",
-    "Peso": 108.0,
-    "Velocidade": 296,
+    "Id": "DDC3321",
+    "Peso": 98.0,
+    "Velocidade": 90,
     "CapacidadePassageiros": 2,
-    "VelMax": 290,
+    "VelMax": 171,
     "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
       "Codigo": 5,
       "ModeloNome": "CBR600RR",
       "Marca": {
-        "$type": "Gerenciador_de_veículos.Objects.Marca, Gerenciador de veículos",
         "MarcaId": 5,
         "MarcaNome": "Honda"
       },
@@ -36,20 +60,18 @@
     }
   },
   {
-    "Eixos": 3,
+    "Eixos": 4,
     "Leito": true,
     "Limpador": false,
-    "Id": "AYO0026",
-    "Peso": 7456.0,
-    "Velocidade": 89,
-    "CapacidadePassageiros": 49,
-    "VelMax": 116,
+    "Id": "JEB7226",
+    "Peso": 6108.0,
+    "Velocidade": 25,
+    "CapacidadePassageiros": 20,
+    "VelMax": 77,
     "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
       "Codigo": 8,
       "ModeloNome": "O500RSD",
       "Marca": {
-        "$type": "Gerenciador_de_veículos.Objects.Marca, Gerenciador de veículos",
         "MarcaId": 13,
         "MarcaNome": "Mercedes-Benz"
       },
@@ -57,453 +79,15 @@
     }
   },
   {
-    "Eixos": 7,
-    "Capacidade": 65000.0,
-    "Carga": 61405.0,
+    "Eixos": 3,
+    "Capacidade": 6000.0,
+    "Carga": 134.0,
     "Limpador": false,
-    "Id": "KCJ0715",
-    "Peso": 6278.0,
-    "Velocidade": 78,
+    "Id": "BSC2447",
+    "Peso": 4025.0,
+    "Velocidade": 33,
     "CapacidadePassageiros": 2,
-    "VelMax": 78,
-    "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
-      "Codigo": 11,
-      "ModeloNome": "Actros",
-      "Marca": {
-        "$type": "Gerenciador_de_veículos.Objects.Marca, Gerenciador de veículos",
-        "MarcaId": 13,
-        "MarcaNome": "Mercedes-Benz"
-      },
-      "Tipo": 4
-    }
-  },
-  {
-    "Limpador": false,
-    "Id": "ESQEWYN",
-    "Peso": 280000.0,
-    "Velocidade": 627,
-    "CapacidadePassageiros": 735,
-    "VelMax": 773,
-    "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
-      "Codigo": 13,
-      "ModeloNome": "Boeing 747",
-      "Marca": {
-        "$type": "Gerenciador_de_veículos.Objects.Marca, Gerenciador de veículos",
-        "MarcaId": 64,
-        "MarcaNome": "Boeing"
-      },
-      "Tipo": 5
-    }
-  },
-  {
-    "Limpador": false,
-    "Id": "ESQEWYN",
-    "Peso": 14000.0,
-    "Velocidade": 1235,
-    "CapacidadePassageiros": 1,
-    "VelMax": 1413,
-    "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
-      "Codigo": 15,
-      "ModeloNome": "F-16 Fighting Falcon",
-      "Marca": {
-        "$type": "Gerenciador_de_veículos.Objects.Marca, Gerenciador de veículos",
-        "MarcaId": 107,
-        "MarcaNome": "Lockheed Martin"
-      },
-      "Tipo": 6
-    }
-  },
-  {
-    "Limpador": false,
-    "Id": "IMO6618",
-    "Peso": 230000000.0,
-    "Velocidade": 37,
-    "CapacidadePassageiros": 5000,
-    "VelMax": 54,
-    "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
-      "Codigo": 18,
-      "ModeloNome": "Oasis of the Seas",
-      "Marca": {
-        "$type": "Gerenciador_de_veículos.Objects.Marca, Gerenciador de veículos",
-        "MarcaId": 107,
-        "MarcaNome": "Royal Caribbean International"
-      },
-      "Tipo": 8
-    }
-  },
-  {
-    "Limpador": false,
-    "Id": "IMO6618",
-    "Peso": 14000000.0,
-    "Velocidade": 37,
-    "CapacidadePassageiros": 200,
-    "VelMax": 54,
-    "Modelo": {
-      "$type": "Gerenciador_de_veículos.Service.Modelo, Gerenciador de veículos",
-      "Codigo": 20,
-      "ModeloNome": "Classe Arleigh Burkes",
-      "Marca": {
-        "$type": "Gerenciador_de_veículos.Objects.Marca, Gerenciador de veículos",
-        "MarcaId": 107,
-        "MarcaNome": "Estados Unidos"
-      },
-      "Tipo": 9
-    }
-  },
-  {
-    "QtdVagoes": 4,
-    "Limpador": false,
-    "Id": "QQE8952",
-    "Peso": 100000000.0,
-    "Velocidade": 37,
-    "CapacidadePassageiros": 1200,
-    "VelMax": 66,
-    "Modelo": null
-  },
-  [
-    {
-      "Portas": 4,
-      "Oficial": false,
-      "Limpador": false,
-      "Id": "PUL1139",
-      "Peso": 1011.0,
-      "Velocidade": 67,
-      "CapacidadePassageiros": 7,
-      "VelMax": 150,
-      "Modelo": {
-        "Codigo": 3,
-        "ModeloNome": "Mustang",
-        "Marca": {
-          "MarcaId": 2,
-          "MarcaNome": "Ford"
-        },
-        "Tipo": 1
-      }
-    },
-    {
-      "Empinar": false,
-      "Id": "GLZ7844",
-      "Peso": 158.0,
-      "Velocidade": 186,
-      "CapacidadePassageiros": 2,
-      "VelMax": 221,
-      "Modelo": {
-        "Codigo": 5,
-        "ModeloNome": "CBR600RR",
-        "Marca": {
-          "MarcaId": 5,
-          "MarcaNome": "Honda"
-        },
-        "Tipo": 2
-      }
-    },
-    {
-      "Eixos": 3,
-      "Leito": true,
-      "Limpador": false,
-      "Id": "BHI3555",
-      "Peso": 14107.0,
-      "Velocidade": 55,
-      "CapacidadePassageiros": 36,
-      "VelMax": 93,
-      "Modelo": {
-        "Codigo": 8,
-        "ModeloNome": "O500RSD",
-        "Marca": {
-          "MarcaId": 13,
-          "MarcaNome": "Mercedes-Benz"
-        },
-        "Tipo": 3
-      }
-    },
-    {
-      "Eixos": 5,
-      "Capacidade": 13500.0,
-      "Carga": 5279.0,
-      "Limpador": false,
-      "Id": "EJF5072",
-      "Peso": 7813.0,
-      "Velocidade": 51,
-      "CapacidadePassageiros": 2,
-      "VelMax": 100,
-      "Modelo": {
-        "Codigo": 11,
-        "ModeloNome": "Actros",
-        "Marca": {
-          "MarcaId": 13,
-          "MarcaNome": "Mercedes-Benz"
-        },
-        "Tipo": 4
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "RUMPOKJ",
-      "Peso": 280000.0,
-      "Velocidade": 534,
-      "CapacidadePassageiros": 477,
-      "VelMax": 841,
-      "Modelo": {
-        "Codigo": 14,
-        "ModeloNome": "Airbus A380",
-        "Marca": {
-          "MarcaId": 65,
-          "MarcaNome": "Airbus"
-        },
-        "Tipo": 5
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "RUMPOKJ",
-      "Peso": 14000.0,
-      "Velocidade": 1043,
-      "CapacidadePassageiros": 1,
-      "VelMax": 1668,
-      "Modelo": {
-        "Codigo": 16,
-        "ModeloNome": "Su-27 Flanker",
-        "Marca": {
-          "MarcaId": 107,
-          "MarcaNome": "Sukhoi"
-        },
-        "Tipo": 6
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "IMO9465",
-      "Peso": 230000000.0,
-      "Velocidade": 28,
-      "CapacidadePassageiros": 5000,
-      "VelMax": 59,
-      "Modelo": {
-        "Codigo": 19,
-        "ModeloNome": "MSC Meraviglia",
-        "Marca": null,
-        "Tipo": 8
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "IMO9465",
-      "Peso": 14000000.0,
-      "Velocidade": 28,
-      "CapacidadePassageiros": 200,
-      "VelMax": 59,
-      "Modelo": {
-        "Codigo": 21,
-        "ModeloNome": "TGV",
-        "Marca": {
-          "MarcaId": 107,
-          "MarcaNome": "Alstom"
-        },
-        "Tipo": 9
-      }
-    },
-    {
-      "QtdVagoes": 13,
-      "Limpador": false,
-      "Id": "IEU9632",
-      "Peso": 100000000.0,
-      "Velocidade": 28,
-      "CapacidadePassageiros": 1200,
-      "VelMax": 78,
-      "Modelo": null
-    }
-  ],
-  [
-    {
-      "Portas": 4,
-      "Oficial": true,
-      "Limpador": false,
-      "Id": "AOH2363",
-      "Peso": 1852.0,
-      "Velocidade": 74,
-      "CapacidadePassageiros": 4,
-      "VelMax": 220,
-      "Modelo": {
-        "Codigo": 1,
-        "ModeloNome": "Golf",
-        "Marca": null,
-        "Tipo": 1
-      }
-    },
-    {
-      "Empinar": false,
-      "Id": "HNI1627",
-      "Peso": 141.0,
-      "Velocidade": 199,
-      "CapacidadePassageiros": 2,
-      "VelMax": 290,
-      "Modelo": {
-        "Codigo": 4,
-        "ModeloNome": "Ninja",
-        "Marca": {
-          "MarcaId": 38,
-          "MarcaNome": "Kawasaki"
-        },
-        "Tipo": 2
-      }
-    },
-    {
-      "Eixos": 3,
-      "Leito": true,
-      "Limpador": false,
-      "Id": "KUL3202",
-      "Peso": 11862.0,
-      "Velocidade": 59,
-      "CapacidadePassageiros": 51,
-      "VelMax": 116,
-      "Modelo": {
-        "Codigo": 7,
-        "ModeloNome": "Paradiso 1800 DD",
-        "Marca": {
-          "MarcaId": 58,
-          "MarcaNome": "Marcopolo"
-        },
-        "Tipo": 3
-      }
-    },
-    {
-      "Eixos": 9,
-      "Capacidade": 65000.0,
-      "Carga": 49406.0,
-      "Limpador": false,
-      "Id": "DWC1440",
-      "Peso": 6750.0,
-      "Velocidade": 5,
-      "CapacidadePassageiros": 2,
-      "VelMax": 102,
-      "Modelo": {
-        "Codigo": 11,
-        "ModeloNome": "Actros",
-        "Marca": {
-          "MarcaId": 13,
-          "MarcaNome": "Mercedes-Benz"
-        },
-        "Tipo": 4
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "GBYQBTQ",
-      "Peso": 280000.0,
-      "Velocidade": 812,
-      "CapacidadePassageiros": 47,
-      "VelMax": 794,
-      "Modelo": {
-        "Codigo": 14,
-        "ModeloNome": "Airbus A380",
-        "Marca": {
-          "MarcaId": 65,
-          "MarcaNome": "Airbus"
-        },
-        "Tipo": 5
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "GBYQBTQ",
-      "Peso": 14000.0,
-      "Velocidade": 1622,
-      "CapacidadePassageiros": 1,
-      "VelMax": 1491,
-      "Modelo": {
-        "Codigo": 16,
-        "ModeloNome": "Su-27 Flanker",
-        "Marca": {
-          "MarcaId": 107,
-          "MarcaNome": "Sukhoi"
-        },
-        "Tipo": 6
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "IMO7960",
-      "Peso": 230000000.0,
-      "Velocidade": 56,
-      "CapacidadePassageiros": 5000,
-      "VelMax": 55,
-      "Modelo": {
-        "Codigo": 19,
-        "ModeloNome": "MSC Meraviglia",
-        "Marca": null,
-        "Tipo": 8
-      }
-    },
-    {
-      "Limpador": false,
-      "Id": "IMO7960",
-      "Peso": 14000000.0,
-      "Velocidade": 56,
-      "CapacidadePassageiros": 200,
-      "VelMax": 55,
-      "Modelo": {
-        "Codigo": 21,
-        "ModeloNome": "TGV",
-        "Marca": {
-          "MarcaId": 107,
-          "MarcaNome": "Alstom"
-        },
-        "Tipo": 9
-      }
-    },
-    {
-      "QtdVagoes": 14,
-      "Limpador": false,
-      "Id": "SYQ0766",
-      "Peso": 100000000.0,
-      "Velocidade": 56,
-      "CapacidadePassageiros": 1200,
-      "VelMax": 70,
-      "Modelo": null
-    }
-  ],
-  {
-    "QtdVagoes": 13,
-    "Limpador": false,
-    "Id": "BXQ4238",
-    "Peso": 100000000.0,
-    "Velocidade": 54,
-    "CapacidadePassageiros": 1200,
-    "VelMax": 47,
-    "Modelo": null
-  },
-  {
-    "Portas": 4,
-    "Oficial": true,
-    "Limpador": false,
-    "Id": "NBQ6434",
-    "Peso": 1251.0,
-    "Velocidade": 157,
-    "CapacidadePassageiros": 2,
-    "VelMax": 293,
-    "Modelo": {
-      "Codigo": 2,
-      "ModeloNome": "Civic",
-      "Marca": {
-        "MarcaId": 5,
-        "MarcaNome": "Honda"
-      },
-      "Tipo": 1
-    }
-  },
-  {
-    "Eixos": 9,
-    "Capacidade": 65000.0,
-    "Carga": 43731.0,
-    "Limpador": false,
-    "Id": "AZS1805",
-    "Peso": 7428.0,
-    "Velocidade": 24,
-    "CapacidadePassageiros": 2,
-    "VelMax": 112,
+    "VelMax": 83,
     "Modelo": {
       "Codigo": 12,
       "ModeloNome": "DAF XF",
@@ -512,6 +96,115 @@
         "MarcaNome": "DAF"
       },
       "Tipo": 4
+    }
+  },
+  {
+    "Limpador": false,
+    "Id": "PTDHJAS",
+    "Peso": 280000.0,
+    "Velocidade": 334,
+    "CapacidadePassageiros": 310,
+    "VelMax": 673,
+    "Modelo": {
+      "Codigo": 13,
+      "ModeloNome": "Boeing 747",
+      "Marca": {
+        "MarcaId": 64,
+        "MarcaNome": "Boeing"
+      },
+      "Tipo": 5
+    }
+  },
+  {
+    "Limpador": false,
+    "Id": "PTDHJAS",
+    "Peso": 14000.0,
+    "Velocidade": 627,
+    "CapacidadePassageiros": 1,
+    "VelMax": 1037,
+    "Modelo": {
+      "Codigo": 15,
+      "ModeloNome": "F-16 Fighting Falcon",
+      "Marca": {
+        "MarcaId": 107,
+        "MarcaNome": "Lockheed Martin"
+      },
+      "Tipo": 6
+    }
+  },
+  {
+    "Limpador": false,
+    "Id": "IMO9575",
+    "Peso": 230000000.0,
+    "Velocidade": 8,
+    "CapacidadePassageiros": 5000,
+    "VelMax": 46,
+    "Modelo": {
+      "Codigo": 18,
+      "ModeloNome": "Oasis of the Seas",
+      "Marca": {
+        "MarcaId": 107,
+        "MarcaNome": "Royal Caribbean International"
+      },
+      "Tipo": 8
+    }
+  },
+  {
+    "Limpador": false,
+    "Id": "IMO9575",
+    "Peso": 14000000.0,
+    "Velocidade": 32,
+    "CapacidadePassageiros": 200,
+    "VelMax": 59,
+    "Modelo": {
+      "Codigo": 21,
+      "ModeloNome": "TGV",
+      "Marca": {
+        "MarcaId": 107,
+        "MarcaNome": "Alstom"
+      },
+      "Tipo": 9
+    }
+  },
+  {
+    "QtdVagoes": 16,
+    "Limpador": false,
+    "Id": "YOT5789",
+    "Peso": 100000000.0,
+    "Velocidade": 32,
+    "CapacidadePassageiros": 1200,
+    "VelMax": 78,
+    "Modelo": null
+  },
+  {
+    "Limpador": false,
+    "Id": "IMO1833",
+    "Peso": 230000000.0,
+    "Velocidade": 46,
+    "CapacidadePassageiros": 5000,
+    "VelMax": 59,
+    "Modelo": {
+      "Codigo": 19,
+      "ModeloNome": "MSC Meraviglia",
+      "Marca": null,
+      "Tipo": 8
+    }
+  },
+  {
+    "Limpador": false,
+    "Id": "JPQKVIL",
+    "Peso": 280000.0,
+    "Velocidade": 392,
+    "CapacidadePassageiros": 832,
+    "VelMax": 661,
+    "Modelo": {
+      "Codigo": 13,
+      "ModeloNome": "Boeing 747",
+      "Marca": {
+        "MarcaId": 64,
+        "MarcaNome": "Boeing"
+      },
+      "Tipo": 5
     }
   }
 ]

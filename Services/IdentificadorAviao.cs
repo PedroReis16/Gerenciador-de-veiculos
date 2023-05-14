@@ -12,6 +12,10 @@ namespace Gerenciador_de_veículos.Services
     { // Classe responsável por gerar o ID dos aviões - prefixo + 5 letras - BRABCDE
         public static string GerarMatricula()
         {
+            if(VeiculosDAO.GetAllPlanes() == null)
+            {
+                return GerarCombinacao();
+            }
             List<Veiculo> list = VeiculosDAO.GetAllPlanes().ConvertAll(x => (Veiculo)x);
 
             while (true)
