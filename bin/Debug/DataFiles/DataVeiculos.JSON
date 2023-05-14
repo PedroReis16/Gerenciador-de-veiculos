@@ -474,5 +474,44 @@
     "CapacidadePassageiros": 1200,
     "VelMax": 47,
     "Modelo": null
+  },
+  {
+    "Portas": 4,
+    "Oficial": true,
+    "Limpador": false,
+    "Id": "NBQ6434",
+    "Peso": 1251.0,
+    "Velocidade": 157,
+    "CapacidadePassageiros": 2,
+    "VelMax": 293,
+    "Modelo": {
+      "Codigo": 2,
+      "ModeloNome": "Civic",
+      "Marca": {
+        "MarcaId": 5,
+        "MarcaNome": "Honda"
+      },
+      "Tipo": 1
+    }
+  },
+  {
+    "Eixos": 9,
+    "Capacidade": 65000.0,
+    "Carga": 43731.0,
+    "Limpador": false,
+    "Id": "AZS1805",
+    "Peso": 7428.0,
+    "Velocidade": 24,
+    "CapacidadePassageiros": 2,
+    "VelMax": 112,
+    "Modelo": {
+      "Codigo": 12,
+      "ModeloNome": "DAF XF",
+      "Marca": {
+        "MarcaId": 51,
+        "MarcaNome": "DAF"
+      },
+      "Tipo": 4
+    }
   }
 ]

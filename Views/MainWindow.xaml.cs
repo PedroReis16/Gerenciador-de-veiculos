@@ -42,7 +42,7 @@ namespace Gerenciador_de_veículos
             InitializeComponent();
 
             Mensagem = new List<string>();
-            //acoes = new VeiculosAcoes(this);
+            acoes = new VeiculosAcoes(this);
 
             InitializeTimer();
             actionTimer.Start();
@@ -111,14 +111,14 @@ namespace Gerenciador_de_veículos
         {
             actionTimer = new DispatcherTimer();
             actionTimer.Tick += new EventHandler(ActionTimer);
-            actionTimer.Interval = TimeSpan.FromSeconds(1);
+            actionTimer.Interval = TimeSpan.FromSeconds(4);
         }
         private void ActionTimer(object sender, EventArgs e)
         {
             //Timer que irá gerar uma ação aleatória nos veículos
 
             int acao = new Random().Next(1, 15);
-            //acoes.Random(acao);
+            acoes.Random(acao);
         }
         public void TimerControl()
         {

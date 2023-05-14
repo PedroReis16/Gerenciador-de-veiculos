@@ -170,9 +170,10 @@ namespace Gerenciador_de_veículos.Services
                     break;
             }
 
-            Veiculo veiculo = (Veiculo)VeiculosDAO.GetAllVehicles().LastOrDefault();
+            var veiculo = VeiculosDAO.GetAllVehicles();
+            Veiculo ultimo = (Veiculo)veiculo.LastOrDefault();
 
-            menu.Text(veiculo.Id, 2);
+            menu.Text(ultimo.Id, 2);
         }
 
         public void Arremeter()
@@ -294,7 +295,7 @@ namespace Gerenciador_de_veículos.Services
 
         public void Descarregar()
         {
-            List<object> list = VeiculosDAO.GetAllRoadVehicles();
+            List<object> list = VeiculosDAO.GetAllRoadVehicles().Where(x=>x.GetType()==typeof(Caminhao)).ToList();
 
             if (list.Count == 0 || list == null)
             {
@@ -310,7 +311,7 @@ namespace Gerenciador_de_veículos.Services
 
         public void Empinar()
         {
-            List<object> list = VeiculosDAO.GetAllRoadVehicles();
+            List<object> list = VeiculosDAO.GetAllRoadVehicles().Where(x=>x.GetType()==typeof(Moto)).ToList();
 
             if (list.Count == 0 || list == null)
             {
@@ -431,6 +432,7 @@ namespace Gerenciador_de_veículos.Services
                 return;
             }
             var veiculo = list[rnd.Next(0, list.Count)];
+
             if (veiculo is Carro)
             {
                 ((Carro)veiculo).Desacelera();
@@ -474,6 +476,7 @@ namespace Gerenciador_de_veículos.Services
             if (list.Count == 0 || list == null)
             {
                 Adicionar();
+                return;
             }
 
             var veiculo = list[rnd.Next(0, list.Count)];

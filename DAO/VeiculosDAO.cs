@@ -13,17 +13,18 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class VeiculosDAO
     {
-        static string DataVeiculo = Environment.CurrentDirectory +@"\DataFiles\DataVeiculos.json";
-        static string json = File.ReadAllText(DataVeiculo);
+        static string DataVeiculo = Environment.CurrentDirectory + @"\DataFiles\DataVeiculos.json";
+
 
         public static void Save(object veiculo)
         {
             try
             {
+                string json = File.ReadAllText(DataVeiculo);
                 List<object> JObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
 
                 JObject.Add(veiculo);
-                
+
                 string dado = JsonConvert.SerializeObject(JObject, Formatting.Indented);
 
                 //JsonSerializerSettings cfg = new JsonSerializerSettings();
@@ -44,7 +45,7 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                //var json = File.ReadAllText(DataCarro);
+                string json = File.ReadAllText(DataVeiculo);
                 List<object> jObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
 
                 jObject.Remove(veiculo);
@@ -61,7 +62,7 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                //string json = File.ReadAllText(DataCarro);
+                string json = File.ReadAllText(DataVeiculo);
                 List<object> jObject = JsonConvert.DeserializeObject<List<object>>(json).ToList();
                 int index;
 
@@ -158,12 +159,14 @@ namespace Gerenciador_de_veículos.DAO
 
         public static List<object> GetAllVehicles()
         {
+            string json = File.ReadAllText(DataVeiculo);
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
 
             return list;
         }
         public static List<object> GetAllRoadVehicles()
         {
+            string json = File.ReadAllText(DataVeiculo);
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
 
@@ -179,6 +182,7 @@ namespace Gerenciador_de_veículos.DAO
         }
         public static List<object> GetAllPlanes()
         {
+            string json = File.ReadAllText(DataVeiculo);
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
             foreach (var i in list)
@@ -192,6 +196,7 @@ namespace Gerenciador_de_veículos.DAO
         }
         public static List<object> GetAllShips()
         {
+            string json = File.ReadAllText(DataVeiculo);
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
             foreach (var i in list)
@@ -205,6 +210,7 @@ namespace Gerenciador_de_veículos.DAO
         }
         public static List<object> GetAllTrains()
         {
+            string json = File.ReadAllText(DataVeiculo);
             List<object> list = JsonConvert.DeserializeObject<List<object>>(json).ToList();
             List<object> result = new List<object>();
             foreach (var i in list)
