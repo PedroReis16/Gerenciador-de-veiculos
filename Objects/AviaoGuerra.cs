@@ -28,7 +28,7 @@ namespace Gerenciador_de_veículos.Objects
             CapacidadePassageiros = 1;
         }
 
-        public void Arremetar()
+        public void Arremeter()
         {
            
         }

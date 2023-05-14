@@ -65,5 +65,13 @@ namespace Gerenciador_de_veículos.Objects
         {
 
         }
+        public void Carregar()
+        {
+            
+        }
+        public void Descarregar()
+        {
+            
+        }   
     }
 }

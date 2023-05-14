@@ -9,7 +9,7 @@ namespace Gerenciador_de_veículos.Fonts
     public interface IAviao
     {
         void Pousar();
-        void Arremetar();
+        void Arremeter();
         void Decolar();
     }
 }

@@ -29,7 +29,7 @@ namespace Gerenciador_de_veículos.Objects
             CapacidadePassageiros = random.Next(0, 850);
             Limpador = false;
         }
-        public void Arremetar()
+        public void Arremeter()
         {
 
         }
