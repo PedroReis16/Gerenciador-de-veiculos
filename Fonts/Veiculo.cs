@@ -1,4 +1,5 @@
 ﻿using Gerenciador_de_veículos.Service;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace Gerenciador_de_veículos.Fonts
         public int Velocidade { get; set; }
         public int CapacidadePassageiros { get; set; }
         public int VelMax { get; set; }
+
+        [JsonProperty(PropertyName = "Modelo")]
         public Modelo Modelo { get; set; }
 
 

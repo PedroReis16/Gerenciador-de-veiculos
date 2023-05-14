@@ -43,17 +43,26 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                var json = File.ReadAllText(DataMoto);
-                List<Moto> jObject = JsonConvert.DeserializeObject<List<Moto>>(json).ToList();
+                string json = File.ReadAllText(DataMoto);
+                List<Moto> JObject;
 
-                jObject.Remove(veiculo);
+                if (json == "")
+                {
+                    JObject = new List<Moto>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<Moto>>(json).ToList();
+                }
 
-                var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataMoto, saida);
+                JObject.Remove(veiculo);
+
+                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                File.WriteAllText(DataMoto, novoJsonResult);
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Erro ao excluir carro");
+                Console.WriteLine("Erro ao adicionar carro");
             }
         }
         public static void Edit(Moto veiculo)

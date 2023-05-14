@@ -20,20 +20,21 @@ namespace Gerenciador_de_veículos.DAO
             try
             {
                 string json = File.ReadAllText(DataCarro);
-                List<Carro> JObject;
+                List<Carro> lista;
 
                 if (json == "")
                 {
-                    JObject = new List<Carro>();
+                    lista = new List<Carro>();
                 }
                 else
                 {
-                    JObject = JsonConvert.DeserializeObject<List<Carro>>(json).ToList();
+                    lista = JsonConvert.DeserializeObject<List<Carro>>(json).ToList();
                 }
+                //p: Por que o método acima, para deserialize o json, esta chamando uma classe que não possui relação com o carro nesse momento?
 
-                JObject.Add(carro);
+                lista.Add(carro);
 
-                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                string novoJsonResult = JsonConvert.SerializeObject(lista, Formatting.Indented);
                 File.WriteAllText(DataCarro, novoJsonResult);
             }
             catch (Exception ex)
@@ -45,17 +46,26 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                var json = File.ReadAllText(DataCarro);
-                List<Carro> jObject = JsonConvert.DeserializeObject<List<Carro>>(json).ToList();
+                string json = File.ReadAllText(DataCarro);
+                List<Carro> JObject;
 
-                jObject.Remove(carro);
+                if (json == "")
+                {
+                    JObject = new List<Carro>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<Carro>>(json).ToList();
+                }
 
-                var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataCarro, saida);
+                JObject.Remove(carro);
+
+                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                File.WriteAllText(DataCarro, novoJsonResult);
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Erro ao excluir carro");
+                Console.WriteLine("Erro ao adicionar carro");
             }
         }
         public static void Edit(Carro carro)

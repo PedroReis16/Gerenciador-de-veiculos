@@ -43,7 +43,7 @@ namespace Gerenciador_de_veículos
 
             Mensagem = new List<string>();
             acoes = new VeiculosAcoes(this);
-            Inicializar();
+            //Inicializar();
 
             InitializeTimer();
             actionTimer.Start();
@@ -119,7 +119,7 @@ namespace Gerenciador_de_veículos
             //Timer que irá gerar uma ação aleatória nos veículos
 
             int acao = new Random().Next(1, 15);
-            //acoes.Random(acao);
+            acoes.Random(acao);
         }
         public void TimerControl()
         {
@@ -183,6 +183,7 @@ namespace Gerenciador_de_veículos
                     break;
             }
         }
+
         #region Buttons Background Events
         private void MainWindow_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -329,15 +330,15 @@ namespace Gerenciador_de_veículos
         private void Inicializar()
         {
 
-            Carro car=new Carro();
-            Moto bike=new Moto();
-            Onibus bus=new Onibus();
-            Caminhao caminhao = new Caminhao();
-            Aviao plane = new Aviao();
-            AviaoGuerra Warplane=new AviaoGuerra();
-            Navio ship = new Navio();
-            NavioGuerra Warship =new NavioGuerra();
-            Trem train = new Trem();
+            //Carro car=new Carro();
+            //Moto bike=new Moto();
+            //Onibus bus=new Onibus();
+            //Caminhao caminhao = new Caminhao();
+            //Aviao plane = new Aviao();
+            //AviaoGuerra Warplane=new AviaoGuerra();
+            //Navio ship = new Navio();
+            //NavioGuerra Warship =new NavioGuerra();
+            //Trem train = new Trem();
 
 
         }

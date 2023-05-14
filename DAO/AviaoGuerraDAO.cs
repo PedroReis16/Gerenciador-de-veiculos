@@ -43,17 +43,25 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                var json = File.ReadAllText(DataAviao);
-                List<AviaoGuerra> jObject = JsonConvert.DeserializeObject<List<AviaoGuerra>>(json).ToList();
+                string json = File.ReadAllText(DataAviao);
+                List<AviaoGuerra> JObject;
+                if (json == "")
+                {
+                    JObject = new List<AviaoGuerra>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<AviaoGuerra>>(json).ToList();
+                }
 
-                jObject.Remove(veiculo);
+                JObject.Remove(veiculo);
 
-                var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataAviao, saida);
+                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                File.WriteAllText(DataAviao, novoJsonResult);
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Erro ao excluir avião");
+                Console.WriteLine("Erro ao adicionar avião");
             }
         }
         public static void Edit(AviaoGuerra veiculo)

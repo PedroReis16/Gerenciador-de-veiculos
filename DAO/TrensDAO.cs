@@ -41,17 +41,26 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                var json = File.ReadAllText(DataNavio);
-                List<Trem> jObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
+                string json = File.ReadAllText(DataNavio);
+                List<Trem> JObject;
 
-                jObject.Remove(veiculo);
+                if (json == "")
+                {
+                    JObject = new List<Trem>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<Trem>>(json).ToList();
+                }
 
-                var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataNavio, saida);
+                JObject.Remove(veiculo);
+
+                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                File.WriteAllText(DataNavio, novoJsonResult);
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Erro ao excluir avião");
+                Console.WriteLine("Erro ao adicionar avião");
             }
         }
         public static void Edit(Trem veiculo)

@@ -43,17 +43,26 @@ namespace Gerenciador_de_veículos.DAO
         {
             try
             {
-                var json = File.ReadAllText(DataOnibus);
-                List<Onibus> jObject = JsonConvert.DeserializeObject<List<Onibus>>(json).ToList();
+                string json = File.ReadAllText(DataOnibus);
+                List<Onibus> JObject;
 
-                jObject.Remove(veiculo);
+                if (json == "")
+                {
+                    JObject = new List<Onibus>();
+                }
+                else
+                {
+                    JObject = JsonConvert.DeserializeObject<List<Onibus>>(json).ToList();
+                }
 
-                var saida = JsonConvert.SerializeObject(jObject, Formatting.Indented);
-                File.WriteAllText(DataOnibus, saida);
+                JObject.Remove(veiculo);
+
+                string novoJsonResult = JsonConvert.SerializeObject(JObject, Formatting.Indented);
+                File.WriteAllText(DataOnibus, novoJsonResult);
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Erro ao excluir ônibus");
+                Console.WriteLine("Erro ao adicionar ônibus");
             }
         }
         public static void Edit(Onibus veiculo)

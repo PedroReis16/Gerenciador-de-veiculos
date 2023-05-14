@@ -76,51 +76,200 @@ namespace Gerenciador_de_veículos.Services
         }
         public void Acelerar()
         {
-            var veiculos = VeiculosDAO.GetAllVehicles();
+            switch (rnd.Next(0, 9))
+            {
+                case 0:
+                    var list = CarrosDAO.GetAll();
+                    if (list == null)
+                    {
+                        return;
+                    }
 
-            if (veiculos.Count == 0 || veiculos == null)
-            {
-                Adicionar();
-            }
+                    Carro car;
+                    if (list.Count == 1)
+                    {
+                        car = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        car = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    car.Acelera();
+                    break;
+                case 1:
+                    var listM = MotosDAO.GetAll();
+                    if (listM == null)
+                    {
+                        return;
+                    }
 
-            List<object> list = VeiculosDAO.GetAllVehicles();
-            if (list.Count == 0 || list == null)
-            {
-                return;
-            }
-            var veiculo = list[rnd.Next(0, list.Count)];
+                    Moto bike;
+                    if (listM.Count == 1)
+                    {
+                        bike = listM[0];
+                    }
+                    else if (listM.Count > 1)
+                    {
+                        bike = listM[rnd.Next(0, listM.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    bike.Acelera();
+                    break;
+                case 2:
+                    var listB = OnibusDAO.GetAll();
+                    if (listB == null)
+                    {
+                        return;
+                    }
+                    Onibus bus;
+                    if (listB.Count == 1)
+                    {
+                        bus = listB[0];
+                    }
+                    else if (listB.Count > 1)
+                    {
+                        bus = listB[rnd.Next(0, listB.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    bus.Acelera();
+                    break;
+                case 3:
+                    var listC = CaminhoesDAO.GetAll();
+                    if (listC == null)
+                    {
+                        return;
+                    }
+                    Caminhao truck;
 
-            if (veiculo is Carro)
-            {
-                ((Carro)veiculo).Desacelera();
-            }
-            else if (veiculo is Caminhao)
-            {
-                ((Caminhao)veiculo).Desacelera();
-            }
-            else if (veiculo is Onibus)
-            {
-                ((Onibus)veiculo).Desacelera();
-            }
-            else if (veiculo is Aviao)
-            {
-                ((Aviao)veiculo).Desacelera();
-            }
-            else if (veiculo is AviaoGuerra)
-            {
-                ((AviaoGuerra)veiculo).Desacelera();
-            }
-            else if (veiculo is Navio)
-            {
-                ((Navio)veiculo).Desacelera();
-            }
-            else if (veiculo is Trem)
-            {
-                ((Trem)veiculo).Desacelera();
-            }
-            else if (veiculo is NavioGuerra)
-            {
-                ((NavioGuerra)veiculo).Desacelera();
+                    if (listC.Count == 1)
+                    {
+                        truck = listC[0];
+                    }
+                    else if (listC.Count > 1)
+                    {
+                        truck = listC[rnd.Next(0, listC.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    truck.Acelera();
+                    break;
+                case 4:
+                    var listA = AvioesDAO.GetAll();
+                    if (listA == null)
+                    {
+                        return;
+                    }
+                    Aviao plane;
+                    if (listA.Count == 1)
+                    {
+                        plane = listA[0];
+                    }
+                    else if (listA.Count > 1)
+                    {
+                        plane = listA[rnd.Next(0, listA.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    plane.Acelera();
+                    break;
+                case 5:
+                    var listAG = AviaoGuerraDAO.GetAll();
+                    if (listAG == null)
+                    {
+                        return;
+                    }
+                    AviaoGuerra planeG;
+                    if (listAG.Count == 1)
+                    {
+                        planeG = listAG[0];
+                    }
+                    else if (listAG.Count > 1)
+                    {
+                        planeG = listAG[rnd.Next(0, listAG.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    planeG.Acelera();
+                    break;
+                case 6:
+                    var listN = NaviosDAO.GetAll();
+                    if (listN == null)
+                    {
+                        return;
+                    }
+                    Navio ship;
+                    if (listN.Count == 1)
+                    {
+                        ship = listN[0];
+                    }
+                    else if (listN.Count > 1)
+                    {
+                        ship = listN[rnd.Next(0, listN.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    ship.Acelera();
+                    break;
+                case 7:
+                    var listNG = NavioGuerraDAO.GetAll();
+                    if (listNG == null)
+                    {
+                        return;
+                    }
+                    NavioGuerra shipG;
+                    if (listNG.Count == 1)
+                    {
+                        shipG = listNG[0];
+                    }
+                    else if (listNG.Count > 1)
+                    {
+                        shipG = listNG[rnd.Next(0, listNG.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    shipG.Acelera();
+                    break;
+                case 8:
+                    var listT = TrensDAO.GetAll();
+                    if (listT == null)
+                    {
+                        return;
+                    }
+                    Trem train;
+                    if (listT.Count == 1)
+                    {
+                        train = listT[0];
+                    }
+                    else if (listT.Count > 1)
+                    {
+                        train = listT[rnd.Next(0, listT.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    train.Acelera();
+                    break;
             }
 
             //Veiculo veiculo1 = (Veiculo)veiculo;
@@ -169,226 +318,299 @@ namespace Gerenciador_de_veículos.Services
 
         public void Arremeter()
         {
-            List<object> list = VeiculosDAO.GetAllPlanes();
-            if (list == null)
+            switch (rnd.Next(0, 2))
             {
-                return;
+                case 0:
+                    var list = AvioesDAO.GetAll();
+
+                    if (list == null)
+                    {
+                        return;
+                    }
+
+                    Aviao aviao;
+                    if (list.Count == 1)
+                    {
+                        aviao = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        aviao = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                    aviao.Arremeter();
+                    break;
+
+                case 1:
+                    var lista = AviaoGuerraDAO.GetAll();
+
+                    if (lista == null)
+                    {
+                        return;
+                    }
+
+                    AviaoGuerra plane;
+
+                    if (lista.Count == 1)
+                    {
+                        plane = lista[0];
+                    }
+                    else if (lista.Count > 1)
+                    {
+                        plane = lista[rnd.Next(0, lista.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    plane.Arremeter();
+
+                    break;
             }
 
-            object aviao;
-            if (list.Count == 1)
-            {
-                aviao = list[0];
-            }
-            else if (list.Count > 1)
-            {
-                aviao = list[rnd.Next(0, list.Count)];
-            }
-            else
-            {
-                return;
-            }
-
-            string mensagem;
-            Veiculo veiculo;
-
-            if (aviao is Aviao)
-            {
-                mensagem = ((Aviao)aviao).Arremeter();
-                //veiculo = (Aviao)aviao;
-                //menu.Text(veiculo.Id, 3);
-            }
-            else
-            {
-                mensagem = ((AviaoGuerra)aviao).Arremeter();
-                //veiculo = (AviaoGuerra)aviao;
-                //menu.Text(veiculo.Id, 3);
-            }
         }
 
         public void Atacar()
         {
-            List<object> list = VeiculosDAO.GetAllPlanes();
-            if (list == null)
+            switch (rnd.Next(0, 2))
             {
-                return;
+                case 1:
+                    var list = AviaoGuerraDAO.GetAll();
+
+                    if (list == null)
+                    {
+                        return;
+                    }
+
+                    AviaoGuerra plane;
+
+                    if (list.Count == 1)
+                    {
+                        plane = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        plane = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    plane.Atacar();
+
+                    break;
+                case 2:
+                    var lista = NavioGuerraDAO.GetAll();
+
+                    if (lista == null)
+                    {
+                        return;
+                    }
+
+                    NavioGuerra navio;
+
+                    if (lista.Count == 1)
+                    {
+                        navio = lista[0];
+                    }
+                    else if (lista.Count > 1)
+                    {
+                        navio = lista[rnd.Next(0, lista.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                    navio.Atacar();
+                    break;
             }
 
-            object veiculo;
-            if (list.Count == 1)
-            {
-                veiculo = list[0];
-            }
-            else if (list.Count > 1)
-            {
-                veiculo = list[rnd.Next(0, list.Count)];
-            }
-            else
-            {
-                return;
-            }
-
-            Veiculo atacar;
-
-            if (veiculo.GetType() == typeof(AviaoGuerra))
-            {
-                ((AviaoGuerra)veiculo).Atacar();
-                //atacar = (AviaoGuerra)veiculo;
-                //menu.Text(atacar.Id, 4);
-            }
-            else
-            {
-                ((NavioGuerra)veiculo).Atacar();
-               //atacar = (NavioGuerra)veiculo;
-               //menu.Text(atacar.Id, 4);
-            }
         }
 
         public void Atracar()
         {
-            List<object> list = VeiculosDAO.GetAllShips();
+            switch (rnd.Next(0, 2))
+            {
+                case 1:
+                    var list = NaviosDAO.GetAll();
 
-            if (list == null)
-            {
-                return;
-            }
+                    if (list == null)
+                    {
+                        return;
+                    }
 
-            object veiculo;
-            if (list.Count == 1)
-            {
-                veiculo = list[0];
-            }
-            else if (list.Count > 1)
-            {
-                veiculo = list[rnd.Next(0, list.Count)];
-            }
-            else
-            {
-                return;
-            }
+                    Navio ship;
 
-            if (veiculo is Navio)
-            {
-                ((Navio)veiculo).Atracar();
-            }
-            else
-            {
-                ((NavioGuerra)veiculo).Atracar();
-            }
+                    if (list.Count == 1)
+                    {
+                        ship = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        ship = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    ship.Atracar();
 
-           //Veiculo barco = (Veiculo)veiculo;
-           //menu.Text(barco.Id, 5);
+                    break;
+                case 2:
+                    var lista = NavioGuerraDAO.GetAll();
+
+                    if (lista == null)
+                    {
+                        return;
+                    }
+
+                    NavioGuerra navio;
+
+                    if (lista.Count == 1)
+                    {
+                        navio = lista[0];
+                    }
+                    else if (lista.Count > 1)
+                    {
+                        navio = lista[rnd.Next(0, lista.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                    navio.Atracar();
+                    break;
+            }
         }
 
         public void Carregar()
         {
-            List<object> list = VeiculosDAO.GetAllRoadVehicles();
+            List<Caminhao> list = CaminhoesDAO.GetAll();
 
             if (list == null)
             {
                 return;
             }
 
-            List<object> caminhoes = list.Where(x => x.GetType() == typeof(Caminhao)).ToList();
-
-
-            object veiculo;
+            Caminhao truck;
             if (list.Count == 1)
             {
-                veiculo = list[0];
+                truck = list[0];
             }
             else if (list.Count > 1)
             {
-                veiculo = list[rnd.Next(0, list.Count)];
+                truck = list[rnd.Next(0, list.Count)];
             }
             else
             {
                 return;
             }
 
-            ((Caminhao)veiculo).Carregar();
-           //Veiculo veiculo1 = (Veiculo)veiculo;
-           //menu.Text(veiculo1.Id, 6);
+            truck.Carregar();
 
         }
 
         public void Decolar()
         {
-            List<object> list = VeiculosDAO.GetAllPlanes();
-            if (list == null)
+            switch (rnd.Next(0, 2))
             {
-                return;
-            }
+                case 0:
+                    var list = AvioesDAO.GetAll();
 
-            object aviao;
-            if (list.Count == 1)
-            {
-                aviao = list[0];
-            }
-            else if (list.Count > 1)
-            {
-                aviao = list[rnd.Next(0, list.Count)];
-            }
-            else
-            {
-                return;
-            }
+                    if (list == null)
+                    {
+                        return;
+                    }
 
-            Veiculo veiculo;
+                    Aviao aviao;
+                    if (list.Count == 1)
+                    {
+                        aviao = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        aviao = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
 
-            if (aviao.GetType() == typeof(Aviao))
-            {
-                ((Aviao)aviao).Decolar();
-                //veiculo = (Veiculo)aviao;
-                //menu.Text(veiculo.Id, 7);
-            }
-            else
-            {
-                ((AviaoGuerra)aviao).Decolar();
-                //veiculo = (Veiculo)aviao;
-                //menu.Text(veiculo.Id, 7);
+                    aviao.Decolar();
+                    break;
+
+                case 1:
+                    var lista = AviaoGuerraDAO.GetAll();
+
+                    if (lista == null)
+                    {
+                        return;
+                    }
+
+                    AviaoGuerra plane;
+
+                    if (lista.Count == 1)
+                    {
+                        plane = lista[0];
+                    }
+                    else if (lista.Count > 1)
+                    {
+                        plane = lista[rnd.Next(0, lista.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    plane.Decolar();
+
+                    break;
             }
         }
 
         public void Descarregar()
         {
-            List<object> list = VeiculosDAO.GetAllRoadVehicles();
+            List<Caminhao> list = CaminhoesDAO.GetAll();
 
             if (list == null)
             {
                 return;
             }
 
-            List<object> caminhoes = list.Where(x => x.GetType() == typeof(Caminhao)).ToList();
-            object veiculo;
+            Caminhao truck;
             if (list.Count == 1)
             {
-                veiculo = list[0];
+                truck = list[0];
             }
-            else if(list.Count >1)
+            else if (list.Count > 1)
             {
-                veiculo = list[rnd.Next(0, list.Count)];
+                truck = list[rnd.Next(0, list.Count)];
             }
             else
             {
                 return;
             }
 
-            ((Caminhao)veiculo).Descarregar();
+            truck.Carregar();
             //Veiculo caminhao = (Veiculo)veiculo;
             //menu.Text(caminhao.Id, 8);
         }
 
         public void Empinar()
         {
-            List<object> list = VeiculosDAO.GetAllRoadVehicles().Where(x => x.GetType() == typeof(Moto)).ToList();
+            List<Moto> list = MotosDAO.GetAll();
 
             if (list == null)
             {
                 return;
             }
 
-            object veiculo;
+            Moto veiculo;
             if (list.Count == 1)
             {
                 veiculo = list[0];
@@ -401,61 +623,186 @@ namespace Gerenciador_de_veículos.Services
             {
                 return;
             }
-            ((Moto)veiculo).Grau();
-           //Veiculo moto = (Veiculo)veiculo;
-           //menu.Text(moto.Id, 9);
+            veiculo.Grau();
+
+            //Veiculo moto = (Veiculo)veiculo;
+            //menu.Text(moto.Id, 9);
         }
 
         public void Limpador()
         {
-            List<object> list = VeiculosDAO.GetAllVehicles().Where(x => x.GetType() != typeof(Moto)).ToList();
+            switch (rnd.Next(0, 9))
+            {
+                case 0:
+                    var list = CarrosDAO.GetAll();
+                    if (list == null)
+                    {
+                        return;
+                    }
 
-            if (list == null)
-            {
-                return;
-            }
+                    Carro car;
+                    if (list.Count == 1)
+                    {
+                        car = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        car = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    car.LigaDesligaLimpador();
+                    break;
+                case 1:
+                    var listB = OnibusDAO.GetAll();
+                    if (listB == null)
+                    {
+                        return;
+                    }
+                    Onibus bus;
+                    if (listB.Count == 1)
+                    {
+                        bus = listB[0];
+                    }
+                    else if (listB.Count > 1)
+                    {
+                        bus = listB[rnd.Next(0, listB.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    bus.LigaDesligaLimpador();
+                    break;
+                case 2:
+                    var listC = CaminhoesDAO.GetAll();
+                    if (listC == null)
+                    {
+                        return;
+                    }
+                    Caminhao truck;
 
-            object veiculo;
-            if (list.Count == 1)
-            {
-                veiculo = list[0];
-            }
-            else
-            {
-                veiculo = list[rnd.Next(0, list.Count)];
-            }
-
-            if (veiculo.GetType() == typeof(Carro))
-            {
-                ((Carro)veiculo).LigaDesligaLimpador();
-            }
-            else if (veiculo.GetType() == typeof(Caminhao))
-            {
-                ((Caminhao)veiculo).LigaDesligaLimpador();
-            }
-            else if (veiculo.GetType() == typeof(Onibus))
-            {
-                ((Onibus)veiculo).LigaDesligaLimpador();
-            }
-            else if (veiculo is Aviao)
-            {
-                ((Aviao)veiculo).LigaDesligaLimpador();
-            }
-            else if (veiculo.GetType() == typeof(AviaoGuerra))
-            {
-                ((AviaoGuerra)veiculo).LigaDesligaLimpador();
-            }
-            else if (veiculo.GetType() == typeof(Navio))
-            {
-                ((Navio)veiculo).LigaDesligaLimpador();
-            }
-            else if (veiculo.GetType() == typeof(Trem))
-            {
-                ((Trem)veiculo).LigaDesligaLimpador();
-            }
-            else if (veiculo.GetType() == typeof(NavioGuerra))
-            {
-                ((NavioGuerra)veiculo).LigaDesligaLimpador();
+                    if (listC.Count == 1)
+                    {
+                        truck = listC[0];
+                    }
+                    else if (listC.Count > 1)
+                    {
+                        truck = listC[rnd.Next(0, listC.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    truck.LigaDesligaLimpador();
+                    break;
+                case 3:
+                    var listA = AvioesDAO.GetAll();
+                    if (listA == null)
+                    {
+                        return;
+                    }
+                    Aviao plane;
+                    if (listA.Count == 1)
+                    {
+                        plane = listA[0];
+                    }
+                    else if (listA.Count > 1)
+                    {
+                        plane = listA[rnd.Next(0, listA.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    plane.LigaDesligaLimpador();
+                    break;
+                case 4:
+                    var listAG = AviaoGuerraDAO.GetAll();
+                    if (listAG == null)
+                    {
+                        return;
+                    }
+                    AviaoGuerra planeG;
+                    if (listAG.Count == 1)
+                    {
+                        planeG = listAG[0];
+                    }
+                    else if (listAG.Count > 1)
+                    {
+                        planeG = listAG[rnd.Next(0, listAG.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    planeG.LigaDesligaLimpador();
+                    break;
+                case 5:
+                    var listN = NaviosDAO.GetAll();
+                    if (listN == null)
+                    {
+                        return;
+                    }
+                    Navio ship;
+                    if (listN.Count == 1)
+                    {
+                        ship = listN[0];
+                    }
+                    else if (listN.Count > 1)
+                    {
+                        ship = listN[rnd.Next(0, listN.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    ship.LigaDesligaLimpador();
+                    break;
+                case 6:
+                    var listNG = NavioGuerraDAO.GetAll();
+                    if (listNG == null)
+                    {
+                        return;
+                    }
+                    NavioGuerra shipG;
+                    if (listNG.Count == 1)
+                    {
+                        shipG = listNG[0];
+                    }
+                    else if (listNG.Count > 1)
+                    {
+                        shipG = listNG[rnd.Next(0, listNG.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    shipG.LigaDesligaLimpador();
+                    break;
+                case 7:
+                    var listT = TrensDAO.GetAll();
+                    if (listT == null)
+                    {
+                        return;
+                    }
+                    Trem train;
+                    if (listT.Count == 1)
+                    {
+                        train = listT[0];
+                    }
+                    else if (listT.Count > 1)
+                    {
+                        train = listT[rnd.Next(0, listT.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    train.LigaDesligaLimpador();
+                    break;
             }
 
             //Veiculo veiculo1 = (Veiculo)veiculo;
@@ -464,143 +811,361 @@ namespace Gerenciador_de_veículos.Services
 
         public void Pedagio()
         {
-            List<object> list = VeiculosDAO.GetAllRoadVehicles();
+            switch (rnd.Next(0, 5))
+            {
+                case 1:
+                    var list = CarrosDAO.GetAll();
 
-            if (list == null)
-            {
-                return;
-            }
+                    if (list == null)
+                    {
+                        return;
+                    }
 
-            object veiculo;
-            if (list.Count == 1)
-            {
-                veiculo = list[0];
-            }
-            else if (list.Count > 1)
-            {
-                veiculo = list[rnd.Next(0, list.Count)];
-            }
-            else
-            {
-                return;
-            }
+                    Carro car;
+                    if (list.Count == 1)
+                    {
+                        car = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        car = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    car.Pedagio();
 
-            if (veiculo.GetType() == typeof(Carro))
-            {
-                ((Carro)veiculo).Pedagio();
-            }
-            else if (veiculo.GetType() == typeof(Caminhao))
-            {
-                ((Caminhao)veiculo).Pedagio();
-            }
-            else if (veiculo.GetType() == typeof(Onibus))
-            {
-                ((Onibus)veiculo).Pedagio();
-            }
-            else if (veiculo.GetType() == typeof(Moto))
-            {
-                ((Moto)veiculo).Pedagio();
-            }
+                    break;
+                case 2:
+                    var lista = CaminhoesDAO.GetAll();
 
-            //Veiculo veiculo1 = (Veiculo)veiculo;
-            //menu.Text(veiculo1.Id, 11);
+                    if (lista == null)
+                    {
+                        return;
+                    }
+                    Caminhao truck;
+                    if (lista.Count == 1)
+                    {
+                        truck = lista[0];
+                    }
+                    else if (lista.Count > 1)
+                    {
+                        truck = lista[rnd.Next(0, lista.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    truck.Pedagio();
+
+                    break;
+                case 3:
+                    var listB = OnibusDAO.GetAll();
+
+                    if (listB == null)
+                    {
+                        return;
+                    }
+
+                    Onibus bus;
+                    if (listB.Count == 1)
+                    {
+                        bus = listB[0];
+                    }
+                    else if (listB.Count > 1)
+                    {
+                        bus = listB[rnd.Next(0, listB.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    bus.Pedagio();
+
+                    break;
+                case 4:
+                    var listM = MotosDAO.GetAll();
+
+                    if (listM == null)
+                    {
+                        return;
+                    }
+
+                    Moto moto;
+
+                    if (listM.Count == 1)
+                    {
+                        moto = listM[0];
+                    }
+                    else if (listM.Count > 1)
+                    {
+                        moto = listM[rnd.Next(0, listM.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    moto.Pedagio();
+
+                    break;
+            }
         }
 
         public void Pousar()
         {
-            List<object> list = VeiculosDAO.GetAllPlanes();
-            if (list == null)
+            switch (rnd.Next(0, 2))
             {
-                return;
-            }
+                case 0:
+                    var list = AvioesDAO.GetAll();
 
-            object aviao;
-            if (list.Count == 1)
-            {
-                aviao = list[0];
-            }
-            else if (list.Count > 1)
-            {
-                aviao = list[rnd.Next(0, list.Count)];
-            }
-            else
-            {
-                return;
-            }
+                    if (list == null)
+                    {
+                        return;
+                    }
 
-            Veiculo veiculo;
-            if (aviao.GetType() == typeof(Aviao))
-            {
-                ((Aviao)aviao).Pousar();
-                //veiculo = (Veiculo)aviao;
-                //menu.Text(veiculo.Id, 12);
-            }
-            else
-            {
-                ((AviaoGuerra)aviao).Pousar();
-                //veiculo = (Veiculo)aviao;
-                //menu.Text(veiculo.Id, 12);
+                    Aviao aviao;
+                    if (list.Count == 1)
+                    {
+                        aviao = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        aviao = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                    aviao.Pousar();
+                    break;
+
+                case 1:
+                    var lista = AviaoGuerraDAO.GetAll();
+
+                    if (lista == null)
+                    {
+                        return;
+                    }
+
+                    AviaoGuerra plane;
+
+                    if (lista.Count == 1)
+                    {
+                        plane = lista[0];
+                    }
+                    else if (lista.Count > 1)
+                    {
+                        plane = lista[rnd.Next(0, lista.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    plane.Pousar();
+
+                    break;
             }
 
         }
 
         public void Reduzir()
         {
-            List<object> list = VeiculosDAO.GetAllVehicles();
-            if (list == null)
+            switch (rnd.Next(0, 9))
             {
-                return;
-            }
+                case 0:
+                    var list = CarrosDAO.GetAll();
+                    if (list == null)
+                    {
+                        return;
+                    }
 
-            object veiculo;
-            if (list.Count == 1)
-            {
-                veiculo = list[0];
-            }
-            else if (list.Count > 1)
-            {
-                veiculo = list[rnd.Next(0, list.Count)];
-            }
-            else
-            {
-                return;
-            }
+                    Carro car;
+                    if (list.Count == 1)
+                    {
+                        car = list[0];
+                    }
+                    else if (list.Count > 1)
+                    {
+                        car = list[rnd.Next(0, list.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    car.Desacelera();
+                    break;
+                case 1:
+                    var listM = MotosDAO.GetAll();
+                    if (listM == null)
+                    {
+                        return;
+                    }
 
-            if (veiculo.GetType() == typeof(Carro))
-            {
-                ((Carro)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(Caminhao))
-            {
-                ((Caminhao)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(Onibus))
-            {
-                ((Onibus)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(Aviao))
-            {
-                ((Aviao)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(AviaoGuerra))
-            {
-                ((AviaoGuerra)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(Navio))
-            {
-                ((Navio)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(Trem))
-            {
-                ((Trem)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(NavioGuerra))
-            {
-                ((NavioGuerra)veiculo).Desacelera();
-            }
-            else if (veiculo.GetType() == typeof(Moto))
-            {
-                ((Moto)veiculo).Desacelera();
+                    Moto bike;
+                    if (listM.Count == 1)
+                    {
+                        bike = listM[0];
+                    }
+                    else if (listM.Count > 1)
+                    {
+                        bike = listM[rnd.Next(0, listM.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    bike.Desacelera();
+                    break;
+                case 2:
+                    var listB = OnibusDAO.GetAll();
+                    if (listB == null)
+                    {
+                        return;
+                    }
+                    Onibus bus;
+                    if (listB.Count == 1)
+                    {
+                        bus = listB[0];
+                    }
+                    else if (listB.Count > 1)
+                    {
+                        bus = listB[rnd.Next(0, listB.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    bus.Desacelera();
+                    break;
+                case 3:
+                    var listC = CaminhoesDAO.GetAll();
+                    if (listC == null)
+                    {
+                        return;
+                    }
+                    Caminhao truck;
+
+                    if (listC.Count == 1)
+                    {
+                        truck = listC[0];
+                    }
+                    else if (listC.Count > 1)
+                    {
+                        truck = listC[rnd.Next(0, listC.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    truck.Desacelera();
+                    break;
+                case 4:
+                    var listA = AvioesDAO.GetAll();
+                    if (listA == null)
+                    {
+                        return;
+                    }
+                    Aviao plane;
+                    if (listA.Count == 1)
+                    {
+                        plane = listA[0];
+                    }
+                    else if (listA.Count > 1)
+                    {
+                        plane = listA[rnd.Next(0, listA.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    plane.Desacelera();
+                    break;
+                case 5:
+                    var listAG = AviaoGuerraDAO.GetAll();
+                    if (listAG == null)
+                    {
+                        return;
+                    }
+                    AviaoGuerra planeG;
+                    if (listAG.Count == 1)
+                    {
+                        planeG = listAG[0];
+                    }
+                    else if (listAG.Count > 1)
+                    {
+                        planeG = listAG[rnd.Next(0, listAG.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    planeG.Desacelera();
+                    break;
+                case 6:
+                    var listN = NaviosDAO.GetAll();
+                    if (listN == null)
+                    {
+                        return;
+                    }
+                    Navio ship;
+                    if (listN.Count == 1)
+                    {
+                        ship = listN[0];
+                    }
+                    else if (listN.Count > 1)
+                    {
+                        ship = listN[rnd.Next(0, listN.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    ship.Desacelera();
+                    break;
+                case 7:
+                    var listNG = NavioGuerraDAO.GetAll();
+                    if (listNG == null)
+                    {
+                        return;
+                    }
+                    NavioGuerra shipG;
+                    if (listNG.Count == 1)
+                    {
+                        shipG = listNG[0];
+                    }
+                    else if (listNG.Count > 1)
+                    {
+                        shipG = listNG[rnd.Next(0, listNG.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    shipG.Desacelera();
+                    break;
+                case 8:
+                    var listT = TrensDAO.GetAll();
+                    if (listT == null)
+                    {
+                        return;
+                    }
+                    Trem train;
+                    if (listT.Count == 1)
+                    {
+                        train = listT[0];
+                    }
+                    else if (listT.Count > 1)
+                    {
+                        train = listT[rnd.Next(0, listT.Count)];
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    train.Desacelera();
+                    break;
             }
 
 
