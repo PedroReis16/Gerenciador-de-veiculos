@@ -85,8 +85,6 @@ namespace Gerenciador_de_veículos.DAO
             {
                 return null;
             }
-            //p: O que pode estar causando stack Overflow aqui?
-            //r: 
         }
     }
 }
