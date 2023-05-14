@@ -73,10 +73,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAO\AviaoGuerraDAO.cs" />
+    <Compile Include="DAO\AvioesDAO.cs" />
+    <Compile Include="DAO\CaminhoesDAO.cs" />
+    <Compile Include="DAO\CarrosDAO.cs" />
     <Compile Include="DAO\MarcasDAO.cs" />
     <Compile Include="DAO\ModelosDAO.cs" />
+    <Compile Include="DAO\MotosDAO.cs" />
+    <Compile Include="DAO\NavioGuerraDAO.cs" />
+    <Compile Include="DAO\NaviosDAO.cs" />
+    <Compile Include="DAO\OnibusDAO.cs" />
     <Compile Include="DAO\PagamentoDAO.cs" />
     <Compile Include="DAO\PedagioDAO.cs" />
+    <Compile Include="DAO\TrensDAO.cs" />
     <Compile Include="DAO\VeiculosDAO.cs" />
     <Compile Include="Enums\TipoVeiculo.cs" />
     <Compile Include="Fonts\IAviao.cs" />
@@ -218,10 +227,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DataFiles\DataAvioesGuerra.JSON" />
+    <None Include="DataFiles\DataAvioes.JSON" />
+    <None Include="DataFiles\DataCaminhoes.JSON" />
+    <None Include="DataFiles\DataCarros.JSON" />
     <None Include="DataFiles\DataMarcas.JSON" />
     <None Include="DataFiles\DataModelos.JSON" />
+    <None Include="DataFiles\DataMotos.JSON" />
+    <None Include="DataFiles\DataNavios.JSON" />
+    <None Include="DataFiles\DataNaviosGuerra.JSON" />
+    <None Include="DataFiles\DataOnibus.JSON" />
     <None Include="DataFiles\DataPagamento.JSON" />
     <None Include="DataFiles\DataPedagio.JSON" />
+    <None Include="DataFiles\DataTrens.JSON" />
     <None Include="DataFiles\DataVeiculos.JSON" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

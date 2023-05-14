@@ -16,7 +16,7 @@ namespace Gerenciador_de_veículos.DAO
 {
     public class MarcasDAO
     {
-        public static string DataMarcas = /*Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)*/Environment.CurrentDirectory + @"\DataFiles\DataMarcas.json";
+        public static string DataMarcas = Environment.CurrentDirectory + @"\DataFiles\DataMarcas.json";
 
         public static void Save(object marca)
         {
