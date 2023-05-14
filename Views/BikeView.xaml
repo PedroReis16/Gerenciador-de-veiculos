@@ -6,10 +6,103 @@
              xmlns:local="clr-namespace:Gerenciador_de_veículos.Views"
              mc:Ignorable="d" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      Height="600" 
-      Width="800"
-      >
+             Height="500" 
+             Width="900"
+             >
     <Grid Background="#001b8f">
-            
+        <Border CornerRadius="5" Background="White" Width="900" Height="500">
+            <ListView
+                Name="Carrolv"
+                Margin="10 0 10 0 "
+                Padding="0 0 0 0"
+                Width="900"
+                HorizontalAlignment="Center"
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                SelectionMode="Single"
+                BorderThickness="0"
+                BorderBrush="Transparent"
+            >
+                <ListView.Resources>
+                    <Style x:Key="HeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="BorderBrush" Value="Transparent"/>
+                        <Setter Property="IsEnabled" Value="False"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                    </Style>
+                </ListView.Resources>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="50" HeaderContainerStyle="{StaticResource HeaderStyle}" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <materialDesign:PackIcon 
+                                            Kind="Car"
+                                            Width="24"
+                                            Height="24"
+                                            Margin="0 6 0 0"
+                                            />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Placa" Width="150" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Width="150" Content="{Binding Id}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn  Header="Modelo" Width="150" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label  Width="150" Content="{Binding Modelo}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 24 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn  Header="Peso" Width="150" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Width="150" Content="{Binding Peso}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Passageiros" Width="100" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Width="100" Content="{Binding CapacidadePassageiros}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Oficial" Width="150" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Width="150" Content="{Binding Oficial}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0 6 32 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Valor" Width="150" HeaderContainerStyle="{StaticResource HeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Click="Button_Click" Background="#0086FF" BorderBrush="Transparent" BorderThickness="0" Margin="36 0 0 0">
+                                        <materialDesign:PackIcon
+                                            Kind="Play"
+                                            Width="20"
+                                            Height="20"
+                                            Foreground="White"
+                                            />
+                                    </Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
     </Grid>
 </UserControl>

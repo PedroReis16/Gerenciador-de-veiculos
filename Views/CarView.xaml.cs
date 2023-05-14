@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gerenciador_de_veículos.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,27 @@ namespace Gerenciador_de_veículos.Views
         public CarView(MainWindow menu)
         {
             InitializeComponent();
+            LoadView();
+        }
+        private void LoadView()
+        {
+            //Carro teste = new Carro
+            //{
+            //    Id = "1234567",
+            //    Peso = 1000,
+            //    Velocidade = 54,
+            //    CapacidadePassageiros = 4,
+            //    VelMax = 150,
+            //    Oficial = true,
+            //    Limpador = false,
+            //};
+
+            //Carrolv.Items.Add(teste);
+            //Carrolv.Items.Add(teste);
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

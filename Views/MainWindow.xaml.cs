@@ -29,7 +29,7 @@ namespace Gerenciador_de_veículos
     {
         private DispatcherTimer actionTimer;
         VeiculosAcoes acoes;
-        bool timer,telas;
+        bool timer, telas;
         VehiclesOptions vehiclesOptions;
 
         public MainWindow()
@@ -71,11 +71,13 @@ namespace Gerenciador_de_veículos
             OpenActionsView();
         }
         private void BtnBack_Click(object sender, RoutedEventArgs e)
-         {
-            if (VehiclesGrid.Visibility == Visibility.Visible && telas == true)
+        {
+            if (VehiclesViewGrid.Visibility == Visibility.Visible)
             {
+                VehiclesViewGrid.Children.Clear();
+                VehiclesViewGrid.Visibility = Visibility.Collapsed;
+
                 OpenVehiclesView();
-                telas = false;
             }
             else if (VehiclesGrid.Visibility == Visibility.Visible)
             {
@@ -141,6 +143,7 @@ namespace Gerenciador_de_veículos
         {
             BtnBack.Visibility = Visibility.Visible;
             VehiclesOptions vehiclesOptions = new VehiclesOptions(this);
+            VehiclesGrid.Width = 800;
 
             VehiclesGrid.Children.Clear();
             VehiclesGrid.Children.Add(vehiclesOptions);
@@ -166,90 +169,99 @@ namespace Gerenciador_de_veículos
         {
             CarView carView = new CarView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenBikeView()
         {
             BikeView carView = new BikeView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenBusView()
         {
             BusView carView = new BusView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenTruckView()
         {
             TruckView carView = new TruckView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenPlaneView()
         {
             PlaneView carView = new PlaneView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenWarPlaneView()
         {
             WarPlaneView carView = new WarPlaneView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenShipView()
         {
             ShipView carView = new ShipView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenWarShipView()
         {
             WarShipView carView = new WarShipView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         public void OpenTrainView()
         {
             TrainView carView = new TrainView(this);
 
-            VehiclesGrid.Children.Clear();
-            VehiclesGrid.Children.Add(carView);
-            VehiclesGrid.Visibility = Visibility.Visible;
+            VehiclesViewGrid.Children.Clear();
+            VehiclesViewGrid.Children.Add(carView);
+            VehiclesViewGrid.Visibility = Visibility.Visible;
             InitialButtons.Visibility = Visibility.Collapsed;
+            VehiclesGrid.Visibility = Visibility.Collapsed;
             telas = true;
         }
         #endregion
