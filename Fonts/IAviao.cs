@@ -8,8 +8,8 @@ namespace Gerenciador_de_veículos.Fonts
 {
     public interface IAviao
     {
-        void Pousar();
-        void Arremeter();
-        void Decolar();
+        string Pousar();
+        string Arremeter();
+        string Decolar();
     }
 }

@@ -35,12 +35,14 @@ namespace Gerenciador_de_veículos
         VeiculosAcoes acoes;
         bool timer, telas;
         VehiclesOptions vehiclesOptions;
+        public List<string> Mensagem { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            //acoes = new VeiculosAcoes(this);
 
+            Mensagem = new List<string>();
+            //acoes = new VeiculosAcoes(this);
 
             InitializeTimer();
             actionTimer.Start();
@@ -127,6 +129,54 @@ namespace Gerenciador_de_veículos
             }
         }
 
+        public void Text(string Id, int acao)
+        {
+            switch (acao)
+            {
+                case 1:
+                    Mensagem.Add($"O veículo {Id} acabou de acelerar um pouco");
+                    break;
+                case 2:
+                    Mensagem.Add($"Parece que o veículo {Id} surgiu no radar! ");
+                    break;
+                case 3:
+                    Mensagem.Add($"O avião {Id} tentou pousar e não conseguiu!");
+                    break;
+                case 4:
+                    Mensagem.Add($"O veículo de guerra {Id} esta prestes a atacar!");
+                    break;
+                case 5:
+                    Mensagem.Add($"O navio {Id} acabou de atracar em nosso porto!");
+                    break;
+                case 6:
+                    Mensagem.Add($"O caminhão {Id} esta enchendo sua carroceria!");
+                    break;
+                case 7:
+                    Mensagem.Add($"O avião {Id} acabou de partir");
+                    break;
+                case 8:
+                    Mensagem.Add($"O caminhão {Id} esta esvaziando sua carroceria!");
+                    break;
+                case 9:
+                    Mensagem.Add($"A moto {Id} esta se exibindo!");
+                    break;
+                case 10:
+                    Mensagem.Add($"O veículo {Id} esta passando por algo molhado");
+                    break;
+                case 11:
+                    Mensagem.Add($"O veículo {Id} vai ter que parada no pedágio!");
+                    break;
+                case 12:
+                    Mensagem.Add($"O avião {Id} vai pousar em instantes!");
+                    break;
+                case 13:
+                    Mensagem.Add($"O veículo {Id} precisou reduzir a velocidade!");
+                    break;
+                case 14:
+                    Mensagem.Add($"Parece que o veículo {Id} sofreu um acidente");
+                    break;
+            }
+        }
         #region Buttons Background Events
         private void MainWindow_MouseEnter(object sender, MouseEventArgs e)
         {

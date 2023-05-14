@@ -28,23 +28,23 @@ namespace Gerenciador_de_veículos.Objects
             CapacidadePassageiros = 1;
         }
 
-        public void Arremeter()
+        public string Arremeter()
         {
-           
+            return $"O avião {Id} tentou pousar, mas não conseguiu!";
         }
 
-        public void Decolar()
+        public string Decolar()
         {
-           
+            return $"O avião acabou de {Id} decolou!";
         }
 
-        public void Pousar()
+        public string Pousar()
         {
-            
+            return $"O avião {Id} acaba de pousar com tranquilidade!";
         }
         public void Atacar()
         {
-
+            
         }
     }
 }

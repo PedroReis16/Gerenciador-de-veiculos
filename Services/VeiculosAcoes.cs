@@ -17,6 +17,12 @@ namespace Gerenciador_de_veículos.Services
     public class VeiculosAcoes : IVeiculosAcoes
     {
         Random rnd = new Random();
+        MainWindow menu;
+
+        public VeiculosAcoes(MainWindow menu)
+        {
+            this.menu = menu;
+        }
 
         public void Random(int acao)
         {
@@ -115,6 +121,9 @@ namespace Gerenciador_de_veículos.Services
             {
                 ((NavioGuerra)veiculo).Desacelera();
             }
+
+            Veiculo veiculo1 = (Veiculo)veiculo;
+            menu.Text(veiculo1.Id, 1);
         }
 
         public void Adicionar()
@@ -160,6 +169,10 @@ namespace Gerenciador_de_veículos.Services
                     VeiculosDAO.Save(novo);
                     break;
             }
+
+            Veiculo veiculo = (Veiculo)VeiculosDAO.GetAllVehicles().LastOrDefault();
+
+            menu.Text(veiculo.Id, 2);
         }
 
         public void Arremeter()
@@ -171,14 +184,20 @@ namespace Gerenciador_de_veículos.Services
             }
 
             var aviao = list[rnd.Next(0, list.Count)];
+            string mensagem;
+            Veiculo veiculo;
 
             if (aviao is Aviao)
             {
-                ((Aviao)aviao).Arremeter();
+                mensagem = ((Aviao)aviao).Arremeter();
+                veiculo = (Aviao)aviao;
+                menu.Text(veiculo.Id, 3);
             }
             else
             {
-                ((AviaoGuerra)aviao).Arremeter();
+                mensagem = ((AviaoGuerra)aviao).Arremeter();
+                veiculo = (AviaoGuerra)aviao;
+                menu.Text(veiculo.Id, 3);
             }
         }
 
@@ -191,14 +210,19 @@ namespace Gerenciador_de_veículos.Services
             }
 
             var veiculo = list[rnd.Next(0, list.Count)];
+            Veiculo atacar = (Veiculo)veiculo;
 
             if (veiculo is AviaoGuerra)
             {
                 ((AviaoGuerra)veiculo).Atacar();
+                atacar = (AviaoGuerra)veiculo;
+                menu.Text(atacar.Id, 4);
             }
             else
             {
                 ((NavioGuerra)veiculo).Atacar();
+                atacar = (NavioGuerra)veiculo;
+                menu.Text(atacar.Id, 4);
             }
         }
 
@@ -213,7 +237,7 @@ namespace Gerenciador_de_veículos.Services
 
             var veiculo = list[rnd.Next(0, list.Count)];
 
-            if(veiculo is Navio)
+            if (veiculo is Navio)
             {
                 ((Navio)veiculo).Atracar();
             }
@@ -221,11 +245,14 @@ namespace Gerenciador_de_veículos.Services
             {
                 ((NavioGuerra)veiculo).Atracar();
             }
+
+            Veiculo barco = (Veiculo)veiculo;
+            menu.Text(barco.Id, 5);
         }
 
         public void Carregar()
         {
-            List<object> list = VeiculosDAO.GetAllRoadVehicles();
+            List<object> list = VeiculosDAO.GetAllRoadVehicles().Where(x => x.GetType() == typeof(Caminhao)).ToList();
 
             if (list.Count == 0 || list == null)
             {
@@ -235,6 +262,9 @@ namespace Gerenciador_de_veículos.Services
             var veiculo = list[rnd.Next(0, list.Count)];
 
             ((Caminhao)veiculo).Carregar();
+            Veiculo veiculo1 = (Veiculo)veiculo;
+            menu.Text(veiculo1.Id, 6);
+
         }
 
         public void Decolar()
@@ -246,14 +276,19 @@ namespace Gerenciador_de_veículos.Services
             }
 
             var aviao = list[rnd.Next(0, list.Count)];
+            Veiculo veiculo;
 
             if (aviao is Aviao)
             {
                 ((Aviao)aviao).Decolar();
+                veiculo = (Veiculo)aviao;
+                menu.Text(veiculo.Id, 7);
             }
             else
             {
                 ((AviaoGuerra)aviao).Decolar();
+                veiculo = (Veiculo)aviao;
+                menu.Text(veiculo.Id, 7);
             }
         }
 
@@ -269,6 +304,8 @@ namespace Gerenciador_de_veículos.Services
             var veiculo = list[rnd.Next(0, list.Count)];
 
             ((Caminhao)veiculo).Descarregar();
+            Veiculo caminhao = (Veiculo)veiculo;
+            menu.Text(caminhao.Id, 8);
         }
 
         public void Empinar()
@@ -282,11 +319,13 @@ namespace Gerenciador_de_veículos.Services
 
             var veiculo = list[rnd.Next(0, list.Count)];
             ((Moto)veiculo).Grau();
+            Veiculo moto = (Veiculo)veiculo;
+            menu.Text(moto.Id, 9);
         }
 
         public void Limpador()
         {
-            List<object> list = VeiculosDAO.GetAllVehicles().Where(x=> x.GetType() != typeof(Moto)).ToList();
+            List<object> list = VeiculosDAO.GetAllVehicles().Where(x => x.GetType() != typeof(Moto)).ToList();
 
             if (list.Count == 0 || list == null)
             {
@@ -295,7 +334,7 @@ namespace Gerenciador_de_veículos.Services
 
             var veiculo = list[rnd.Next(0, list.Count)];
 
-            if(veiculo is Carro)
+            if (veiculo is Carro)
             {
                 ((Carro)veiculo).LigaDesligaLimpador();
             }
@@ -327,7 +366,9 @@ namespace Gerenciador_de_veículos.Services
             {
                 ((NavioGuerra)veiculo).LigaDesligaLimpador();
             }
-            
+
+            Veiculo veiculo1 = (Veiculo)veiculo;
+            menu.Text(veiculo1.Id, 10);
         }
 
         public void Pedagio()
@@ -352,6 +393,9 @@ namespace Gerenciador_de_veículos.Services
             {
                 ((Moto)veiculo).Pedagio();
             }
+
+            Veiculo veiculo1 = (Veiculo)veiculo;
+            menu.Text(veiculo1.Id, 11);
         }
 
         public void Pousar()
@@ -363,15 +407,20 @@ namespace Gerenciador_de_veículos.Services
             }
 
             var aviao = list[rnd.Next(0, list.Count)];
-
+            Veiculo veiculo;
             if (aviao is Aviao)
             {
                 ((Aviao)aviao).Pousar();
+                veiculo = (Veiculo)aviao;
+                menu.Text(veiculo.Id, 12);
             }
             else
             {
                 ((AviaoGuerra)aviao).Pousar();
+                veiculo = (Veiculo)aviao;
+                menu.Text(veiculo.Id, 12);
             }
+
         }
 
         public void Reduzir()
@@ -414,6 +463,8 @@ namespace Gerenciador_de_veículos.Services
             {
                 ((NavioGuerra)veiculo).Desacelera();
             }
+            Veiculo veiculo1 = (Veiculo)veiculo;
+            menu.Text(veiculo1.Id, 13);
         }
 
         public void Remover()
@@ -426,6 +477,9 @@ namespace Gerenciador_de_veículos.Services
             }
 
             var veiculo = list[rnd.Next(0, list.Count)];
+
+            Veiculo veiculo1 = (Veiculo)veiculo;
+            menu.Text(veiculo1.Id, 14);
 
             VeiculosDAO.Delete(veiculo);
         }

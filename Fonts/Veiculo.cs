@@ -19,11 +19,27 @@ namespace Gerenciador_de_veículos.Fonts
 
         public void Acelera()
         {
-            Velocidade++;
+            Random rnd = new Random();
+
+            int velocidade = rnd.Next(0, VelMax);
+
+            while (Velocidade < VelMax || velocidade > 0)
+            {
+                Velocidade++;
+                velocidade--;
+            }
         }
         public void Desacelera()
         {
-            Velocidade--;
+            Random rnd = new Random();
+
+            int velocidade = rnd.Next(0, VelMax);
+
+            while (Velocidade > 0 || velocidade > 0)
+            {
+                Velocidade--;
+                velocidade--;
+            }
         }
     }
 }
